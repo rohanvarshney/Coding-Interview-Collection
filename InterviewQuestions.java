@@ -5,7 +5,7 @@ public class InterviewQuestions {
 
 
 	public static void main(String args[]) {
-		//Perform testing here.
+		//Perform function testing here.
 
 		
 		
@@ -46,8 +46,7 @@ public class InterviewQuestions {
 		}
 		if (count > 1)
 			only1s = false;
-
-
+		
 		if (only1s)
 			return str;
 
@@ -258,7 +257,7 @@ public class InterviewQuestions {
 	For example, given [6, 1, 3, 3, 3, 6, 6], return 1. 
 	Given [13, 19, 13, 13], return 19.
 	*/
-	public static int findUniqueOccurrence(int[] arr) {
+	public static int findUniqueOccurrenceOfThree(int[] arr) {
 		HashSet<Integer> visitedOnlyOnce = new HashSet<>();
 		HashSet<Integer> visited = new HashSet<>();
 
@@ -275,13 +274,38 @@ public class InterviewQuestions {
 
 		return visitedOnlyOnce.iterator().next();
 	}
-	public static void testFindUniqueOccurrence() {
-		System.out.println(findUniqueOccurrence(new int[]{0,0,0,0,1,1,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,7,7,7,8,8,9,9,20,20}));
-		System.out.println(findUniqueOccurrence(new int[]{-10,-10,-1,-1,-1,-1,-1,-1,-1,0}));
-		System.out.println(findUniqueOccurrence(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1}));
-		System.out.println(findUniqueOccurrence(new int[]{999,999,10,10,10,10,10,9,9,8,8,-9978}));
-		System.out.println(findUniqueOccurrence(new int[]{999}));
+	//TODO: Fix tests.
+	public static void testFindUniqueOccurrenceOfThree() {
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,1,1,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,7,7,7,8,8,9,9,20,20}));
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{-10,-10,-1,-1,-1,-1,-1,-1,-1,0}));
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1}));
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{999,999,10,10,10,10,10,9,9,8,8,-9978}));
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{999}));
 	}
+
+	/*
+	Given a list of sorted numbers (can be both negative or positive), return the list of numbers squared in sorted order.
+	def square_numbers(nums):
+	print(square_numbers([-5, -3, -1, 0, 1, 4, 5]))
+	[0, 1, 1, 9, 16, 25, 25]
+	Solve this problem in O(n) time.
+	*/
+	public static int[] sortSquaredNumbers(int[] arr) {
+		//Binary search to find smallest number, alternate left and right
+		return null;
+	}
+	public static void testSortSquaredNumbers() {
+		System.out.println(sortSquaredNumbers(new int[]{-99}));
+		System.out.println(sortSquaredNumbers(new int[]{-10,0,10}));
+		System.out.println(sortSquaredNumbers(new int[]{-5, -3, -1, 0, 1, 4, 5}));
+		System.out.println(sortSquaredNumbers(new int[]{-5, -4,-3,-2, -1, 0, 1, 4, 5}));
+		System.out.println(sortSquaredNumbers(new int[]{-5, -3, -1, 0, 1, 4,4,4,4,4,4, 5}));
+		System.out.println(sortSquaredNumbers(new int[]{-99,-20,-10,-5,-5,-5, -3, -1, 1, 1,1,2,4, 5}));
+	}
+
+
+
+
 
 
 
