@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testSortSquaredNumbers();
+		testEvaluateCrossword();
 
 	}
 
@@ -332,7 +332,153 @@ public class InterviewQuestions {
 	the first pointer is looking at.
 	*/
 
+
+
+
+	/*
+	Given a list of words, and an arbitrary alphabetical order, verify that the words are in order of the alphabetical order.
+
+	Example:
+	Input:
+	words = ["abcd", "efgh"], order="zyxwvutsrqponmlkjihgfedcba"
+
+	Output: False
+	Explanation: 'e' comes before 'a' so 'efgh' should come before 'abcd'
+
+	Example 2:
+	Input:
+	words = ["zyx", "zyxw", "zyxwy"],
+	order="zyxwvutsrqponmlkjihgfedcba"
+
+	Output: True
+	*/
+	public static boolean evaluateLexographicalOrder(String[] words, String alphabet) {
+		HashMap<Character, Integer> alphabetValue = new HashMap<>();
+		for (int x = 0; x < alphabet.length(); x++) {
+			char c = alphabet.charAt(x);
+			alphabetValue.put(c, x);
+		}
+		//System.out.println(alphabetValue);
+
+		for (String word : words) {
+			boolean val = evaluateLexographicalOrderOfWord(word, alphabetValue);
+			if (!val) return false;
+		}
+		return true;
+	}
+	public static boolean evaluateLexographicalOrderOfWord(String word, HashMap<Character, Integer> alphabet) {
+		int prevVal = alphabet.get(word.charAt(0));
+		for (int x = 1; x < word.length(); x++) {
+			char c = word.charAt(x);
+			int value = alphabet.get(c);
+			if (value < prevVal) {
+				return false;
+			}
+			prevVal = value;
+		}
+		return true;
+	}
+	public static void testEvaluateWordOrder() {
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		String reversedAlphabet = new StringBuilder(alphabet).reverse().toString();
+		String[] words = {"abc", "def", "xyz"};
+		String[] words2 = {"zy", "zy", "cba"};
+		String[] words3 = {"zyxwvu", "zy", "fedcba"};
+		System.out.println(evaluateLexographicalOrder(words, alphabet));
+		System.out.println(evaluateLexographicalOrder(words, reversedAlphabet));
+		System.out.println(evaluateLexographicalOrder(words2, reversedAlphabet));
+		System.out.println(evaluateLexographicalOrder(words3, reversedAlphabet));
+	}
+
+
+
+	/*
+	You have a function rand7() that generates a random integer from 1 to 7. 
+	Use it to write a function rand5() that generates a random integer from 1 to 5.
+	*/
+	public static int rand7() {
+		return (int) Math.random() * 6 + 1;
+	}
+	public static int rand5() {
+
+		int sum; 
+		do 
+		{
+			sum = 5 * rand5() + rand5(); 
+		} while (sum > 20); 
+		return sum % 7; 
+	}
+
+
+	/*
+	This problem was asked by Coursera. Given a 2D board of characters and a word, find if the word exists in the grid.
+	The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are 
+	those horizontally or vertically neighboring. The same letter cell may not be used more than once.
+	For example, given the following board:
+	[
+	  ['A','B','C','E'],
+	  ['S','F','C','S'],
+	  ['A','D','E','E']
+	]
+	exists(board, "ABCCED") returns true, exists(board, "SEE") returns true, exists(board, "ABCB") returns false.
+	*/
+	public static boolean evaluateCrossword(String word, char[][] board) {
+		for (int x = 0; x < board.length; x++) {
+			for (int y = 0; y < board[0].length; y++) {
+				boolean result = evaluateCrosswordSpot(x, y, word, 0, 'N', board) 
+					|| evaluateCrosswordSpot(x, y, word, 0, 'S', board) 
+					|| evaluateCrosswordSpot(x, y, word, 0, 'E', board) 
+					|| evaluateCrosswordSpot(x, y, word, 0, 'W', board);
+				if (result == true) return true;
+			}
+		}
+		return false;
+	}
+	public static boolean evaluateCrosswordSpot(int x, int y, String word, int len, char direction, char[][] board) {
+		if (len == word.length()) return true;
+		if (x < 0 || y < 1 || x >= board.length || y >= board[0].length) return false;
+
+		boolean works = false;
+		if (board[x][y] == word.charAt(len)) {
+			len += 1;
+		}
+		if (direction == 'N') {
+			works = evaluateCrosswordSpot(x-1, y, word, len, direction, board);
+		}
+		if (direction == 'S') {
+			works = evaluateCrosswordSpot(x+1, y, word, len, direction, board);
+		}
+		if (direction == 'E') {
+			works = evaluateCrosswordSpot(x, y+1, word, len, direction, board);
+		}
+		if (direction == 'W') {
+			works = evaluateCrosswordSpot(x, y-1, word, len, direction, board);
+		}
+		return works;
+
+	}
+
+	public static void testEvaluateCrossword() {
+		char[][] board = {
+			{'A','B','C','E'},
+			{'S','F','C','S'},
+			{'A','D','E','E'}
+						};
+		System.out.println(evaluateCrossword("DEE", board));
+		System.out.println(evaluateCrossword("ESE", board));
+		System.out.println(evaluateCrossword("ECA", board));
+		System.out.println(evaluateCrossword("ADEEA", board));
+
+	}
+
+
 	
+
+
+
+
+
+
 
 
 
