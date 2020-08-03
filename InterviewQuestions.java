@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testEvaluateCrossword();
+		testLargestNumOfNums();
 
 	}
 
@@ -472,8 +472,122 @@ public class InterviewQuestions {
 	}
 
 
-	
 
+	/*
+	This problem was asked by Palantir.
+	In academia, the h-index is a metric used to calculate the impact of a researcher's papers. 
+	It is calculated as follows:
+	A researcher has index h if at least h of her N papers have h citations each. 
+	If there are multiple h satisfying this formula, the maximum is chosen.
+	For example, suppose N = 5, and the respective citations of each paper are [4, 3, 0, 1, 5]. 
+	Then the h-index would be 3, since the researcher has 3 papers with at least 3 citations.
+	Given a list of paper citations of a researcher, calculate their h-index.
+	*/
+	public static int hIndex(int[] citations) {
+		//Count buckets for occurrences of each paper.
+		int[] summedBuckets = new int[citations.length + 1];
+		for (int citation: citations) {
+			if (citation >= citations.length) {
+				summedBuckets[citations.length]++;
+			} else {
+				summedBuckets[citation] += 1;
+			}
+		}
+
+		//Go backwards, sum papers up as you go.
+		int sum = 0;
+		for (int x = citations.length; x > 0; x--) {
+			sum += summedBuckets[x];
+			if (sum >= x) {
+				return x;
+			}
+		}
+		return 0;
+	}
+
+	public static void testHIndex() {
+		System.out.println(hIndex(new int[]{8,6,3,2,1,5}));
+		System.out.println(hIndex(new int[]{4, 3, 0, 1,5}));
+	}
+
+
+
+
+
+	/*
+	Hi, here's your problem today. This problem was recently asked by Apple:
+
+	In many spreadsheet applications, the columns are marked with letters. From the 1st to the 26th column the letters are A to Z. Then starting from the 27th column it uses AA, AB, ..., ZZ, AAA, etc.
+
+	Given a number n, find the n-th column name.
+
+	def column_name(n):
+	  # Fill this in.
+
+	print column_name(26)
+	print column_name(27)
+	print column_name(28)
+	# Z
+	# AA
+	# AB
+	*/
+	public static String nthColumnName(int n) {
+		String s = "";
+
+		while (n > 26) {
+			int dividend = n / 26;
+			char c = (char)('A' + (dividend - 1));
+			s = s + c;
+			n = n - (dividend * 26);
+		}
+		s = s + (char)('A' + (n - 1));
+		return s;
+	}
+	public static void testnthColumnName() {
+		System.out.println(nthColumnName(3));
+		System.out.println(nthColumnName(25));
+		System.out.println(nthColumnName(26));
+		System.out.println(nthColumnName(27));
+		System.out.println(nthColumnName(28));
+		System.out.println(nthColumnName(100));
+		System.out.println(nthColumnName(105));
+		System.out.println(nthColumnName(106));
+		System.out.println(nthColumnName(107));
+	}
+
+
+	/*
+	Given a number of integers, combine them so it would create the largest number.
+
+	Example:
+	Input:  [17, 7, 2, 45, 72]
+	Output:  77245217
+	def largestNum(nums):
+	  # Fill this in.
+
+	print largestNum([17, 7, 2, 45, 72])
+	# 77245217
+	*/
+	public static String largestNumOfNums(List<String> nums) {
+		StringBuilder sb = new StringBuilder();
+		Collections.sort(nums, new Comparator<String>(){ 
+	  		@Override
+	        public int compare(String X, String Y) { 
+	        	String XY=X + Y; 
+	        	String YX=Y + X; 
+	        	return XY.compareTo(YX) > 0 ? -1:1; 
+	    	} 
+	    });  
+	    Iterator it = nums.iterator();
+	    while(it.hasNext()) {
+	        sb.append(it.next()); 
+	    }
+	    return sb.toString();
+	}
+	public static void testLargestNumOfNums() {
+		List<String> l = Arrays.asList("1", "2", "31", "33");
+		System.out.println(largestNumOfNums(l));
+	}
 
 
 
