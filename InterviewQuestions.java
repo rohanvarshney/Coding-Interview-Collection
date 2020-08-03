@@ -1,16 +1,12 @@
 import java.util.*;
+import java.io.*;
 
 public class InterviewQuestions {
 
 
-
 	public static void main(String args[]) {
 		//Perform function testing here.
-
-		
-		
-
-
+		testSortSquaredNumbers();
 
 	}
 
@@ -68,7 +64,7 @@ public class InterviewQuestions {
 	/*
 	Take an input and output the number of consecutive numbers in a row, 
 	or what you would say if you were to read it out loud 
-	ex input: 111222289 three ones four twos one eight one nine 31421819  
+	ex input: 111222289  (three ones four twos one eight one nine ) = 31421819  
 	*/
 	public static String readNumber(String num) {
 		String answer = "";
@@ -105,7 +101,6 @@ public class InterviewQuestions {
 		int end = nums.length;
 		while (start < end) {
 			int mid = (start+end)/2;
-			System.out.print(nums[mid] + " --> ");
 			if (nums[mid] > target) {
 				end = mid - 1;
 			} else if (nums[mid] < target) {
@@ -127,7 +122,9 @@ public class InterviewQuestions {
 	/*
 	Given an array of integers that has a peak integer 
 	(left neighbor < peak > right neighbor), find the peak integer. 
-	5,5,5,5,5,6,6,6,7,7,8,9,9,***50****,20,20,20,10,0 
+	5,5,5,5,5,6,6,6,7,7,8,9,9,***50****,20,20,20,10,0.
+
+	This is essentially a modified binary search where the desired result is the maximum integer.
 	*/
 	public static int findPeak(int[] nums) {
 		int start = 0;
@@ -135,18 +132,18 @@ public class InterviewQuestions {
 		while (start <= end) {
 			int mid = (start+end)/2;
 
-			if (mid == nums.length - 1 && nums[mid] > nums[mid-1])
+			if (mid == nums.length - 1 && nums[mid] > nums[mid-1]) //end of list
 				return nums[mid];
-			if (mid == 0 && nums[mid] > nums[mid+1])
+			if (mid == 0 && nums[mid] > nums[mid+1]) //beginning of list
 				return nums[mid];
-			if (nums[mid] > nums[mid-1] && nums[mid] > nums[mid+1])
+			if (nums[mid] > nums[mid-1] && nums[mid] > nums[mid+1]) //bigger than element before and after
 				return nums[mid];
 
 			if (nums[mid+1] > nums[mid]) {
 				start = mid;
 			} else if (nums[mid+1] < nums[mid]) {
 				end = mid;
-			} else if (start == end) {
+			} else if (start == end) { //completed search
 				return nums[mid];
 			}
 		}
@@ -220,7 +217,7 @@ public class InterviewQuestions {
 
 
 	/*
-	Sum of first n evens, starting from 2.
+	Sum of first n evens using recursion, starting from 2.
 	*/
 	public static int sumOfEvens(int n) {
 		if (n < 0) {
@@ -272,14 +269,13 @@ public class InterviewQuestions {
 			}
 		}
 
-		return visitedOnlyOnce.iterator().next();
+		return visitedOnlyOnce.iterator().next(); //Returns first and only element
 	}
-	//TODO: Fix tests.
 	public static void testFindUniqueOccurrenceOfThree() {
 		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,1,1,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,7,7,7,8,8,9,9,20,20}));
 		System.out.println(findUniqueOccurrenceOfThree(new int[]{-10,-10,-1,-1,-1,-1,-1,-1,-1,0}));
-		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1}));
-		System.out.println(findUniqueOccurrenceOfThree(new int[]{999,999,10,10,10,10,10,9,9,8,8,-9978}));
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0}));
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{999,999,10,10,10,10,10,9,9,8,8,-9978, 7, 7, 7, 7, 7}));
 		System.out.println(findUniqueOccurrenceOfThree(new int[]{999}));
 	}
 
@@ -289,10 +285,29 @@ public class InterviewQuestions {
 	print(square_numbers([-5, -3, -1, 0, 1, 4, 5]))
 	[0, 1, 1, 9, 16, 25, 25]
 	Solve this problem in O(n) time.
+
+	We know the original list is sorted, so the maximums occur on the ends, which would end up being on the back of the list.
 	*/
-	public static int[] sortSquaredNumbers(int[] arr) {
-		//Binary search to find smallest number, alternate left and right
-		return null;
+	public static List<Integer> sortSquaredNumbers(int[] arr) {
+		LinkedList<Integer> answer = new LinkedList<Integer>();
+		int start = 0;
+		int end = arr.length - 1;
+
+		double squaredStart = 0;
+		double squaredEnd = 0;
+		while (start < end) {
+			squaredStart = Math.pow(arr[start], 2);
+			squaredEnd = Math.pow(arr[end], 2);
+			if (squaredStart > squaredEnd) {
+				answer.addFirst((int)squaredStart);
+				start++;
+			} else {
+				answer.addFirst((int)squaredEnd);
+				end--;
+			}
+		}
+		answer.addFirst((int)Math.pow(arr[start], 2));
+		return answer;
 	}
 	public static void testSortSquaredNumbers() {
 		System.out.println(sortSquaredNumbers(new int[]{-99}));
@@ -302,25 +317,6 @@ public class InterviewQuestions {
 		System.out.println(sortSquaredNumbers(new int[]{-5, -3, -1, 0, 1, 4,4,4,4,4,4, 5}));
 		System.out.println(sortSquaredNumbers(new int[]{-99,-20,-10,-5,-5,-5, -3, -1, 1, 1,1,2,4, 5}));
 	}
-
-
-
-
-
-
-
-
-	//THESE ARE ALL THE ALGORITHMS THAT HAVE NOT YET BEEN CODED OR DEBUGGED OR COMPELTED.
-	//_____________________
-	//_____________________
-	//_____________________
-	//_____________________
-	//_____________________
-	//_____________________
-	//_____________________
-	//_____________________
-
-
 
 
 	/*
@@ -336,24 +332,8 @@ public class InterviewQuestions {
 	the first pointer is looking at.
 	*/
 
+	
 
-
-	/*
-	Write a method reverseWords() that takes a message as an array 
-	of characters and reverses the order of the words in place. ↴
-	Why an array of characters instead of a string? The goal of 
-	this question is to practice manipulating strings in place. 
-	Since we're modifying the message, we need a mutable ↴ type 
-	like an array, instead of Java's immutable strings. For example:
-
-	char[] message = { 'c', 'a', 'k', 'e', ' ',
-                   'p', 'o', 'u', 'n', 'd', ' ',
-                   's', 't', 'e', 'a', 'l' };
-
-                   reverseWords(message);
-                   System.out.println(message);
-    prints: "steal pound cake"
-    */
 
 
 
