@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testLargestNumOfNums();
+		testNonAdjacentString();
 
 	}
 
@@ -611,6 +611,38 @@ public class InterviewQuestions {
 	print(Solution().validMountainArray([1, 2, 3]))
 	# False
 	*/
+	public static boolean isMountainArray(int[] nums) {
+		boolean hasReachedAPeak = false;
+		int peak = Integer.MIN_VALUE;
+		int previous = nums[0];
+		for (int x = 1; x < nums.length; x++) {
+			if (nums[x] >= previous) {
+				if (hasReachedAPeak) {
+					return false;
+				}
+				previous = nums[x];
+				peak = nums[x];
+			} else if (nums[x] < previous) {
+				hasReachedAPeak = true;
+				previous = nums[x];
+			}
+		}
+		return true;
+
+	}
+	public static void testIsMountainArray() {
+		System.out.println(isMountainArray(new int[]{1,2,3,4,3,2,1}));
+		System.out.println(isMountainArray(new int[]{1,2,3,4,3,2,4}));
+
+		System.out.println(isMountainArray(new int[]{1,2,3,10,3,2,1}));
+		System.out.println(isMountainArray(new int[]{1,2,3,2,3,2,1}));
+
+		System.out.println(isMountainArray(new int[]{1,2,3,9,9,9,9,100,1}));
+		System.out.println(isMountainArray(new int[]{1,100,3,9,9,9,9,100,1}));
+
+		System.out.println(isMountainArray(new int[]{1,100,99,98,91,3,2,1}));
+		System.out.println(isMountainArray(new int[]{1,100,99,98,91,100,2,1}));
+	}
 
 
 
@@ -633,6 +665,57 @@ public class InterviewQuestions {
 	print ip_addresses('1592551013')
 	# ['159.255.101.3', '159.255.10.13']
 	*/
+	public static HashSet<String> makeIPAddresses(String num) {
+		HashSet<String> possible = new HashSet<String>();
+		String base = num + "";
+		for (int x = 0; x < base.length(); x++) {
+			for (int y = 0; y < base.length()+1; y++) {
+				for (int z = 0; z < base.length() + 2; z++) {
+					String ip = base;
+					ip = ip.substring(0, x) + "." + ip.substring(x);
+					ip = ip.substring(0, y) + "." + ip.substring(y);
+					ip = ip.substring(0, z) + "." + ip.substring(z);
+					boolean valid = evaluateIPAddress(ip);
+					if (valid) possible.add(ip);
+				}
+			}
+		}
+		return possible;
+	}
+	public static boolean evaluateIPAddress(String ip) {
+		String[] parts = ip.split("\\.");
+
+		if (parts.length != 4) {
+			return false;
+		}
+		for (String part : parts) {
+			if (!isNumeric(part)) return false;
+			if (part == "") return false;
+			float num = Float.parseFloat(part);
+			if (num > 255 || num < 0) return false;
+			if (part.startsWith("0") && !part.equals("0")) return false;
+		}
+		return true;
+	}
+	public static boolean isNumeric(final String str) {
+		if (str == null || str.length() == 0) {
+            return false;
+        }
+        for (char c : str.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+	public static void testMakeIPAddresses() {
+		System.out.println(makeIPAddresses("25525511135"));
+		System.out.println(makeIPAddresses("1592551013"));
+		System.out.println(makeIPAddresses("10000083782"));
+		System.out.println(makeIPAddresses("9999999"));
+		System.out.println(makeIPAddresses("10010010010"));
+	}
+
 
 
 	/*
@@ -651,11 +734,93 @@ public class InterviewQuestions {
 	print(find_num([1, 2, 3, 4], 5))
 	# (-1, -1)
 	*/
+	public static class Range {
+		int start;
+		int end;
+		public Range(int start, int end) {
+			this.start = start;
+			this.end = end;
+		}
+		public String toString() {
+			return "Range: [" + start + ", " + end + "]";
+		}
+	}
+	public static Range findRangeInDuplicates(int[] nums, int target) {
+		int start = 0;
+		int end = nums.length;
+		int index = 0;
+		while (start < end) {
+			int mid = (start+end)/2;
+			if (nums[mid] > target) {
+				end = mid - 1;
+			} else if (nums[mid] < target) {
+				start = mid + 1;
+			} else {
+				index = mid;
+				break;
+			}
+		}
+		Range ret = new Range(-1, -1);
+		if (start == end && nums[start] != target) {
+			return ret;
+		}
+
+
+		int left = findLeftBound(nums, index, target);
+		int right = findRightBound(nums, index, target);
+		ret = new Range(left, right);
+		if (nums[index-1] != target && nums[index+1] != target) ret = new Range(index, index+1);
+		return ret;
+	}
+	public static int findLeftBound(int[] nums, int l, int target) {
+		int start = 0;
+		int end = l;
+		int index = 0;
+		while (start < end) {
+			int mid = (start+end)/2;
+			if (nums[mid] < target) {
+				start = mid + 1;
+			} else if (nums[mid] == target) {
+				end = mid - 1;
+			}
+		}
+		return nums[start] == target ? start : end;
+	}
+	public static int findRightBound(int[] nums, int r, int target) {
+		int start = r;
+		int end = nums.length;
+		int index = 0;
+		while (start < end) {
+			int mid = (start+end)/2;
+			if (nums[mid] > target) {
+				end = mid - 1;
+			} else if (nums[mid] == target) {
+				start = mid + 1;
+			}
+		}
+		return nums[start] == target ? start : end;
+	}
+	public static void testFindRangeInDuplicates() {
+		System.out.println(findRangeInDuplicates(new int[]{1, 3, 5, 7, 9, 10, 10, 10, 12}, 10));
+		System.out.println(findRangeInDuplicates(new int[]{1, 1, 1, 1, 1, 1, 10, 20, 30, 40}, 1));
+		System.out.println(findRangeInDuplicates(new int[]{1, 1, 1, 1, 1, 1, 10, 10, 10, 10, 20, 30, 30, 40}, 30));
+		System.out.println(findRangeInDuplicates(new int[]{1, 1, 10, 20, 30, 40}, 20));
+	}
+
+
+
+
+
+
+
+
 
 	/*
 	Hi, here's your problem today. This problem was recently asked by Amazon:
 
-	Given a 2d n x m matrix where each cell has a certain amount of change on the floor, your goal is to start from the top left corner mat[0][0] and end in the bottom right corner mat[n - 1][m - 1] with the most amount of change. You can only move either left or down.
+	Given a 2d n x m matrix where each cell has a certain amount of change on the floor, your goal is to start from the 
+	top left corner mat[0][0] and end in the bottom right corner mat[n - 1][m - 1] with the most amount of change. 
+	You can only move either right or down.
 
 	Here's some starter code:
 
@@ -671,16 +836,78 @@ public class InterviewQuestions {
 	print(max_change(mat))
 	# 13
 	*/
+	public static int maxChange(int[][] floor) {
+		return maxChangeHelper(floor, 0, 0, 0);
+	}
+	public static int maxChangeHelper(int[][] floor, int x, int y, int sum) {
+		if (x == floor.length - 1 && y == floor[0].length - 1) {
+			return sum + floor[x][y];
+		}
+		if (x >= floor.length || y >= floor[0].length) {
+			return 0;
+		}
+
+		sum += floor[x][y];
+		return Math.max(maxChangeHelper(floor, x + 1, y, sum), maxChangeHelper(floor, x, y+1, sum));
+	}
+	public static void testMaxChange() {
+		int[][] board = {
+			{0, 3, 0, 2},
+	    	{1, 2, 3, 3},
+	    	{6, 0, 3, 2}
+		};
+		System.out.println(maxChange(board));
+	}
+
+
+
+
+
 
 	/*
 	Good morning! Here's your coding interview problem for today.
 
 	This problem was asked by IBM.
 
-	Given a string with repeated characters, rearrange the string so that no two adjacent characters are the same. If this is not possible, return None.
+	Given a string with repeated characters, rearrange the string so that no two adjacent characters are the same. 
+	If this is not possible, return None.
 
 	For example, given "aaabbc", you could return "ababac". Given "aaab", return None.
 	*/
+	public static String nonAdjacentString(String original) {
+		int iter = 0;
+		int ahead = 1;
+		String s = original + "";
+
+		while (iter < s.length() && ahead < s.length()) {
+			if (s.charAt(iter) == s.charAt(ahead)) {
+				int finder = ahead;
+				while (s.charAt(ahead) == s.charAt(finder)) {
+					if (finder == original.length() -1 ) return "None";
+					finder++;
+				}
+				s = swapChar(s, finder, ahead);
+			}
+			iter++;
+			ahead++;
+		}
+		return s;
+	}
+	public static String swapChar(String str, int i, int j) 
+    { 
+        char ch[] = str.toCharArray(); 
+        char temp = ch[i]; 
+        ch[i] = ch[j]; 
+        ch[j] = temp; 
+
+        String s = new String(ch);
+        return s;
+    } 
+    public static void testNonAdjacentString() {
+    	System.out.println(nonAdjacentString("aaabbc"));
+    	System.out.println(nonAdjacentString("aaab"));
+    	System.out.println(nonAdjacentString("aaaaabcdefg"));
+    }
 
 
 
