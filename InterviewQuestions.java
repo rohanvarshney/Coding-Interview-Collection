@@ -592,6 +592,99 @@ public class InterviewQuestions {
 
 
 
+	/*
+	Hi, here's your problem today. This problem was recently asked by Microsoft:
+
+	Given an array of heights, determine whether the array forms a "mountain" pattern. A mountain pattern goes up and then down.
+
+	Like
+	  /\
+	 /  \
+	/    \
+	class Solution(object):
+	  def validMountainArray(self, arr):
+	    # Fill this in.
+
+	print(Solution().validMountainArray([1, 2, 3, 2, 1]))
+	# True
+
+	print(Solution().validMountainArray([1, 2, 3]))
+	# False
+	*/
+
+
+
+
+	/*
+	Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit CoderPro for more practice!) This problem was recently asked by Microsoft:
+
+	An IP Address is in the format of A.B.C.D, where A, B, C, D are all integers between 0 to 255.
+
+	Given a string of numbers, return the possible IP addresses you can make with that string by splitting into 4 parts of A, B, C, D.
+
+	Keep in mind that integers can't start with a 0! (Except for 0)
+
+	Example:
+	Input: 1592551013
+	Output: ['159.255.101.3', '159.255.10.13']
+	def ip_addresses(s, ip_parts=[]):
+	  # Fill this in.
+
+	print ip_addresses('1592551013')
+	# ['159.255.101.3', '159.255.10.13']
+	*/
+
+
+	/*
+	Hi, here's your problem today. This problem was recently asked by Twitter:
+
+	Given a sorted list with duplicates, and a target number n, find the range in which the number exists (represented as a tuple (low, high), both inclusive. If the number does not exist in the list, return (-1, -1)).
+
+	Here's some examples and some starter code.
+
+	def find_num(nums, target):
+	  # Fill this in.
+
+	print(find_num([1, 1, 3, 5, 7], 1))
+	# (0, 1)
+
+	print(find_num([1, 2, 3, 4], 5))
+	# (-1, -1)
+	*/
+
+	/*
+	Hi, here's your problem today. This problem was recently asked by Amazon:
+
+	Given a 2d n x m matrix where each cell has a certain amount of change on the floor, your goal is to start from the top left corner mat[0][0] and end in the bottom right corner mat[n - 1][m - 1] with the most amount of change. You can only move either left or down.
+
+	Here's some starter code:
+
+	def max_change(mat):
+	  # Fill this in.
+
+	mat = [
+	    [0, 3, 0, 2],
+	    [1, 2, 3, 3],
+	    [6, 0, 3, 2]
+	]
+
+	print(max_change(mat))
+	# 13
+	*/
+
+	/*
+	Good morning! Here's your coding interview problem for today.
+
+	This problem was asked by IBM.
+
+	Given a string with repeated characters, rearrange the string so that no two adjacent characters are the same. If this is not possible, return None.
+
+	For example, given "aaabbc", you could return "ababac". Given "aaab", return None.
+	*/
+
+
+
+
 
 
 
