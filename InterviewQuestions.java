@@ -6,13 +6,33 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testNonAdjacentString();
+		testStepsToMove();
 
 	}
 
+	public static class Range {
+		int start;
+		int end;
+		public Range(int start, int end) {
+			this.start = start;
+			this.end = end;
+		}
+		public String toString() {
+			return "Range: [" + start + ", " + end + "]";
+		}
+	}
 
-
-
+	public static class Coordinate {
+		int x;
+		int y;
+		public Coordinate(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+		public String toString() {
+			return "Coordinate: [" + x + ", " + y + "]";
+		}
+	}
 
 
 	/*
@@ -734,17 +754,6 @@ public class InterviewQuestions {
 	print(find_num([1, 2, 3, 4], 5))
 	# (-1, -1)
 	*/
-	public static class Range {
-		int start;
-		int end;
-		public Range(int start, int end) {
-			this.start = start;
-			this.end = end;
-		}
-		public String toString() {
-			return "Range: [" + start + ", " + end + "]";
-		}
-	}
 	public static Range findRangeInDuplicates(int[] nums, int target) {
 		int start = 0;
 		int end = nums.length;
@@ -908,6 +917,174 @@ public class InterviewQuestions {
     	System.out.println(nonAdjacentString("aaab"));
     	System.out.println(nonAdjacentString("aaaaabcdefg"));
     }
+
+
+
+
+
+
+    /*
+    Hi, here's your problem today. This problem was recently asked by Facebook:
+	You are given an array of integers. Return the smallest positive integer that is not present in the array. The array may contain duplicate entries.
+	For example, the input [3, 4, -1, 1] should return 2 because it is the smallest positive integer that doesn't exist in the array.
+	Your solution should run in linear time and use constant space.
+	Here's your starting point:
+	def first_missing_positive(nums):
+	  # Fill this in.
+	print first_missing_positive([3, 4, -1, 1])
+	# 2
+    */
+    public static int firstMissingPositive(int[] nums) {
+    	HashSet<Integer> set = new HashSet<>();
+    	for (int num: nums) {
+    		set.add(num);
+    	}
+    	for (int x = 1; x <= set.size() + 1; x++) {
+    		if (!set.contains(x)) return x;
+    	}
+    	return 0;
+
+
+    }
+    public static void testFirstMissingPositive() {
+    	System.out.println(firstMissingPositive(new int[]{3, 4, -1, 1}));
+    	System.out.println(firstMissingPositive(new int[]{3, 4, 2, 1}));
+    	System.out.println(firstMissingPositive(new int[]{0, 1, 2, 3, 6, 7, 8, 9, -100}));
+    }
+
+    /*
+    Hi, here's your problem today. This problem was recently asked by LinkedIn:
+	Given a non-empty array where each element represents a digit of a non-negative integer, add one to the integer. The most significant digit is at the front of the array and each element in the array contains only one digit. Furthermore, the integer does not have leading zeros, except in the case of the number '0'. 
+
+	Example:
+	Input: [2,3,4]
+	Output: [2,3,5]
+	class Solution():
+	  def plusOne(self, digits):
+	    # Fill this in.
+
+	num = [2, 9, 9]
+	print(Solution().plusOne(num))
+	# [3, 0, 0]
+    */
+    public static int[] arrayPlusOne(int[] num) {
+    	int carry = 1;
+    	for (int x = num.length - 1; x >= 0; x--) {
+    		int sum = num[x] + carry;
+    		if (sum > 9) {
+    			carry = sum/10;
+    			sum = sum%10;
+    		} else {
+    			carry = 0;
+    		}
+    		num[x] = sum;
+    	}
+    	if (carry != 0) {
+    		int[] newNum = new int[num.length + 1];
+    		newNum[0] = carry;
+    		for (int x = 0; x < num.length; x++) {
+    			newNum[x+1] = num[x];
+    		}
+    		num = newNum;
+    	}
+    	return num;
+    }
+    public static void testArrayPlusOne() {
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{1, 2})));
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{1, 9})));
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{8, 9})));
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{1, 9, 9})));
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{2, 0, 1})));
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{9})));
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{9, 9})));
+    	System.out.println(Arrays.toString(arrayPlusOne(new int[]{9, 9 ,9})));
+    }
+
+
+
+
+    /*
+    Determine whether there exists a one-to-one character mapping from one string s1 to another s2.
+	For example, given s1 = abc and s2 = bcd, return true since we can map a to b, b to c, and c to d.
+	Given s1 = foo and s2 = bar, return false since the o cannot map to two characters.
+    */
+    public static boolean characterMappingExists(String a, String b) {
+    	if (b.length() != a.length()) { //make String a shorter
+    		return false;
+    	}
+    	HashMap<Character, Character> dict = new HashMap<>();
+    	for (int x = 0; x < a.length(); x++) {
+    		char aa = a.charAt(x);
+    		char bb = b.charAt(x);
+    		if (dict.containsKey(aa)) {
+    			if (dict.get(aa) != bb) {
+    				return false;
+    			}
+    		} else {
+    			dict.put(aa, bb);
+    		}
+    	}
+    	return true;
+    }
+    public static void testCharacterMappingExists() {
+    	System.out.println(characterMappingExists("abc", "bcd"));
+    	System.out.println(characterMappingExists("foo", "bar"));
+    	System.out.println(characterMappingExists("for", "bar"));
+    	System.out.println(characterMappingExists("aaaaaauy", "bbbbbbuy"));
+    }
+
+
+    /*
+	Good morning! Here's your coding interview problem for today.
+	This problem was asked by Google.
+	You are in an infinite 2D grid where you can move in any of the 8 directions:
+	 (x,y) to
+	    (x+1, y),
+	    (x - 1, y),
+	    (x, y+1),
+	    (x, y-1),
+	    (x-1, y-1),
+	    (x+1,y+1),
+	    (x-1,y+1),
+	    (x+1,y-1)
+	You are given a sequence of points and the order in which you need to cover the points. Give the minimum number of steps in which you can achieve it. You start from the first point.
+	Example:
+	Input: [(0, 0), (1, 1), (1, 2)]
+	Output: 2
+	It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
+	*/
+	public static int stepsToMove(List<Coordinate> points) {
+		int totalDistance = 0;
+		for (int x = 1; x < points.size(); x++) {
+			Coordinate a = points.get(x);
+			Coordinate b = points.get(x-1);
+			int steps = numberOfSteps(a, b);
+			totalDistance += steps;
+		}
+		return totalDistance;
+
+	}
+	public static int numberOfSteps(Coordinate a, Coordinate b) {
+		int xDiff = Math.abs(a.x - b.x);
+		int yDiff = Math.abs(a.y - b.y);
+		int diagonalSteps = Math.min(xDiff, yDiff);
+		int xSteps = xDiff - diagonalSteps;
+		int ySteps = yDiff - diagonalSteps;
+		return diagonalSteps + xSteps + ySteps;
+	}
+	public static void testStepsToMove() {
+		List<Coordinate> list = new ArrayList<>();
+		list.add(new Coordinate(0, 0));
+		list.add(new Coordinate(1, 1));
+		list.add(new Coordinate(1, 2));
+		System.out.println(stepsToMove(list));
+
+		list.add(new Coordinate(0, 0));
+		System.out.println(stepsToMove(list));
+		list.add(new Coordinate(1, 1));
+		list.add(new Coordinate(7, 10));
+		System.out.println(stepsToMove(list));
+	}
 
 
 
