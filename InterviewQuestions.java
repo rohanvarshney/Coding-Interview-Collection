@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testMaxFunSkiing();
+		testNumberOfIslands();
 
 	}
 
@@ -1176,7 +1176,7 @@ public class InterviewQuestions {
 	public static int maxFunSkiing(int[][] resort) {
 		int max = 0;
 		int[][] funPossible = new int[resort.length][resort[0].length];
-		
+
 		for (int x = 0; x < funPossible.length; x++) {
 			for (int y = 0; y < funPossible[0].length; y++) {
 				funPossible[x][y] = Integer.MIN_VALUE;
@@ -1235,6 +1235,297 @@ public class InterviewQuestions {
 		};
 		System.out.println(maxFunSkiing(skiResort));
 	}
+
+
+
+	public static void wordCounterLyft() {
+		List<String> lines = new ArrayList<String>();
+		Scanner in = new Scanner(System.in);
+		while (in.hasNextLine()) {
+			String command = in.nextLine();
+		    if(command.equals("")) {
+		        break;
+		    } else {
+		    	lines.add(command);
+		    }
+		}
+		System.out.println("\n");
+		wordCountLines(lines);
+	}
+	public static void wordCountLines(List<String> lines) {
+		TreeMap<String, Integer> count = new TreeMap<>();
+		for (String line: lines) {
+			String[] words = line.split(" ");
+			for (int x = 0; x < words.length; x++) {
+				String word = words[x];
+				if (word == "" || word == " ") continue;
+
+				if (count.containsKey(word)) {
+					count.put(word, count.get(word) + 1);
+				} else {
+					count.put(word, 1);
+				}
+			}
+		}
+		printTreeMap(count);
+	}
+	public static void printTreeMap(TreeMap<String, Integer> tm) {
+		for (String key: tm.keySet()) {
+			System.out.println(key + " " + tm.get(key));
+		}
+	}
+
+
+	/*
+	Hi, here's your problem today. This problem was recently asked by Google:
+
+	There are n people lined up, and each have a height represented as an integer. A murder has happened right in front of them, and only people who are taller than everyone in front of them are able to see what has happened. How many witnesses are there?
+
+	Example:
+	Input: [3, 6, 3, 4, 1]  
+	Output: 3
+	Explanation: Only [6, 4, 1] were able to see in front of them.
+	 #
+	 #
+	 # #
+	####
+	####
+	#####
+	36341                                 x (murder scene)
+	Here's your starting point:
+
+	def witnesses(heights):
+	  # Fill this in.
+
+	print witnesses([3, 6, 3, 4, 1])
+	# 3
+	*/
+	public static int numberOfWitnesses(int[] heights) {
+		int count = 0;
+		int maxHeight = Integer.MIN_VALUE;
+		for (int x = heights.length-1; x >= 0; x--) {
+			if (heights[x] > maxHeight) {
+				count++;
+				maxHeight = heights[x];
+			}
+		}
+		return count;
+	}
+	public static void testNumberOfWitnesses() {
+		System.out.println(numberOfWitnesses(new int[]{3, 6, 3, 4, 1}));
+	}
+
+
+
+
+	/*
+	Hi, here's your problem today. This problem was recently asked by Facebook:
+
+	Given a sequence of numbers, find the longest sequence that contains only 2 unique numbers.
+
+	Example:
+	Input: [1, 3, 5, 3, 1, 3, 1, 5]
+	Output: 4
+	The longest sequence that contains just 2 unique numbers is [3, 1, 3, 1]
+
+	Here's the solution signature:
+
+	def findSequence(seq):
+	  # Fill this in.
+
+	print findSequence([1, 3, 5, 3, 1, 3, 1, 5])
+	# 4
+	*/
+	public static int longestSequenceOf2UniqueNums(int[] nums) {
+		int maxLength = 0;
+		HashMap<Integer, Integer> count = new HashMap<>();
+		count.put(nums[0], 1);
+		int back = 0, front = 1;
+		while (front < nums.length) {
+			int number = nums[front];
+			//put in hashmap
+			if (count.containsKey(number)) {
+				count.put(number, count.get(number) + 1);
+			} else {
+				count.put(number, 1);
+			}
+			//evaluate: if hashmap has more than 2 keys, remove from back until 2 keys
+			//if has 2 keys, return length
+			if (count.keySet().size() > 2) {
+
+				while (count.keySet().size() != 2) {
+					//remove from back in hashmap
+					int backNumber = nums[back];
+					if (count.containsKey(backNumber)) {
+						if (count.get(backNumber) == 1) {
+							count.remove(backNumber);
+						} else {
+							count.put(backNumber, count.get(backNumber) - 1);
+						}
+					}
+					back++;
+				}
+
+			} else if (count.keySet().size() == 2) {
+				int length = front - back;
+				if (length > maxLength) maxLength = length;
+			}
+			front++;
+		}
+		return maxLength + 1;
+
+	}
+	public static void testLongestSequenceOf2UniqueNums() {
+		System.out.println(longestSequenceOf2UniqueNums(new int[]{1, 3, 5, 3, 1, 3, 1, 5}));
+		System.out.println(longestSequenceOf2UniqueNums(new int[]{1, 1, 1, 1, 1, 3, 1, 5}));
+		System.out.println(longestSequenceOf2UniqueNums(new int[]{1, 2, 3, 4, 5, 6, 7, 7}));
+		System.out.println(longestSequenceOf2UniqueNums(new int[]{1, 1, 3, 4, 5, 6, 7, 7}));
+		System.out.println(longestSequenceOf2UniqueNums(new int[]{1, 2, 3, 4, 5, 6, 7, 7, 1, 2, 3, 4, 5, 6, 7, 7}));	
+	}
+
+
+	/*
+	Hi, here's your problem today. This problem was recently asked by Amazon:
+
+	You are given a string s, and an integer k. Return the length of the longest substring in s that contains at most k distinct characters.
+
+	For instance, given the string:
+	aabcdefff and k = 3, then the longest substring with 3 distinct characters would be defff. The answer should be 5.
+
+	Here's a starting point:
+
+	def longest_substring_with_k_distinct_characters(s, k):
+	  # Fill this in.
+
+	print longest_substring_with_k_distinct_characters('aabcdefff', 3)
+	# 5 (because 'defff' has length 5 with 3 characters)
+	*/
+	public static int longestSequenceOfKUniqueNums(int[] nums, int k) {
+		int maxLength = 0;
+		HashMap<Integer, Integer> count = new HashMap<>();
+		count.put(nums[0], 1);
+		int back = 0, front = 1;
+		while (front < nums.length) {
+			int number = nums[front];
+			//put in hashmap
+			if (count.containsKey(number)) {
+				count.put(number, count.get(number) + 1);
+			} else {
+				count.put(number, 1);
+			}
+			//evaluate: if hashmap has more than 2 keys, remove from back until 2 keys
+			//if has 2 keys, return length
+			if (count.keySet().size() > k) {
+
+				while (count.keySet().size() != k) {
+					//remove from back in hashmap
+					int backNumber = nums[back];
+					if (count.containsKey(backNumber)) {
+						if (count.get(backNumber) == 1) {
+							count.remove(backNumber);
+						} else {
+							count.put(backNumber, count.get(backNumber) - 1);
+						}
+					}
+					back++;
+				}
+
+			} else if (count.keySet().size() <= k) {
+				int length = front - back;
+				if (length > maxLength) maxLength = length;
+			} 
+			front++;
+		}
+		return maxLength + 1;
+
+	}
+	public static void testLongestSequenceOfKUniqueNums() {
+		System.out.println(longestSequenceOfKUniqueNums(new int[]{1, 3, 5, 3, 1, 3, 1, 5}, 3));
+		System.out.println(longestSequenceOfKUniqueNums(new int[]{1, 3, 5}, 7));
+		System.out.println(longestSequenceOfKUniqueNums(new int[]{1, 1, 1, 1, 1, 3, 1, 5}, 4));
+		System.out.println(longestSequenceOfKUniqueNums(new int[]{1, 2, 3, 4, 5, 6, 7, 7}, 3));
+		System.out.println(longestSequenceOfKUniqueNums(new int[]{1, 1, 3, 4, 5, 6, 7, 7}, 2));
+		System.out.println(longestSequenceOfKUniqueNums(new int[]{1, 2, 3, 4, 5, 6, 7, 7, 1, 2, 3, 4, 5, 6, 7, 7}, 2));	
+	}
+
+
+	/*
+	This problem was asked by Amazon.
+	Given a matrix of 1s and 0s, return the number of "islands" in the matrix. A 1 represents land and 0 represents water, so an island is a group of 1s that are neighboring whose perimeter is surrounded by water.
+	For example, this matrix has 4 islands.
+	1 0 0 0 0
+	0 0 1 1 0
+	0 1 1 0 0
+	0 0 0 0 0
+	1 1 0 0 1
+	1 1 0 0 1
+
+	*/
+	public static int numberOfIslands(int[][] matrix) {
+		int count = 0;
+		for (int x = 0; x < matrix.length; x++) {
+			for (int y = 0; y < matrix[0].length; y++) {
+				if (matrix[x][y] == 1) {
+					fillIsland(matrix, x, y);
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+	public static void fillIsland(int[][] matrix, int x, int y) {
+		if (x < 0 || y < 0 || x == matrix.length || y == matrix[0].length) return;
+		if (matrix[x][y] == 0) return;
+		if (matrix[x][y] == 1) {
+			matrix[x][y] = 0;
+		}
+
+		fillIsland(matrix, x-1, y);
+		fillIsland(matrix, x+1, y);
+		fillIsland(matrix, x, y-1);
+		fillIsland(matrix, x, y+1);
+	}
+	public static void testNumberOfIslands() {
+		int[][] ocean = new int[][]{
+			{1,0,0,0,0},
+			{0,0,1,1,0},
+			{0,1,1,0,0},
+			{0,0,0,0,0},
+			{1,1,0,0,1},
+			{1,1,0,0,1},
+		};
+		System.out.println(numberOfIslands(ocean));
+		int[][] ocean2 = new int[][]{
+			{1,1,0,0,0},
+			{0,1,1,1,0},
+			{0,1,1,0,0},
+			{0,0,0,0,0},
+			{1,1,0,0,1},
+			{1,1,0,0,1},
+		};
+		System.out.println(numberOfIslands(ocean2));
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

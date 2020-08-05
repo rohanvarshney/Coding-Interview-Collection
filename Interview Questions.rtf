@@ -2183,62 +2183,8 @@ Solution
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Palantir.\
 Write a program that checks whether an integer is a palindrome. For example, 121 is a palindrome, as well as 888. 678 is not a palindrome. Do not convert the integer into a string.\cell \lastrow\row
-\pard\pardeftab560\sa40\partightenfactor0
-
-\f2\b\fs28 \cf0 Hi, here's your problem today. This problem was recently asked by Google:\
-\
-There are n people lined up, and each have a height represented as an integer. A murder has happened right in front of them, and only people who are taller than everyone in front of them are able to see what has happened. How many witnesses are there?\
-\
-Example:\
 \pard\pardeftab560\slleading20\partightenfactor0
-
-\f1\b0\fs24 \cf0 Input: [3, 6, 3, 4, 1]  \
-Output: 3\
-\pard\pardeftab560\sa40\partightenfactor0
-
-\f2\b\fs28 \cf0 Explanation: Only [6, 4, 1] were able to see in front of them.\
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f1\b0\fs24 \cf0  #\
- #\
- # #\
-####\
-####\
-#####\
-36341                                 x (murder scene)\
-\pard\pardeftab560\sa40\partightenfactor0
-
-\f2\b\fs28 \cf0 Here's your starting point:\
-\
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\fs24 \cf0 def
-\f1\b0  witnesses
-\f2\b (
-\f1\b0 heights
-\f2\b ):
-\f1\b0 \
-  
-\f7\i # Fill this in.
-\f1\i0 \
-\
-
-\f2\b print
-\f1\b0  witnesses
-\f2\b ([3,
-\f1\b0  
-\f2\b 6,
-\f1\b0  
-\f2\b 3,
-\f1\b0  
-\f2\b 4,
-\f1\b0  
-\f2\b 1])
-\f1\b0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f7\i \cf0 # 3
-\f1\i0 \
+\cf0 \
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -2253,56 +2199,11 @@ We define a path in the triangle to start at the top and go down one row at a ti
 Write a program that returns the weight of the maximum weight path.\cell \lastrow\row
 \pard\pardeftab560\sa40\partightenfactor0
 
-\f2\b\fs28 \cf0 Hi, here's your problem today. This problem was recently asked by Facebook:\
-\
-Given a sequence of numbers, find the longest sequence that contains only 2 unique numbers.\
-\
-Example:\
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f1\b0\fs24 \cf0 Input: [1, 3, 5, 3, 1, 3, 1, 5]\
-Output: 4\
-\pard\pardeftab560\sa40\partightenfactor0
-
-\f2\b\fs28 \cf0 The longest sequence that contains just 2 unique numbers is [3, 1, 3, 1]\
-\
-Here's the solution signature:\
+\f2\b\fs28 \cf0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\fs24 \cf0 def
-\f1\b0  findSequence
-\f2\b (
-\f1\b0 seq
-\f2\b ):
-\f1\b0 \
-  
-\f7\i # Fill this in.
-\f1\i0 \
-\
-
-\f2\b print
-\f1\b0  findSequence
-\f2\b ([1,
-\f1\b0  
-\f2\b 3,
-\f1\b0  
-\f2\b 5,
-\f1\b0  
-\f2\b 3,
-\f1\b0  
-\f2\b 1,
-\f1\b0  
-\f2\b 3,
-\f1\b0  
-\f2\b 1,
-\f1\b0  
-\f2\b 5])
-\f1\b0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f7\i \cf0 # 4
-\f1\i0 \
+\f1\b0\fs24 \cf0 \
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -2456,137 +2357,6 @@ Output: 1260388352\
 \f7\i \cf0 # 1001011001000000000000000000000
 \f1\i0 \
 \
-Hi, here's your problem today. This problem was recently asked by Amazon:\
-\
-You are given a 2D array of characters, and a target string. Return whether or not the word target word exists in the matrix. Unlike a standard word search, the word must be either going left-to-right, or top-to-bottom in the matrix.\
-\
-Example:\
-\
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f2\b \cf0 [[
-\f1\b0 'F'
-\f2\b ,
-\f1\b0  'A'
-\f2\b ,
-\f1\b0  'C'
-\f2\b ,
-\f1\b0  'I'
-\f2\b ],
-\f1\b0 \
- 
-\f2\b [
-\f1\b0 'O'
-\f2\b ,
-\f1\b0  'B'
-\f2\b ,
-\f1\b0  'Q'
-\f2\b ,
-\f1\b0  'P'
-\f2\b ],
-\f1\b0 \
- 
-\f2\b [
-\f1\b0 'A'
-\f2\b ,
-\f1\b0  'N'
-\f2\b ,
-\f1\b0  'O'
-\f2\b ,
-\f1\b0  'B'
-\f2\b ],
-\f1\b0 \
- 
-\f2\b [
-\f1\b0 'M'
-\f2\b ,
-\f1\b0  'A'
-\f2\b ,
-\f1\b0  'S'
-\f2\b ,
-\f1\b0  'S'
-\f2\b ]]
-\f1\b0 \
-\
-Given this matrix, and the target word FOAM, you should return true, as it can be found going up-to-down in the first column.\
-\
-Here's the function signature:\
-\
-
-\f2\b def
-\f1\b0  word_search
-\f2\b (
-\f1\b0 matrix
-\f2\b ,
-\f1\b0  word
-\f2\b ):
-\f1\b0 \
-  
-\f7\i # Fill this in.
-\f1\i0 \
-  \
-matrix 
-\f2\b =
-\f1\b0  
-\f2\b [
-\f1\b0 \
-  
-\f2\b [
-\f1\b0 'F'
-\f2\b ,
-\f1\b0  'A'
-\f2\b ,
-\f1\b0  'C'
-\f2\b ,
-\f1\b0  'I'
-\f2\b ],
-\f1\b0 \
-  
-\f2\b [
-\f1\b0 'O'
-\f2\b ,
-\f1\b0  'B'
-\f2\b ,
-\f1\b0  'Q'
-\f2\b ,
-\f1\b0  'P'
-\f2\b ],
-\f1\b0 \
-  
-\f2\b [
-\f1\b0 'A'
-\f2\b ,
-\f1\b0  'N'
-\f2\b ,
-\f1\b0  'O'
-\f2\b ,
-\f1\b0  'B'
-\f2\b ],
-\f1\b0 \
-  
-\f2\b [
-\f1\b0 'M'
-\f2\b ,
-\f1\b0  'A'
-\f2\b ,
-\f1\b0  'S'
-\f2\b ,
-\f1\b0  'S'
-\f2\b ]]
-\f1\b0 \
-
-\f2\b print
-\f1\b0  word_search
-\f2\b (
-\f1\b0 matrix
-\f2\b ,
-\f1\b0  'FOAM'
-\f2\b )
-\f1\b0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f7\i \cf0 # True
-\f1\i0 \
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -2595,45 +2365,8 @@ matrix
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
 Given a set of distinct positive integers, find the largest subset such that every pair of elements in the subset (i, j) satisfies either i % j = 0 or j % i = 0.\
-For example, given the set [3, 5, 10, 20, 21], you should return [5, 10, 20]. Given [1, 3, 6, 24], return [1, 3, 6, 24].\cell \lastrow\row
-\pard\pardeftab560\sa40\partightenfactor0
-
-\f2\b\fs28 \cf0 Hi, here's your problem today. This problem was recently asked by Amazon:\
-\
-You are given a string s, and an integer k. Return the length of the longest substring in s that contains at most k distinct characters.\
-\
-For instance, given the string:\
-aabcdefff and k = 3, then the longest substring with 3 distinct characters would be defff. The answer should be 5.\
-\
-Here's a starting point:\
-\
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\fs24 \cf0 def
-\f1\b0  longest_substring_with_k_distinct_characters
-\f2\b (
-\f1\b0 s
-\f2\b ,
-\f1\b0  k
-\f2\b ):
-\f1\b0 \
-  
-\f7\i # Fill this in.
-\f1\i0 \
-\
-
-\f2\b print
-\f1\b0  longest_substring_with_k_distinct_characters
-\f2\b (
-\f1\b0 'aabcdefff'
-\f2\b ,
-\f1\b0  
-\f2\b 3)
-\f1\b0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-
-\f7\i \cf0 # 5 (because 'defff' has length 5 with 3 characters)
-\f1\i0 \
+For example, given the set [3, 5, 10, 20, 21], you should return [5, 10, 20]. Given [1, 3, 6, 24], return [1, 3, 6, 24].\
+\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
@@ -3896,20 +3629,6 @@ d   e f\
  c  b\
  \\  / \\\
   f e  d\cell \lastrow\row
-
-\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
-\pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
-\cf0 This problem was asked by Amazon.\
-Given a matrix of 1s and 0s, return the number of "islands" in the matrix. A 1 represents land and 0 represents water, so an island is a group of 1s that are neighboring whose perimeter is surrounded by water.\
-For example, this matrix has 4 islands.\
-\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
-\cf0 1 0 0 0 0\
-0 0 1 1 0\
-0 1 1 0 0\
-0 0 0 0 0\
-1 1 0 0 1\
-1 1 0 0 1\cell \lastrow\row
 \pard\pardeftab560\slleading20\partightenfactor0
 \cf0 Hi, here's your problem today. This problem was recently asked by LinkedIn:\
 \
