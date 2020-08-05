@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testStepsToMove();
+		testMaxFunSkiing();
 
 	}
 
@@ -1085,6 +1085,163 @@ public class InterviewQuestions {
 		list.add(new Coordinate(7, 10));
 		System.out.println(stepsToMove(list));
 	}
+
+
+
+	/*
+	Hi, here's your problem today. This problem was recently asked by Twitter:
+
+	Given a string with only ( and ), find the minimum number of characters to add or subtract to fix the string such that the brackets are balanced.
+
+	Example:
+	Input: '(()()'
+	Output: 1
+	Explanation:
+
+	The fixed string could either be ()() by deleting the first bracket, or (()()) by adding a bracket. These are not the only ways of fixing the string, there are many other ways by adding it in different positions!
+
+
+	Here's some code to start with:
+
+	def fix_brackets(s):
+	  # Fill this in.
+
+	print fix_brackets('(()()')
+	# 1
+	*/
+	public static int disparateBracketCount(String b) {
+		int count = 0;
+		Stack<Character> stack = new Stack<>();
+		for (int x = 0; x < b.length(); x++) {
+			char c = b.charAt(x);
+			if (c == '(') {
+				stack.push(c);
+			} else if (c == ')') {
+				if (stack.empty()) {
+					count++;
+				} else if (stack.peek() == '(') {
+					stack.pop();
+				} else {
+					count++;
+				}
+			}
+		}
+		while (!stack.empty()) {
+			stack.pop();
+			count++;
+		}
+		return count;
+	}
+	public static void testDisparateBracketCount() {
+		System.out.println(disparateBracketCount("(()()"));
+		System.out.println(disparateBracketCount("((()()"));
+		System.out.println(disparateBracketCount("(()())"));
+		System.out.println(disparateBracketCount("("));
+		System.out.println(disparateBracketCount(")"));
+		System.out.println(disparateBracketCount("()())())"));
+	}
+
+
+
+
+
+	/*
+	You like skiing a lot. In order to get maximum speed and fun, you like to go downhill every time. 
+	You have a 2D grid representing a Lime ski resort. 
+	Every number in the grid represents the elevation at that coordinate. 
+	The following rules apply:
+
+	You can only move horizontally or vertically in the grid (no diagonal) 
+	You cannot go beyond the boundaries. 
+	You can only move to a cell with lower elevation.***
+	You can start at any point in the grid
+	You get 1 point of fun when skiing from one cell to another cell in the grid. 
+	Getting a lift from the cable car at any time will reset the fun. 
+
+	Find the maximum possible fun you can get at this resort
+	Example:
+
+	Input: Ski Resot
+
+	[[1,  2,  3, 4,  5],
+	[16, 17, 18, 19, 6],
+	[15, 24, 25, 20, 7],
+	[14, 23, 22, 21, 8],
+	[13, 12, 11, 10, 9]]
+
+	rec(i, j) = 1 + max[rec(i-1,j), rec(i+1,j), rec(i, j+1), rec(i, j-1)]
+
+	maximum possible fun at this resort: 24
+	*/
+	public static int maxFunSkiing(int[][] resort) {
+		int max = 0;
+		int[][] funPossible = new int[resort.length][resort[0].length];
+		
+		for (int x = 0; x < funPossible.length; x++) {
+			for (int y = 0; y < funPossible[0].length; y++) {
+				funPossible[x][y] = Integer.MIN_VALUE;
+			}
+		}
+
+		for (int x = 0; x < resort.length; x++) {
+			for (int y = 0; y < resort[0].length; y++) {
+				int maxFunPossible = maxFunAtPoint(resort, x, y, funPossible) - 1;
+				if (maxFunPossible > max) max = maxFunPossible;
+			}
+		}
+		return max;
+
+	}
+	public static int maxFunAtPoint(int[][] resort, int x, int y, int[][] record) {
+		if (x < 0 || y < 0 || x >= resort.length || y >= resort[0].length) {
+			return 0;
+		}
+		if (record[x][y] != Integer.MIN_VALUE) return record[x][y];
+
+		int north = 0, south = 0, east = 0, west = 0;
+
+		if (x - 1 >= 0 && resort[x-1][y] < resort[x][y]) {
+			//System.out.println("North");
+			north = maxFunAtPoint(resort, x-1, y, record);
+		}
+
+		if (x + 1 < resort.length && resort[x+1][y] < resort[x][y]) {
+			//System.out.println("South");
+			south = maxFunAtPoint(resort, x+1, y, record);
+		}
+
+		if (y +  1 < resort[0].length && resort[x][y+1] < resort[x][y]) {
+			//System.out.println("East");
+			east = maxFunAtPoint(resort, x, y+1, record);
+		}
+
+		if (y - 1 >= 0 && resort[x][y-1] < resort[x][y]) {
+			//System.out.println("West");
+			west = maxFunAtPoint(resort, x, y-1, record);
+		}
+
+		//System.out.println("N:"+north+" E:"+east+" W:"+west+" S:"+south);
+		int maxFunPossible = 1 + Math.max(Math.max(north, south), Math.max(east, west));
+		record[x][y] = maxFunPossible;
+		return maxFunPossible;
+	}
+	public static void testMaxFunSkiing() {
+		int[][] skiResort = new int[][] {
+			{1,  2,  3, 4,  5},
+			{16, 17, 18, 19, 6},
+			{15, 24, 25, 20, 7},
+			{14, 23, 22, 21, 8},
+			{13, 12, 11, 10, 9}
+		};
+		System.out.println(maxFunSkiing(skiResort));
+	}
+
+
+
+
+
+
+
 
 
 
