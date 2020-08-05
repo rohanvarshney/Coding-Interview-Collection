@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testNumberOfIslands();
+		testGenerate3DigitPermutations();
 
 	}
 
@@ -537,7 +537,8 @@ public class InterviewQuestions {
 	/*
 	Hi, here's your problem today. This problem was recently asked by Apple:
 
-	In many spreadsheet applications, the columns are marked with letters. From the 1st to the 26th column the letters are A to Z. Then starting from the 27th column it uses AA, AB, ..., ZZ, AAA, etc.
+	In many spreadsheet applications, the columns are marked with letters. 
+	From the 1st to the 26th column the letters are A to Z. Then starting from the 27th column it uses AA, AB, ..., ZZ, AAA, etc.
 
 	Given a number n, find the n-th column name.
 
@@ -668,7 +669,8 @@ public class InterviewQuestions {
 
 
 	/*
-	Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit CoderPro for more practice!) This problem was recently asked by Microsoft:
+	Hi, here's your problem today. 
+	This problem was recently asked by Microsoft:
 
 	An IP Address is in the format of A.B.C.D, where A, B, C, D are all integers between 0 to 255.
 
@@ -741,7 +743,10 @@ public class InterviewQuestions {
 	/*
 	Hi, here's your problem today. This problem was recently asked by Twitter:
 
-	Given a sorted list with duplicates, and a target number n, find the range in which the number exists (represented as a tuple (low, high), both inclusive. If the number does not exist in the list, return (-1, -1)).
+	Given a sorted list with duplicates, and a target number n, 
+	find the range in which the number exists 
+	(represented as a tuple (low, high), both inclusive. 
+	If the number does not exist in the list, return (-1, -1)).
 
 	Here's some examples and some starter code.
 
@@ -954,7 +959,9 @@ public class InterviewQuestions {
 
     /*
     Hi, here's your problem today. This problem was recently asked by LinkedIn:
-	Given a non-empty array where each element represents a digit of a non-negative integer, add one to the integer. The most significant digit is at the front of the array and each element in the array contains only one digit. Furthermore, the integer does not have leading zeros, except in the case of the number '0'. 
+	Given a non-empty array where each element represents a digit of a non-negative integer, add one to the integer. 
+	The most significant digit is at the front of the array and each element in the array contains only one digit. 
+	Furthermore, the integer does not have leading zeros, except in the case of the number '0'. 
 
 	Example:
 	Input: [2,3,4]
@@ -1047,7 +1054,9 @@ public class InterviewQuestions {
 	    (x+1,y+1),
 	    (x-1,y+1),
 	    (x+1,y-1)
-	You are given a sequence of points and the order in which you need to cover the points. Give the minimum number of steps in which you can achieve it. You start from the first point.
+	You are given a sequence of points and the order in which you need to cover the points. 
+	Give the minimum number of steps in which you can achieve it. 
+	You start from the first point.
 	Example:
 	Input: [(0, 0), (1, 1), (1, 2)]
 	Output: 2
@@ -1098,7 +1107,10 @@ public class InterviewQuestions {
 	Output: 1
 	Explanation:
 
-	The fixed string could either be ()() by deleting the first bracket, or (()()) by adding a bracket. These are not the only ways of fixing the string, there are many other ways by adding it in different positions!
+	The fixed string could either be ()() by deleting the first bracket, 
+	or (()()) by adding a bracket. 
+	These are not the only ways of fixing the string, 
+	there are many other ways by adding it in different positions!
 
 
 	Here's some code to start with:
@@ -1279,7 +1291,10 @@ public class InterviewQuestions {
 	/*
 	Hi, here's your problem today. This problem was recently asked by Google:
 
-	There are n people lined up, and each have a height represented as an integer. A murder has happened right in front of them, and only people who are taller than everyone in front of them are able to see what has happened. How many witnesses are there?
+	There are n people lined up, and each have a height represented as an integer. 
+	A murder has happened right in front of them, 
+	and only people who are taller than everyone in front of them are able to see what has happened. 
+	How many witnesses are there?
 
 	Example:
 	Input: [3, 6, 3, 4, 1]  
@@ -1399,7 +1414,14 @@ public class InterviewQuestions {
 
 	print longest_substring_with_k_distinct_characters('aabcdefff', 3)
 	# 5 (because 'defff' has length 5 with 3 characters)
+
+	Good morning! Here's your coding interview problem for today.
+	This problem was asked by Amazon.
+	Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
+	For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
 	*/
+	//If we want to do with Strings, just change HashMap to <Character, Integer> and
+	//iterate though a char[] array, converted from string. Logic holds same.
 	public static int longestSequenceOfKUniqueNums(int[] nums, int k) {
 		int maxLength = 0;
 		HashMap<Integer, Integer> count = new HashMap<>();
@@ -1451,7 +1473,9 @@ public class InterviewQuestions {
 
 	/*
 	This problem was asked by Amazon.
-	Given a matrix of 1s and 0s, return the number of "islands" in the matrix. A 1 represents land and 0 represents water, so an island is a group of 1s that are neighboring whose perimeter is surrounded by water.
+	Given a matrix of 1s and 0s, return the number of "islands" in the matrix. 
+	A 1 represents land and 0 represents water, 
+	so an island is a group of 1s that are neighboring whose perimeter is surrounded by water.
 	For example, this matrix has 4 islands.
 	1 0 0 0 0
 	0 0 1 1 0
@@ -1506,30 +1530,156 @@ public class InterviewQuestions {
 		System.out.println(numberOfIslands(ocean2));
 	}
 
+	/*
+	This problem was asked by Google.
+	Given a word W and a string S, find all starting indices in S which are anagrams of W.
+	For example, given that W is "ab", and S is "abxaba", return 0, 3, and 4.
+	*/
+	public static List<Integer> indicesOfAnagram(String w, String s) {
+		List<Integer> answer = new ArrayList<>();
+		int substringLength = w.length();
+		HashMap<Character, Integer> countOfW = new HashMap<>();
+		for (int x = 0; x < w.length(); x++) {
+			if (countOfW.containsKey(w.charAt(x))) {
+				countOfW.put(w.charAt(x), countOfW.get(w.charAt(x) + 1));
+			} else {
+				countOfW.put(w.charAt(x), 1);
+			}
+		}
+
+		HashMap<Character, Integer> count = new HashMap<>();
+
+		for (int x = 0; x < s.length(); x++) {
+			char add = s.charAt(x);
+			if (count.containsKey(add)) {
+				count.put(add, count.get(add) + 1);
+			} else {
+				count.put(add, 1);
+			}
+
+			if (x > substringLength-1) {
+				char remove = s.charAt(x - substringLength);
+				if (count.containsKey(remove)) {
+					count.put(remove, count.get(remove) - 1);
+					if (count.get(remove) == 0) {
+						count.remove(remove);
+					}
+				} else {
+					count.put(remove, 1);
+				}
+			}
+
+			if (count.equals(countOfW)) {
+				answer.add(x - 1);
+			}
+		}
+
+		return answer;
+	}
+	public static void testIndicesOfAnagram() {
+		System.out.println(indicesOfAnagram("ab", "abxaba"));
+		System.out.println(indicesOfAnagram("abc", "cbaxxxxbac"));
+		System.out.println(indicesOfAnagram("abc", "cbacxxxxcbac"));
+		System.out.println(indicesOfAnagram("abc", "abcabcabc"));
+	}
+
+
+
+	/*
+	This problem was asked by Lyft.
+	Given a list of integers and a number K, return which contiguous elements of the list sum to K.
+	For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return [2, 3, 4].
+
+	Given a list of integers S and a target number k, write a function that returns a subset of S that adds up to k. 
+	If such a subset cannot be made, then return null.
+	*/
+	//This solution works for only positive numbers.
+	public static LinkedList<Integer> contiguousPositiveSum(int k, int[] nums) {
+		LinkedList<Integer> answer = new LinkedList<Integer>();
+		int currSum = 0;
+
+		int index = 0;
+		while (index < nums.length) {
+			System.out.println("Index: " + index + ". Sum: " + currSum);
+			if (currSum < k) {
+				int add = nums[index];
+				answer.addLast(add);
+				currSum += add;
+				index++;
+			} else if (currSum > k) {
+				int rem = answer.removeFirst();
+				currSum -= rem;
+			}
+			if (currSum == k) {
+				return answer;
+			}
+		}
+
+		return null;
+	}
+	public static void testContiguousSum() {
+		System.out.println(contiguousPositiveSum(9, new int[]{1, 2, 3, 4, 5}));
+		System.out.println(contiguousPositiveSum(10, new int[]{1, 8, 3, 1, 5, 1}));
+	}
+
+
+
+	/*This problem was asked by Microsoft.
+	Given a number in the form of a list of digits, return all possible permutations.
+	For example, given [1,2,3], return [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]].
+	*/
+	//Only works for 3 digit numbers.
+	public static HashSet<List<Integer>> generate3DigitPermutations(List<Integer> list) {
+		HashSet<List<Integer>> answer = new HashSet<>();
+		for (int x = 0; x < list.size(); x++) {
+			for (int y = 0; y < list.size(); y++) {
+				for (int z = 0; z < list.size(); z++) {
+					if (x == y || y == z || x == z) continue;
+					List<Integer> permutation = new ArrayList<Integer>();
+					permutation.addAll(Arrays.asList(list.get(x), list.get(y), list.get(z)));
+					answer.add(permutation);
+				}
+			}
+		}
+		return answer;
+	}
+	public static void testGenerate3DigitPermutations() {
+		List<Integer> test = new ArrayList<>(Arrays.asList(1, 2, 3));
+		System.out.println(generate3DigitPermutations(test));
+
+		List<Integer> test2 = new ArrayList<>(Arrays.asList(8, 7, 6));
+		System.out.println(generate3DigitPermutations(test2));
+	}
+
+
+	/*
+	This problem was asked by Microsoft.
+	Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+	For example, given [100, 4, 200, 1, 3, 2], the longest consecutive element sequence is [1, 2, 3, 4]. Return its length: 4.
+	Your algorithm should run in O(n) complexity.
+	*/
 
 
 
 
 
+	/*
+	This problem was asked by Square.
+	Given a string and a set of characters, return the shortest substring containing all the characters in the set.
+	For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
+	*/
 
+	/*
+	This problem was asked by Google.
+	Given a string, return the first recurring character in it, or null if there is no recurring character.
+	For example, given the string "acbbac", return "b". Given the string "abcdef", return null.
+	*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	/*
+	This problem was asked by Amazon.
+	Given a string, find the longest palindromic contiguous substring. If there are more than one with the maximum length, return any one.
+	For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The longest palindromic substring of "bananas" is "anana".
+	*/
 
 
 
