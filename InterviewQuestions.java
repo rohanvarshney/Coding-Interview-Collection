@@ -241,7 +241,7 @@ public class InterviewQuestions {
 	*/
 	public static int sumOfEvens(int n) {
 		if (n < 0) {
-			throw new IllegalArgumentException("duude");
+			throw new IllegalArgumentException("Incorrect input.");
 		}
 		return sumOfEvensRecursion(n);
 	}
@@ -939,6 +939,7 @@ public class InterviewQuestions {
 	print first_missing_positive([3, 4, -1, 1])
 	# 2
     */
+    //This solution does not use constant space, but uses O(n) space.
     public static int firstMissingPositive(int[] nums) {
     	HashSet<Integer> set = new HashSet<>();
     	for (int num: nums) {
@@ -1668,18 +1669,79 @@ public class InterviewQuestions {
 	Given a string and a set of characters, return the shortest substring containing all the characters in the set.
 	For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
 	*/
+	//Incomplete
+	public static String substringWithSetCharacter(HashSet<Character> chars, String word) {
+		HashMap<Character, Integer> count = new HashMap<>();
+		int countSoFar = 0;
+		String answer = "";
+		String answerSoFar = "";
+
+		for (int i = 0; i < word.length(); i++) {
+			char c = word.charAt(i);
+			if (count.containsKey(c)) {
+				count.put(c, count.get(c) + 1);
+			} else {
+				count.put(c, 1);
+			}
+			countSoFar++;
+
+	 		if (countSoFar >= chars.size()) {
+	 			boolean hasAllChars = true;
+	 			for (Character c: chars) {
+	 				if (!count.contansKey(c)) {
+	 					hasAllChars = false;
+	 					break;
+	 				}
+	 			}
+	 			if (hasAllChars) {
+	 				answerSoFar += c;
+	 				if (answerSoFar.length() < answer) {
+	 					answer = answerSoFar;
+	 				}
+	 			}
+	 		}
+	 	}
+	}
 
 	/*
 	This problem was asked by Google.
 	Given a string, return the first recurring character in it, or null if there is no recurring character.
 	For example, given the string "acbbac", return "b". Given the string "abcdef", return null.
 	*/
+	public static char firstRecurringCharacter(String s) {
+		HashSet<Charcter> hs = new HashSet<>();
+		for (char c: s.toCharArray()) {
+			if (hs.containKey(c)) return c;
+			else hs.add(c);
+		}
+		return '';
+	}
+	//Untested
 
 	/*
 	This problem was asked by Amazon.
 	Given a string, find the longest palindromic contiguous substring. If there are more than one with the maximum length, return any one.
 	For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The longest palindromic substring of "bananas" is "anana".
 	*/
+
+	/*
+	Asked by Bloomberg.
+	Given a string with no unbalanced brackets, find the substring(s) within the most deeply nested bracket
+	"ab(c(d)e)"      ->  "d"
+	"((a)b(cd)ef)"   ->  "a", "cd"
+	"()()" -> "", 
+	"abcde" -> "abcde"
+	"abbbbbbbbb(c(d)(e)(f(g)))" -> "g"
+	"()" -> ""
+	"" -> ""
+	"(abc)" -> "abc"
+	"abb(c(d)(e)(f(g)))" -> "g"
+	    0  1 2  2  2 3
+	*/
+	public static List<String> deeplyNestedBracketString(String s) {
+		return null;
+	}
+
 
 
 
