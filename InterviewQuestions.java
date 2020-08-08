@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testGenerate3DigitPermutations();
+		testFindUniqueOccurrenceOfThree();
 
 	}
 
@@ -72,12 +72,12 @@ public class InterviewQuestions {
 
 	}
 	public static void testCompressString() {
-		System.out.println(compressString("aabcccccaaa"));
-		System.out.println(compressString("abcdefghijkkkkkkklmnooooopqrrrr"));
-		System.out.println(compressString("aaaaaaaa"));
-		System.out.println(compressString("abcdefghijkl"));
-		System.out.println(compressString("zefghij"));
-		System.out.println(compressString("aab"));
+		System.out.println(compressString("aabcccccaaa").equals("a2b1c5a3"));
+		System.out.println(compressString("abcdefghijkkkkkkklmnooooopqrrrr").equals("a1b1c1d1e1f1g1h1i1j1k7l1m1n1o5p1q1r4"));
+		System.out.println(compressString("aaaaaaaa").equals("a8"));
+		System.out.println(compressString("abcdefghijkl").equals("abcdefghijkl"));
+		System.out.println(compressString("zefghij").equals("zefghij"));
+		System.out.println(compressString("aab").equals("a2b1"));
 	}
 
 
@@ -107,9 +107,9 @@ public class InterviewQuestions {
 		return answer;
 	}
 	public static void testReadNumber() {
-		System.out.println(readNumber("233313411134323"));
-		System.out.println(readNumber("111222289"));
-		System.out.println(readNumber("1234567890000"));
+		System.out.println(readNumber("233313411134323").equals("1233111314311314131213"));
+		System.out.println(readNumber("111222289").equals("31421819"));
+		System.out.println(readNumber("1234567890000").equals("11121314151617181940"));
 	}
 
 
@@ -132,10 +132,10 @@ public class InterviewQuestions {
 		return -1;
 	}
 	public static void testBinarySearch() {
-		System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 2));
-		System.out.println(binarySearch(new int[]{1,3,5,7,9,10,13,15,19,99}, 99));
-		System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 10));
-		System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 9));
+		System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 2) == 2);
+		System.out.println(binarySearch(new int[]{1,3,5,7,9,10,13,15,19,99}, 99) == 99);
+		System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 10) == -1);
+		System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7,8,9}, 9) == 9);
 	}
 
 
@@ -170,13 +170,13 @@ public class InterviewQuestions {
 		return -1;
 	}
 	public static void testFindPeak() {
-		System.out.println(findPeak(new int[]{1,2,3,4,5,6,7,8,9}));
-		System.out.println(findPeak(new int[]{1,3,5,7,9,10,13,15,19,99}));
-		System.out.println(findPeak(new int[]{1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2}));
-		System.out.println(findPeak(new int[]{1,2,3,4,7,6,5,4,3,2}));
-		System.out.println(findPeak(new int[]{1,2,3,4,3,2}));
-		System.out.println(findPeak(new int[]{0,2,1,0}));
-		System.out.println(findPeak(new int[]{1,2,3,4,5,6,7,8,9, 481, 98, 97}));
+		System.out.println(findPeak(new int[]{1,2,3,4,5,6,7,8,9}) == 9);
+		System.out.println(findPeak(new int[]{1,3,5,7,9,10,13,15,19,99}) == 99);
+		System.out.println(findPeak(new int[]{1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2}) == 9);
+		System.out.println(findPeak(new int[]{1,2,3,4,7,6,5,4,3,2}) == 7);
+		System.out.println(findPeak(new int[]{1,2,3,4,3,2}) == 4);
+		System.out.println(findPeak(new int[]{0,2,1,0}) == 2);
+		System.out.println(findPeak(new int[]{1,2,3,4,5,6,7,8,9, 481, 98, 97}) == 481);
 		
 	}
 
@@ -199,13 +199,14 @@ public class InterviewQuestions {
 	public static void testFibonacci() {
 		System.out.println(fibonacci(0));
 		System.out.println(fibonacci(-1));
-		System.out.println(fibonacci(1));
-		System.out.println(fibonacci(2));
-		System.out.println(fibonacci(3));
-		System.out.println(fibonacci(4));
-		System.out.println(fibonacci(5));
-		System.out.println(fibonacci(6));
-		System.out.println(fibonacci(7));
+		System.out.println(fibonacci(1) == 1);
+		System.out.println(fibonacci(2) == 1);
+		System.out.println(fibonacci(3) == 2);
+		System.out.println(fibonacci(4) == 3);
+		System.out.println(fibonacci(5) == 5);
+		System.out.println(fibonacci(6) == 8);
+		System.out.println(fibonacci(7) == 11);
+		System.out.println(fibonacci(8) == 19);
 		
 	}
 
@@ -252,15 +253,16 @@ public class InterviewQuestions {
 		return (n*2) + sumOfEvensRecursion(n-1);
 	}
 	public static void testSumOfEvens() {		
-		System.out.println(sumOfEvens(1));
-		System.out.println(sumOfEvens(2));
-		System.out.println(sumOfEvens(3));
-		System.out.println(sumOfEvens(4));
-		System.out.println(sumOfEvens(5));
-		System.out.println(sumOfEvens(6));
-		System.out.println(sumOfEvens(7));
-		System.out.println(sumOfEvens(8));
-		System.out.println(sumOfEvens(10));
+		System.out.println(sumOfEvens(1) == 2);
+		System.out.println(sumOfEvens(2) == 6);
+		System.out.println(sumOfEvens(3) == 12);
+		System.out.println(sumOfEvens(4) == 20);
+		System.out.println(sumOfEvens(5) == 30);
+		System.out.println(sumOfEvens(6) == 42);
+		System.out.println(sumOfEvens(7) == 56);
+		System.out.println(sumOfEvens(8) == 72);
+		System.out.println(sumOfEvens(9) == 90);
+		System.out.println(sumOfEvens(10)== 110);
 	}
 
 
@@ -292,11 +294,11 @@ public class InterviewQuestions {
 		return visitedOnlyOnce.iterator().next(); //Returns first and only element
 	}
 	public static void testFindUniqueOccurrenceOfThree() {
-		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,1,1,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,7,7,7,8,8,9,9,20,20}));
-		System.out.println(findUniqueOccurrenceOfThree(new int[]{-10,-10,-1,-1,-1,-1,-1,-1,-1,0}));
-		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0}));
-		System.out.println(findUniqueOccurrenceOfThree(new int[]{999,999,10,10,10,10,10,9,9,8,8,-9978, 7, 7, 7, 7, 7}));
-		System.out.println(findUniqueOccurrenceOfThree(new int[]{999}));
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,1,1,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,7,7,7,8,8,9,9,20,20}) == 2);
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{-10,-10,-1,-1,-1,-1,-1,-1,-1,0}) == 0);
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0}) == 1);
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{999,999,10,10,10,10,10,9,9,8,8,-9978, 7, 7, 7, 7, 7}) == -9978);
+		System.out.println(findUniqueOccurrenceOfThree(new int[]{999}) == 999);
 	}
 
 	/*
@@ -1669,38 +1671,8 @@ public class InterviewQuestions {
 	Given a string and a set of characters, return the shortest substring containing all the characters in the set.
 	For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
 	*/
-	//Incomplete
 	public static String substringWithSetCharacter(HashSet<Character> chars, String word) {
-		HashMap<Character, Integer> count = new HashMap<>();
-		int countSoFar = 0;
-		String answer = "";
-		String answerSoFar = "";
-
-		for (int i = 0; i < word.length(); i++) {
-			char c = word.charAt(i);
-			if (count.containsKey(c)) {
-				count.put(c, count.get(c) + 1);
-			} else {
-				count.put(c, 1);
-			}
-			countSoFar++;
-
-	 		if (countSoFar >= chars.size()) {
-	 			boolean hasAllChars = true;
-	 			for (Character c: chars) {
-	 				if (!count.contansKey(c)) {
-	 					hasAllChars = false;
-	 					break;
-	 				}
-	 			}
-	 			if (hasAllChars) {
-	 				answerSoFar += c;
-	 				if (answerSoFar.length() < answer) {
-	 					answer = answerSoFar;
-	 				}
-	 			}
-	 		}
-	 	}
+		return "";
 	}
 
 	/*
@@ -1709,14 +1681,16 @@ public class InterviewQuestions {
 	For example, given the string "acbbac", return "b". Given the string "abcdef", return null.
 	*/
 	public static char firstRecurringCharacter(String s) {
-		HashSet<Charcter> hs = new HashSet<>();
+		HashSet<Character> hs = new HashSet<>();
 		for (char c: s.toCharArray()) {
-			if (hs.containKey(c)) return c;
+			if (hs.contains(c)) return c;
 			else hs.add(c);
 		}
-		return '';
+		return ' ';
 	}
-	//Untested
+	public static void testFirstRecurringCharacter() {
+		System.out.println(firstRecurringCharacter("acbbac") == 'b');
+	}
 
 	/*
 	This problem was asked by Amazon.
