@@ -6,7 +6,7 @@ public class InterviewQuestions {
 
 	public static void main(String args[]) {
 		//Perform function testing here.
-		testFindUniqueOccurrenceOfThree();
+		testDeeplyNestedBracketString();
 
 	}
 
@@ -1713,7 +1713,69 @@ public class InterviewQuestions {
 	    0  1 2  2  2 3
 	*/
 	public static List<String> deeplyNestedBracketString(String s) {
-		return null;
+		int maxLevel = 0;
+		int level = 0;
+		List<String> answer = new ArrayList<String>();
+		//int maxStringLength = 0;
+		StringBuilder sb = new StringBuilder();
+		for (int x = 0; x < s.length(); x++) {
+			if (s.charAt(x) == '(') {
+				level++;
+				if (level > maxLevel) {
+					maxLevel = level;
+					answer.clear();
+				}
+				sb.setLength(0);
+			} else if (s.charAt(x) == ')') {
+				if (level == maxLevel) answer.add(sb.toString());
+				sb.setLength(0);
+				level--;
+			} else {
+				sb.append(s.charAt(x));
+				/*if (sb.length() > maxStringLength) {
+					maxStringLength = sb.length();
+					answer.clear();
+				}*/
+
+			}
+		}
+		if (level == maxLevel) {
+			answer.add(sb.toString());
+		}
+
+
+
+		return answer;
+	}
+	public static void testDeeplyNestedBracketString() {
+		System.out.println(deeplyNestedBracketString("ab(c(d)e)"));
+		System.out.println(deeplyNestedBracketString("((a)b(cd)ef)"));
+		System.out.println(deeplyNestedBracketString("()()"));
+		System.out.println(deeplyNestedBracketString("abcde"));
+		System.out.println(deeplyNestedBracketString("abbbbbbbbb(c(d)(e)(f(g)))"));
+		System.out.println(deeplyNestedBracketString("()"));
+		System.out.println(deeplyNestedBracketString(""));
+		System.out.println(deeplyNestedBracketString("(abc)"));
+		System.out.println(deeplyNestedBracketString("abb(c(d)(e)(f(g)))"));
+	}
+
+	/*
+	https://www.glassdoor.com/Interview/Hackerrank-test-1-Print-Roman-number-equivalent-for-numbers-1-1000-2-Order-a-list-of-words-appearing-in-a-file-by-numb-QTN_2294098.htm
+	Order a list of words appearing in a file by number of letters but 
+	maintain original order ("stable sorting") of words with same length.
+	*/
+	public static List<String> sortByStringLength(List<String> list) {
+		list.sort((first, second) -> Integer.compare(first.length(),
+                                                   second.length()));
+		return list;
+	}
+	public static void testSortByStringLength() {
+		List<String> cities = new ArrayList<>(Arrays.asList("London", 
+                                                "Tokyo","tokyo", 
+                                                "Atlanta", 
+                                                "Jacksonville","NewYork"));
+		cities = sortByStringLength(cities);
+		System.out.println(cities);
 	}
 
 
