@@ -7,11 +7,11 @@
 {\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;\red16\green60\blue192;
 \red236\green236\blue236;\red25\green55\blue116;\red246\green246\blue246;\red40\green80\blue147;\red123\green71\blue5;
 \red193\green71\blue5;\red0\green0\blue196;\red64\green140\blue9;\red67\green67\blue67;\red239\green241\blue244;
-\red97\green101\blue107;\red154\green154\blue154;\red220\green161\blue13;}
+\red0\green0\blue0;\red97\green101\blue107;\red154\green154\blue154;\red220\green161\blue13;}
 {\*\expandedcolortbl;;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;\cssrgb\c6667\c33333\c80000;
 \cssrgb\c94118\c94118\c94118;\cssrgb\c12549\c29020\c52941;\cssrgb\c97255\c97255\c97255;\cssrgb\c20392\c39608\c64314;\cssrgb\c56078\c34902\c784;
 \cssrgb\c80784\c36078\c0;\cssrgb\c0\c0\c81176;\cssrgb\c30588\c60392\c2353;\cssrgb\c33333\c33333\c33333;\cssrgb\c94902\c95686\c96471;
-\cssrgb\c45490\c47059\c49412;\csgray\c66667;\cssrgb\c89412\c68627\c3922;}
+\cssrgb\c0\c0\c0;\cssrgb\c45490\c47059\c49412;\csgray\c66667;\cssrgb\c89412\c68627\c3922;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
@@ -22,7 +22,7 @@
 {\list\listtemplateid8\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid701\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid8}
 {\list\listtemplateid9\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid801\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid9}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}{\listoverride\listid9\listoverridecount0\ls9}}
-\margl1440\margr1440\vieww14200\viewh15440\viewkind0
+\margl1440\margr1440\vieww13900\viewh15140\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Interview Questions\
@@ -169,10 +169,225 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \cb14 This problem was asked by Yelp.\cb1 \
 \cb14 Given a mapping of digits to letters (as in a phone number), and a digit string, return all possible letters the number could represent. You can assume each valid number in the mapping is a single digit.\cb1 \
 \cb14 For example if \{\'932\'94: [\'93a\'94, \'93b\'94, \'93c\'94], 3: [\'93d\'94, \'93e\'94, \'93f\'94], \'85\} then \'9323\'94 should return [\'93ad\'94, \'93ae\'94, \'93af\'94, \'93bd\'94, \'93be\'94, \'93bf\'94, \'93cd\'94, \'93ce\'94, \'93cf"].\cell \lastrow\row
-\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\pard\pardeftab720\partightenfactor0
 
-\f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\fs26 \cf2 \cb3 Hi, here's your problem today. This problem was recently asked by Apple:\cb1 \
 \
+\cb3 You are given the root of a binary tree. You need to implement 2 functions:\cb1 \
+\
+\cb3 1. serialize(root) which serializes the tree into a string representation\cb1 \
+\cb3 2. deserialize(s) which deserializes the string back to the original tree that it represents\cb1 \
+\
+\cb3 For this problem, often you will be asked to design your own serialization format. However, for simplicity, let's use the pre-order traversal of the tree. Here's your starting point:\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b\fs24 \cf6 \cb7 class
+\f4\b0 \cf2  Node
+\f5\b :
+\f4\b0 \cb1 \
+\cb7   
+\f5\b \cf6 def
+\f4\b0 \cf2  __init__
+\f5\b (
+\f4\b0 \cf8 self
+\f5\b \cf2 ,
+\f4\b0  val
+\f5\b ,
+\f4\b0  left
+\f5\b \cf10 =
+\f4\b0 \cf8 None
+\f5\b \cf2 ,
+\f4\b0  right
+\f5\b \cf10 =
+\f4\b0 \cf8 None
+\f5\b \cf2 ):
+\f4\b0 \cb1 \
+\cb7     \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 val 
+\f5\b \cf10 =
+\f4\b0 \cf2  val\cb1 \
+\cb7     \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 left 
+\f5\b \cf10 =
+\f4\b0 \cf2  left\cb1 \
+\cb7     \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 right 
+\f5\b \cf10 =
+\f4\b0 \cf2  right\cb1 \
+\
+\cb7   
+\f5\b \cf6 def
+\f4\b0 \cf2  __str__
+\f5\b (
+\f4\b0 \cf8 self
+\f5\b \cf2 ):
+\f4\b0 \cb1 \
+\cb7     
+\f6\i \cf9 # pre-order printing of the tree.
+\f4\i0 \cf2 \cb1 \
+\cb7     result 
+\f5\b \cf10 =
+\f4\b0 \cf2  \cf12 ''\cf2 \cb1 \
+\cb7     result 
+\f5\b \cf10 +=
+\f4\b0 \cf2  \cf6 str
+\f5\b \cf2 (
+\f4\b0 \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 val
+\f5\b )
+\f4\b0 \cb1 \
+\cb7     
+\f5\b \cf6 if
+\f4\b0 \cf2  \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 left
+\f5\b :
+\f4\b0 \cb1 \
+\cb7       result 
+\f5\b \cf10 +=
+\f4\b0 \cf2  \cf6 str
+\f5\b \cf2 (
+\f4\b0 \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 left
+\f5\b )
+\f4\b0 \cb1 \
+\cb7     
+\f5\b \cf6 if
+\f4\b0 \cf2  \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 right
+\f5\b :
+\f4\b0 \cb1 \
+\cb7       result 
+\f5\b \cf10 +=
+\f4\b0 \cf2  \cf6 str
+\f5\b \cf2 (
+\f4\b0 \cf8 self
+\f5\b \cf10 .
+\f4\b0 \cf2 right
+\f5\b )
+\f4\b0 \cb1 \
+\cb7     
+\f5\b \cf6 return
+\f4\b0 \cf2  result\cb1 \
+\
+
+\f5\b \cf6 \cb7 def
+\f4\b0 \cf2  serialize
+\f5\b (
+\f4\b0 root
+\f5\b ):
+\f4\b0 \cb1 \
+\cb7   
+\f6\i \cf9 # Fill this in.
+\f4\i0 \cf2 \cb1 \
+\
+
+\f5\b \cf6 \cb7 def
+\f4\b0 \cf2  deserialize
+\f5\b (
+\f4\b0 data
+\f5\b ):
+\f4\b0 \cb1 \
+\cb7   
+\f6\i \cf9 # Fill this in.
+\f4\i0 \cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f6\i \cf9 \cb7 #     1
+\f4\i0 \cf2 \cb1 \
+
+\f6\i \cf9 \cb7 #    / \\
+\f4\i0 \cf2 \cb1 \
+
+\f6\i \cf9 \cb7 #   3   4
+\f4\i0 \cf2 \cb1 \
+
+\f6\i \cf9 \cb7 #  / \\   \\
+\f4\i0 \cf2 \cb1 \
+
+\f6\i \cf9 \cb7 # 2   5   7
+\f4\i0 \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb7 tree 
+\f5\b \cf10 =
+\f4\b0 \cf2  Node
+\f5\b (\cf11 1\cf2 )
+\f4\b0 \cb1 \
+\cb7 tree
+\f5\b \cf10 .
+\f4\b0 \cf2 left 
+\f5\b \cf10 =
+\f4\b0 \cf2  Node
+\f5\b (\cf11 3\cf2 )
+\f4\b0 \cb1 \
+\cb7 tree
+\f5\b \cf10 .
+\f4\b0 \cf2 left
+\f5\b \cf10 .
+\f4\b0 \cf2 left 
+\f5\b \cf10 =
+\f4\b0 \cf2  Node
+\f5\b (\cf11 2\cf2 )
+\f4\b0 \cb1 \
+\cb7 tree
+\f5\b \cf10 .
+\f4\b0 \cf2 left
+\f5\b \cf10 .
+\f4\b0 \cf2 right 
+\f5\b \cf10 =
+\f4\b0 \cf2  Node
+\f5\b (\cf11 5\cf2 )
+\f4\b0 \cb1 \
+\cb7 tree
+\f5\b \cf10 .
+\f4\b0 \cf2 right 
+\f5\b \cf10 =
+\f4\b0 \cf2  Node
+\f5\b (\cf11 4\cf2 )
+\f4\b0 \cb1 \
+\cb7 tree
+\f5\b \cf10 .
+\f4\b0 \cf2 right
+\f5\b \cf10 .
+\f4\b0 \cf2 right 
+\f5\b \cf10 =
+\f4\b0 \cf2  Node
+\f5\b (\cf11 7\cf2 )
+\f4\b0 \cb1 \
+\
+
+\f5\b \cf6 \cb7 print
+\f4\b0 \cf2  serialize
+\f5\b (
+\f4\b0 tree
+\f5\b )
+\f4\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f6\i \cf9 \cb7 # 1 3 2 # # 5 # # 4 # 7 # #
+\f4\i0 \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\b \cf6 \cb7 print
+\f4\b0 \cf2  deserialize
+\f5\b (
+\f4\b0 \cf12 '1 3 2 # # 5 # # 4 # 7 # #'
+\f5\b \cf2 )
+\f4\b0 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f6\i \cf9 \cb7 # 132547
+\f1\i0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
@@ -199,9 +414,41 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \f3 \cb14 , since the optimal partition is 
 \f7 \cb7 [5, 1, 2], [7], [3, 4]
 \f3 \cb14 .\cell \lastrow\row
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb3 Hi, here's your problem today. This problem was recently asked by Amazon:\cb1 \
+\
+\cb3 Given a positive integer 
+\f4 \cb5 n
+\f3 \cb3 , find all primes less than 
+\f4 \cb5 n
+\f3 \cb3 .\cb1 \
+\
+\cb3 Here's an example and some starter code:\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b\fs24 \cf6 \cb7 def
+\f4\b0 \cf2  find_primes
+\f5\b (
+\f4\b0 n
+\f5\b ):
+\f4\b0 \cb1 \
+\cb7   
+\f6\i \cf9 # Fill this in.
+\f4\i0 \cf2 \cb1 \
+\
+
+\f5\b \cf6 \cb7 print\cf2 (
+\f4\b0 find_primes
+\f5\b (\cf11 14\cf2 ))
+\f4\b0 \cb1 \
+
+\f6\i \cf9 \cb7 # [2, 3, 5, 7, 11, 13]
+\f4\i0 \cf2 \cb1 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 
-\f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\f1 \cf0 \kerning1\expnd0\expndtw0 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
@@ -411,7 +658,86 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \f3 \cb14 , since that's 
 \f7 \cb7 -10 * -10 * 5
 \f3 \cb14 .\cb1 \
-\cb14 You can assume the list has at least three integers.\cell \lastrow\row
+\cb14 You can assume the list has at least three integers.\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb1 \
+\
+\
+\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Hi, here's your problem today. This problem was recently asked by Uber:\cb1 \
+\
+\cb3 You have a landscape, in which puddles can form. You are given an array of non-negative integers representing the elevation at each location. Return the amount of water that would accumulate if it rains.\cb1 \
+\
+\cb3 For example: 
+\f4 \cb5 [0,1,0,2,1,0,1,3,2,1,2,1]
+\f3 \cb3  should return 
+\f4 \cb5 6
+\f3 \cb3  because 6 units of water can get trapped here.
+\f4\fs24 \cb5 \
+       X               \cb1 \
+\cb5    X
+\f7 \uc0\u9608 \u9608 \u9608 
+\f4 XX
+\f7 \uc0\u9608 
+\f4 X              \cb1 \
+\cb5  X
+\f7 \uc0\u9608 
+\f4 XX
+\f7 \uc0\u9608 
+\f4 XXXXXX                   \cb1 \
+\cb5 # [0,1,0,2,1,0,1,3,2,1,2,1]\cb1 \
+
+\f3\fs26 \cb3 Here's your starting pont:\cb1 \
+\
+
+\f5\b\fs24 \cf6 \cb7 def
+\f4\b0 \cf2  capacity
+\f5\b (
+\f4\b0 arr
+\f5\b ):
+\f4\b0 \cb1 \
+\cb7   
+\f6\i \cf9 # Fill this in.
+\f4\i0 \cf2 \cb1 \
+\
+
+\f5\b \cf6 \cb7 print
+\f4\b0 \cf2  capacity
+\f5\b ([\cf11 0\cf2 ,
+\f4\b0  
+\f5\b \cf11 1\cf2 ,
+\f4\b0  
+\f5\b \cf11 0\cf2 ,
+\f4\b0  
+\f5\b \cf11 2\cf2 ,
+\f4\b0  
+\f5\b \cf11 1\cf2 ,
+\f4\b0  
+\f5\b \cf11 0\cf2 ,
+\f4\b0  
+\f5\b \cf11 1\cf2 ,
+\f4\b0  
+\f5\b \cf11 3\cf2 ,
+\f4\b0  
+\f5\b \cf11 2\cf2 ,
+\f4\b0  
+\f5\b \cf11 1\cf2 ,
+\f4\b0  
+\f5\b \cf11 2\cf2 ,
+\f4\b0  
+\f5\b \cf11 1\cf2 ])
+\f4\b0 \cb1 \
+
+\f6\i \cf9 \cb7 # 6
+\f4\i0 \cf2 \cb1 \
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf2 \
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\fs32 \cf13 \cb14 \cell \lastrow\row
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 
 \f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
@@ -505,7 +831,7 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \cb14 For example, given the tree:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f4\fs26 \cf15 \cb7    1\
+\f4\fs26 \cf16 \cb7    1\
   / \\\
  2   3\
     / \\\
@@ -827,7 +1153,7 @@ class Solution: \
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Palantir.\
 In academia, the h-index is a metric used to calculate the impact of a researcher's papers. It is calculated as follows:\
@@ -1609,7 +1935,7 @@ _____________________________\
 \
 Hi, here's your problem today. This problem was recently asked by Twitter:\
 \
-By the way, check out our NEW project AlgoPro ({\field{\*\fldinst{HYPERLINK "http://algopro.com/"}}{\fldrslt \cf17 \ul \ulc17 http://algopro.com}}) for over 60+ video coding sessions with ex-Google/ex-Facebook engineers.\
+By the way, check out our NEW project AlgoPro ({\field{\*\fldinst{HYPERLINK "http://algopro.com/"}}{\fldrslt \cf18 \ul \ulc18 http://algopro.com}}) for over 60+ video coding sessions with ex-Google/ex-Facebook engineers.\
 \
 Given a tree, find if the binary tree is height balanced or not. A height balanced binary tree is a tree where every node's 2 subtree do not differ in height by more than 1.\
 \
@@ -1761,7 +2087,7 @@ n1
 
 \f2\b\fs28 \cf0 Hi, here's your problem today. This problem was recently asked by Twitter:\
 \
-By the way, check out our NEW project AlgoPro ({\field{\*\fldinst{HYPERLINK "http://algopro.com/"}}{\fldrslt \cf17 \ul \ulc17 http://algopro.com}}) for over 60+ video coding sessions with ex-Google/ex-Facebook engineers.\
+By the way, check out our NEW project AlgoPro ({\field{\*\fldinst{HYPERLINK "http://algopro.com/"}}{\fldrslt \cf18 \ul \ulc18 http://algopro.com}}) for over 60+ video coding sessions with ex-Google/ex-Facebook engineers.\
 \
 Given a list of numbers, find the smallest window to sort such that the whole list will be sorted. If the list is already sorted return (0, 0). You can assume there will be no duplicate numbers.\
 \
@@ -1817,7 +2143,7 @@ Output: (2, 4)\
 \
 Hi, here's your problem today. This problem was recently asked by Apple:\
 \
-By the way, check out our NEW project AlgoPro ({\field{\*\fldinst{HYPERLINK "http://algopro.com/"}}{\fldrslt \cf17 \ul \ulc17 http://algopro.com}}) for over 60+ video coding sessions with ex-Google/ex-Facebook engineers.\
+By the way, check out our NEW project AlgoPro ({\field{\*\fldinst{HYPERLINK "http://algopro.com/"}}{\fldrslt \cf18 \ul \ulc18 http://algopro.com}}) for over 60+ video coding sessions with ex-Google/ex-Facebook engineers.\
 \
 A fixed point in a list is where the value is equal to its index. So for example the list [-5, 1, 3, 4], 1 is a fixed point in the list since the index and value is the same. Find a fixed point (there can be many, just return 1) in a 
 \f2\b sorted list of distinct elements
@@ -2159,7 +2485,7 @@ Challenge: Try sorting the list using constant space.\
 \f1\b0\fs24 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Amazon.\
 Given an array and a number k that's smaller than the length of the array, rotate the array to the right k elements in-place.\cell \lastrow\row
@@ -2217,7 +2543,7 @@ Output: 1\
 Challenge: Find a way to do this using O(1) memory.\
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 
 \f1\b0\fs24 \cf0 Good morning! Here's your coding interview problem for today.\
@@ -2357,7 +2683,7 @@ root
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Goldman Sachs.\
@@ -2416,7 +2742,7 @@ Output: True\
 \f1\b0\fs24 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Twitter.\
@@ -2467,11 +2793,11 @@ Output: -4\
 \f1\b0\fs24 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
-Given a number in {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Roman_numerals"}}{\fldrslt \cf17 \ul \ulc17 Roman numeral}} format, convert it to decimal.\
+Given a number in {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Roman_numerals"}}{\fldrslt \cf18 \ul \ulc18 Roman numeral}} format, convert it to decimal.\
 The values of Roman numerals are as follows:\
 \{\
     'M': 1000,\
@@ -2482,7 +2808,7 @@ The values of Roman numerals are as follows:\
     'V': 5,\
     'I': 1\
 \}\
-In addition, note that the Roman numeral system uses {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Subtractive_notation"}}{\fldrslt \cf17 \ul \ulc17 subtractive notation}} for numbers such as IV and XL.\
+In addition, note that the Roman numeral system uses {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Subtractive_notation"}}{\fldrslt \cf18 \ul \ulc18 subtractive notation}} for numbers such as IV and XL.\
 For the input XIV, for instance, you should return 14.\cell \lastrow\row
 \pard\pardeftab560\slleading20\partightenfactor0
 \cf0 Hi, here's your problem today. This problem was recently asked by Microsoft:\
@@ -2526,7 +2852,7 @@ Here's a starting point:\
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Stripe.\
@@ -2611,7 +2937,7 @@ Solution
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Palantir.\
 Write a program that checks whether an integer is a palindrome. For example, 121 is a palindrome, as well as 888. 678 is not a palindrome. Do not convert the integer into a string.\cell \lastrow\row
@@ -2620,7 +2946,7 @@ Write a program that checks whether an integer is a palindrome. For example, 121
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Google.\
 You are given an array of arrays of integers, where each array corresponds to a row in a triangle of numbers. For example, [[1], [2, 3], [1, 5, 1]] represents the triangle:\
@@ -2639,7 +2965,7 @@ Write a program that returns the weight of the maximum weight path.\cell \lastro
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -2702,7 +3028,7 @@ Output: ..RR.LL..RR\
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Apple.\
@@ -2792,7 +3118,7 @@ Output: 1260388352\
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -2801,7 +3127,7 @@ For example, given the set [3, 5, 10, 20, 21], you should return [5, 10, 20]. Gi
 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Apple.\
 Given the root of a binary tree, find the most frequent subtree sum. The subtree sum of a node is the sum of all values under a node, including the node itself.\
@@ -2908,7 +3234,7 @@ Output: false\
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 Given a 2-D matrix representing an image, a location of a pixel in the screen and a color C, replace the color of the given pixel and all adjacent same colored pixels with C.\
@@ -2960,7 +3286,7 @@ The 5 trees are:\
 - The [1, 1, 1] tree at the bottom. (+1)\
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 
 \f2\b\fs28 \cf0 What will this code print out?\
@@ -2987,7 +3313,7 @@ for f in functions:\
 \f1\b0\fs24 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Amazon.\
 Given n numbers, find the greatest common denominator between them.\
@@ -3211,7 +3537,7 @@ tree
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 
 \f2\b\fs28 \cf0 This problem was asked by Google.\
@@ -3265,7 +3591,7 @@ Output: '/Users/Joma/'\
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given a stack of N elements, interleave the first half of the stack with the second half reversed using only one other queue. This should be done in-place.\
@@ -3456,7 +3782,7 @@ node
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Nvidia.\
@@ -3473,7 +3799,7 @@ Input: 123\
 Output: 321\
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by PayPal.\
@@ -3522,7 +3848,7 @@ Given an integer, check if that integer is a palindrome. For this problem do not
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Etsy.\
@@ -3535,14 +3861,14 @@ For example, given N = [5, 1, 2, 7, 3, 4] and k = 3, you should return 8, since 
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Pinterest.\
 The sequence [0, 1, ..., N] has been jumbled, and the only clue you have for its order is an array representing whether each number is larger or smaller than the last. Given this information, reconstruct an array that is consistent with it. For example, given [None, +, +, -, +], you could return [1, 2, 3, 0, 4].\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Atlassian.\
@@ -3629,7 +3955,7 @@ k
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 
 \f2\b\fs28 \cf0 Good morning! Here's your coding interview problem for today.\
@@ -3659,7 +3985,7 @@ For example, the Euro sign, \'80, corresponds to the three bytes 11100010 100000
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Morgan Stanley.\
@@ -3677,7 +4003,7 @@ You should return [1, 3, 2, 4, 5, 6, 7].\cell \lastrow\row
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Netflix.\
@@ -3694,7 +4020,7 @@ Given an array of integers, determine whether it contains a Pythagorean triplet.
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Uber.\
@@ -3706,13 +4032,13 @@ For example, suppose the input for a three-by-six grid is the following:\
 Considering the edges of the matrix as boundaries, this divides the grid into three triangles, so you should return 3.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 \
 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Given a linked list and a positive integer k, rotate the list to the right by k places.\
 For example, given the linked list 7 -> 7 -> 3 -> 5 and k = 2, it should become 3 -> 5 -> 7 -> 7.\
@@ -3721,23 +4047,23 @@ Given the linked list 1 -> 2 -> 3 -> 4 -> 5 and k = 3, it should become 3 -> 4 -
 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 \{"timestamp": 1526579928, count: 3, "type": "enter"\}\
 This means 3 people entered the building. An exit looks like this:\
 \{"timestamp": 1526580382, count: 2, "type": "exit"\}\
-This means that 2 people exited the building. timestamp is in {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Unix_time"}}{\fldrslt \cf17 \ul \ulc17 Unix time}}.\
+This means that 2 people exited the building. timestamp is in {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Unix_time"}}{\fldrslt \cf18 \ul \ulc18 Unix time}}.\
 Find the busiest period in the building, that is, the time with the most people in the building. Return it as a pair of (start, end) timestamps. You can assume the building always starts off and ends up empty, i.e. with 0 people inside.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given a linked list, sort it in O(n log n) time and constant space.\
 For example, the linked list 4 -> 1 -> -3 -> 99 should become -3 -> 1 -> 4 -> 99.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Given an N by N matrix, rotate it by 90 degrees clockwise.\
 For example, given the following matrix:\
@@ -3751,13 +4077,13 @@ you should return:\
 Follow-up: What if you couldn't use any extra space?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Google.\
 You are given an array of length n + 1 whose elements belong to the set \{1, 2, ..., n\}. By the pigeonhole principle, there must be a duplicate. Find it in linear time and space.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
@@ -3765,7 +4091,7 @@ Given a string, determine whether any permutation of it is a palindrome.\
 For example, carrace should return true, since it can be rearranged to form racecar, which is a palindrome. daily should return false, since there's no rearrangement that can form a palindrome.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by MongoDB.\
@@ -3776,20 +4102,20 @@ For example, given [1, 2, 1, 1, 3, 4, 0], return 1.\cell \lastrow\row
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Write a function that rotates a list by k elements. For example, [1, 2, 3, 4, 5, 6] rotated by two becomes [3, 4, 5, 6, 1, 2]. Try solving this without creating a copy of the list. How many swap or move operations do you need?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given the head of a singly linked list, swap every two nodes and return its head.\
 For example, given 1 -> 2 -> 3 -> 4, return 2 -> 1 -> 4 -> 3.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given an array of integers in which two elements appear exactly once and all other elements appear exactly twice, find the two elements that appear only once.\
@@ -3797,7 +4123,7 @@ For example, given the array [2, 4, 6, 8, 10, 2, 6, 10], return 4 and 8. The ord
 Follow-up: Can you do this in linear time and constant space?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Amazon.\
 Implement a bit array.\
@@ -3808,7 +4134,7 @@ A bit array is a space efficient array that holds a value of 1 or 0 at each inde
 	\'95	get(i): gets the value at index i.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -3820,7 +4146,7 @@ Use a more space-efficient data structure, SparseArray, that implements the same
 	\'95	get(i): gets the value at index i.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
@@ -3836,13 +4162,13 @@ For example, the inorder successor of 22 is 30.\
 \cf0 You can assume each node has a parent pointer.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Given two strings A and B, return whether or not A can be shifted some number of times to get B.\
 For example, if A is abcde and B is cdeab, return true. If A is abc and B is acb, return false.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given a binary tree, return the level of the tree with minimum sum.\cell \lastrow\row
@@ -3854,7 +4180,7 @@ That is,\'a0generate()\'a0should return a tree whose size is unbounded but finit
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -3862,7 +4188,7 @@ Given a string of words delimited by spaces, reverse the words in string. For ex
 Follow-up: given a mutable string representation, can you perform this operation in-place?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given a binary tree, return all paths from the root to leaves.\
@@ -3877,20 +4203,20 @@ For example, given the tree\
 \cf0 it should return [[1, 2], [1, 3, 4], [1, 3, 5]].\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \
 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Pinterest.\
 Given an integer list where each number represents the number of hops you can make, determine whether you can reach to the last index starting at index 0.\
 For example, [2, 0, 1, 0] returns true while [1, 1, 0, 1] returns false.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -3898,32 +4224,32 @@ Determine whether a doubly linked list is a palindrome. What if it\'92s singly l
 For example, 1 -> 4 -> 3 -> 4 -> 1 returns true while 1 -> 4 returns false.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, using only mathematical or bit operations. You can assume b can only be 1 or 0.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \
 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Given an even number (greater than 2), return two prime numbers whose sum will be equal to the given number.\
-A solution will always exist. See {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Goldbach%27s_conjecture"}}{\fldrslt \cf17 \ul \ulc17 Goldbach\'92s conjecture}}.\
+A solution will always exist. See {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Goldbach%27s_conjecture"}}{\fldrslt \cf18 \ul \ulc18 Goldbach\'92s conjecture}}.\
 Example:\
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Input: 4\
@@ -3941,30 +4267,30 @@ Given a tree, find the largest tree/subtree that is a BST.\
 Given a tree, return the size of the largest tree/subtree that is a BST.\
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by LinkedIn.\
 Determine whether a tree is a valid binary search tree.\
 A binary search tree is a tree with two children, left and right, and satisfies the constraint that the key in the left child must be less than or equal to the root and the key in the right child must be greater than or equal to the root.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This question was asked by Google.\
 Given an integer n and a list of integers l, write a function that randomly generates a number from 0 to n-1 that isn't in l (uniform).\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Coursera.\
 Given a 2D board of characters and a word, find if the word exists in the grid.\
@@ -3979,7 +4305,7 @@ For example, given the following board:\
 exists(board, "ABCCED") returns true, exists(board, "SEE") returns true, exists(board, "ABCB") returns false.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Uber.\
 A rule looks like this:\
@@ -4001,14 +4327,14 @@ A N B\
 \cf0 is considered valid.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given a string of parentheses, write a function to compute the minimum number of parentheses to be removed to make the string valid (i.e. each open parenthesis is eventually closed).\
 For example, given the string "()())()", you should return 1. Given the string ")(", you should return 2, since we must remove all of them.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given an array of integers, write a function to determine whether the array could become non-decreasing by modifying at most 1 element.\
@@ -4018,7 +4344,7 @@ Given the array [10, 5, 1], you should return false, since we can't modify any o
 \cf0 Reverse linked list!\
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Amazon.\
 Given a matrix of 1s and 0s, return the number of "islands" in the matrix. A 1 represents land and 0 represents water, so an island is a group of 1s that are neighboring whose perimeter is surrounded by water.\
@@ -4032,7 +4358,7 @@ For example, this matrix has 4 islands.\
 1 1 0 0 1\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -4106,7 +4432,7 @@ Output: 321\
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked Microsoft.\
 Using a read7() method that returns 7 characters from a file, implement readN(n) which reads n characters.\
@@ -4146,7 +4472,7 @@ Output: cbcbca\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -4159,7 +4485,7 @@ Given the root of a binary tree, return a deepest node. For example, in the foll
 d\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Yelp.\
@@ -4288,7 +4614,7 @@ node
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Airbnb.\
@@ -4297,7 +4623,7 @@ For example, [2, 4, 6, 2, 5] should return 13, since we pick 2, 6, and 5. [5, 1,
 Follow-up: Can you do this in O(N) time and constant space?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given k sorted singly linked lists, write a function to merge all the lists into one sorted singly linked list.\cell \lastrow\row
@@ -4364,7 +4690,7 @@ nums
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -4372,13 +4698,13 @@ Given an array of numbers, find the length of the longest increasing subsequence
 For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], the longest increasing subsequence has length 6: it is 0, 2, 6, 9, 11, 15.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given the head of a singly linked list, reverse it in-place.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -4511,14 +4837,14 @@ testTail
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Two Sigma.\
 Using a function rand7() that returns an integer from 1 to 7 (inclusive) with uniform probability, implement a function rand5() that returns an integer from 1 to 5 (inclusive).\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -4527,7 +4853,7 @@ Given a positive integer n, return the n-th perfect number.\
 For example, given 1, you should return 19. Given 2, you should return 28.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Amazon.\
 Given a N by M matrix of numbers, print out the matrix in a clockwise spiral.\
@@ -4562,14 +4888,14 @@ For example, given the following matrix:\
 12\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Square.\
 Assume you have access to a function toss_biased() which returns 0 or 1 with a probability that's not 50-50 (but also not 0-100 or 100-0). You do not know the bias of the coin.\
 Write a function to simulate an unbiased coin toss.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Microsoft.\
 Given a 2D matrix of characters and a target word, write a function that returns whether the word can be found in the matrix by going left-to-right, or up-to-down.\
@@ -4583,7 +4909,7 @@ For example, given the following matrix:\
 \cf0 and the target word 'FOAM', you should return true, since it's the leftmost column. Similarly, given the target word 'MASS', you should return true, since it's the last row.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given a multiset of integers, return whether it can be partitioned into two subsets whose sums are the same.\
@@ -4591,7 +4917,7 @@ For example, given the multiset \{15, 5, 20, 10, 35, 15, 10\}, it would return t
 Given the multiset \{15, 5, 20, 10, 35\}, it would return false, since we can't split it up into two subsets that add up to the same sum.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 Implement integer exponentiation. That is, implement the pow(x, y) function, where x and y are integers and returns x^y.\
@@ -4599,7 +4925,7 @@ Do this faster than the naive method of repeated multiplication.\
 For example, pow(2, 10) should return 1024.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Amazon.\
 An sorted array of integers was rotated an unknown number of times.\
@@ -4607,7 +4933,7 @@ Given such an array, find the index of the element in the array in faster than l
 For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 (the index of 8 in the array).\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Amazon.\
 Given an array of numbers, find the maximum sum of any contiguous subarray of the array.\
@@ -4616,26 +4942,26 @@ Given the array [-5, -1, -8, -9], the maximum sum would be 0, since we would not
 Do this in O(N) time.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Apple.\
 Implement a queue using two stacks. Recall that a queue is a FIFO (first-in, first-out) data structure with the following methods: enqueue, which inserts an element into the queue, and dequeue, which removes it.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given a 32-bit integer, return the number with its bits reversed.\
 For example, given the binary number 1111 0000 1111 0000 1111 0000 1111 0000, return 0000 1111 0000 1111 0000 1111 0000 1111.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -4647,7 +4973,7 @@ Implement a URL shortener with the following methods:\
 \cf0 Hint: What if we enter the same URL twice?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Microsoft.\
 Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer and each internal node is one of '+', '\uc0\u8722 ', '
@@ -4665,14 +4991,14 @@ For example, given the following tree:\
 \cf0 You should return 45, as it is (3 + 2) * (4 + 5).\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given a function that generates perfectly random numbers between 1 and k (inclusive), where k is an input, write a function that shuffles a deck of cards represented as an array using only swaps.\
 It should run in O(N) time.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given pre-order and in-order traversals of a binary tree, write a function to reconstruct the tree.\
@@ -4722,7 +5048,7 @@ You are given an array of integers. Return all the permutations of this array.\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 We can determine how "out of order" an array A is by counting the number of inversions it has. Two elements A[i] and A[j] form an inversion if A[i] > A[j] but i < j. That is, a smaller element appears after a larger element.\
@@ -4731,33 +5057,33 @@ You may assume each element in the array is distinct.\
 For example, a sorted list has zero inversions. The array [2, 4, 1, 3, 5] has three inversions: (2, 1), (4, 1), and (4, 3). The array [5, 4, 3, 2, 1] has ten inversions: every distinct pair forms an inversion.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \
 Integers can appear more than once in the list. You may assume all numbers in the list are positive.\
 For example, given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] since it sums up to 24.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 \cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Facebook.\
 Given a array of numbers representing the stock prices of a company in chronological order, write a function that calculates the maximum profit you could have made from buying and selling that stock once. You must buy before you can sell it.\
 For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could buy the stock at 5 dollars and sell it at 10 dollars.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Two Sigma.\
 Using a function rand5() that returns an integer from 1 to 5 (inclusive) with uniform probability, implement a function rand7() that returns an integer from 1 to 7 (inclusive).\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Twitter.\
@@ -4768,7 +5094,7 @@ Hint: Try preprocessing the dictionary into a more efficient data structure to s
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Given a string of round, curly, and square open and closing brackets, return whether the brackets are balanced (well-formed).\
 For example, given the string "([])[](\{\})", you should return true.\
@@ -4777,7 +5103,7 @@ Given the string "([)]" or "((()", you should return false\cell \lastrow\row
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Dropbox.\
 Given the root to a binary search tree, find the second largest node in the tree.\cell \lastrow\row
@@ -4786,7 +5112,7 @@ Given the root to a binary search tree, find the second largest node in the tree
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Microsoft.\
 Compute the running median of a sequence of numbers. That is, given a stream of numbers, print out the median of the list so far on each new element.\
@@ -4804,7 +5130,7 @@ For example, given the sequence [2, 1, 5, 7, 2, 0, 5], your algorithm should pri
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 Given an array of strictly the characters 'R', 'G', and 'B', segregate the values of the array so that all the Rs come first, the Gs come second, and the Bs come last. You can only swap elements of the array.\
@@ -4814,7 +5140,7 @@ For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should beco
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Quora.\
 Given a string, find the palindrome that can be made by inserting the fewest number of characters as possible anywhere in the word. If there is more than one palindrome of minimum length that can be made, return the lexicographically earliest one (the first one alphabetically).\
@@ -4824,7 +5150,7 @@ As another example, given the string "google", you should return "elgoogle".\cel
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -4870,7 +5196,7 @@ Do this in O(n) time and O(k) space. You can modify the input array in-place and
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 The edit distance between two strings refers to the minimum number of character insertions, deletions, and substitutions required to change one string to the other. For example, the edit distance between \'93kitten\'94 and \'93sitting\'94 is three: substitute the \'93k\'94 for \'93s\'94, substitute the \'93e\'94 for \'93i\'94, and append a \'93g\'94.\
@@ -4880,7 +5206,7 @@ Given two strings, compute the edit distance between them.\cell \lastrow\row
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -4996,7 +5322,7 @@ version2
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -5066,7 +5392,7 @@ Here is a starting point:\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Snapchat.\
@@ -5108,7 +5434,7 @@ Output: 4\
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -5118,19 +5444,19 @@ For example, given the input [2, 1, 2], we can hold 1 unit of water in the middl
 Given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index, 2 in the second, and 3 in the fourth index (we cannot hold 5 since it would run off to the left), so we can trap 8 units of water.\cell \lastrow\row
 \pard\pardeftab560\sa40\partightenfactor0
 {\field{\*\fldinst{HYPERLINK "https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDc3NDM4NCIsImRlbGl2ZXJ5X2lkIjoiODM1MDM1ODE1NiIsInVybCI6Imh0dHBzOi8vd3d3LmludGVydmlld2Nha2UuY29tL3F1ZXN0aW9uL3NpbXVsYXRlLTctc2lkZWQtZGllP3V0bV9zb3VyY2U9d2Vla2x5X2VtYWlsXHUwMDI2dXRtX2NhbXBhaWduPXdlZWtseV9lbWFpbFx1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZfX3M9eWRxbWRldGRna3RqemJzdGlocWlcdTAwMjZ1dG1fc291cmNlPWRyaXBcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPUludGVydmlldytDYWtlK1dlZWtseStQcm9ibGVtKyUyMzI2NCUzQStTaW11bGF0ZSs3LXNpZGVkK2RpZSJ9"}}{\fldrslt 
-\f2\b\fs28 \cf17 \ul \ulc17 Simulate 7-sided die}}
+\f2\b\fs28 \cf18 \ul \ulc18 Simulate 7-sided die}}
 \f2\b\fs28  \
 \pard\pardeftab560\slleading20\partightenfactor0
 
 \f1\b0\fs24 \cf0 \
-This problem will be free for 2 weeks, then it'll go back to being available only in {\field{\*\fldinst{HYPERLINK "https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDc3NDM4NCIsImRlbGl2ZXJ5X2lkIjoiODM1MDM1ODE1NiIsInVybCI6Imh0dHBzOi8vd3d3LmludGVydmlld2Nha2UuY29tL3VwZ3JhZGU_dXRtX3NvdXJjZT13ZWVrbHlfZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249d2Vla2x5X2VtYWlsXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNl9fcz15ZHFtZGV0ZGdrdGp6YnN0aWhxaVx1MDAyNnV0bV9zb3VyY2U9ZHJpcFx1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249SW50ZXJ2aWV3K0Nha2UrV2Vla2x5K1Byb2JsZW0rJTIzMjY0JTNBK1NpbXVsYXRlKzctc2lkZWQrZGllIn0"}}{\fldrslt \cf17 \ul \ulc17 our full course}}.\
+This problem will be free for 2 weeks, then it'll go back to being available only in {\field{\*\fldinst{HYPERLINK "https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDc3NDM4NCIsImRlbGl2ZXJ5X2lkIjoiODM1MDM1ODE1NiIsInVybCI6Imh0dHBzOi8vd3d3LmludGVydmlld2Nha2UuY29tL3VwZ3JhZGU_dXRtX3NvdXJjZT13ZWVrbHlfZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249d2Vla2x5X2VtYWlsXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNl9fcz15ZHFtZGV0ZGdrdGp6YnN0aWhxaVx1MDAyNnV0bV9zb3VyY2U9ZHJpcFx1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249SW50ZXJ2aWV3K0Nha2UrV2Vla2x5K1Byb2JsZW0rJTIzMjY0JTNBK1NpbXVsYXRlKzctc2lkZWQrZGllIn0"}}{\fldrslt \cf18 \ul \ulc18 our full course}}.\
 \
 Do the problem 
 \f8\i this week
 \f1\i0  and we'll review it together next week :)\
 \
 Let's review last week's question, {\field{\*\fldinst{HYPERLINK "https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDc3NDM4NCIsImRlbGl2ZXJ5X2lkIjoiODM1MDM1ODE1NiIsInVybCI6Imh0dHBzOi8vd3d3LmludGVydmlld2Nha2UuY29tL3F1ZXN0aW9uL3NpbXVsYXRlLTUtc2lkZWQtZGllP3V0bV9zb3VyY2U9d2Vla2x5X2VtYWlsXHUwMDI2dXRtX2NhbXBhaWduPXdlZWtseV9lbWFpbFx1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZfX3M9eWRxbWRldGRna3RqemJzdGlocWlcdTAwMjZ1dG1fc291cmNlPWRyaXBcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPUludGVydmlldytDYWtlK1dlZWtseStQcm9ibGVtKyUyMzI2NCUzQStTaW11bGF0ZSs3LXNpZGVkK2RpZSJ9"}}{\fldrslt 
-\f2\b \cf17 \ul \ulc17 Simulate 5-sided die}}:\
+\f2\b \cf18 \ul \ulc18 Simulate 5-sided die}}:\
 \
 Making sure each possible result has 
 \f8\i the same probability
@@ -5143,7 +5469,7 @@ If you're ever struggling with the math to figure something like that out, don't
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.\
@@ -5193,7 +5519,7 @@ A
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -5335,7 +5661,7 @@ input3
 \f1\b0\fs24 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Google.\
 You are given an M by N matrix consisting of booleans that represents a board. Each True boolean represents a wall. Each False boolean represents a tile you can walk on.\
@@ -5385,7 +5711,7 @@ Implementing queue with stack.\
 \pard\pardeftab560\pardirnatural\partightenfactor0
 \ls4\ilvl0
 \f7\b0\fs20 \cf0 {\listtext	\uc0\u8226 	}
-\f1\fs24 		Given an input stream of strings, find the most frequent string. \'a0 {\field{\*\fldinst{HYPERLINK "https://www.glassdoor.com/Interview/Given-an-input-stream-of-strings-find-the-most-frequent-string-QTN_1972574.htm"}}{\fldrslt \cf17 1 Answer}}\
+\f1\fs24 		Given an input stream of strings, find the most frequent string. \'a0 {\field{\*\fldinst{HYPERLINK "https://www.glassdoor.com/Interview/Given-an-input-stream-of-strings-find-the-most-frequent-string-QTN_1972574.htm"}}{\fldrslt \cf18 1 Answer}}\
 \ls4\ilvl0
 \f7\fs20 {\listtext	\uc0\u8226 	}
 \f1\fs24 		Given an input stream of strings, find the first, unique string. \'a0\
@@ -5398,7 +5724,7 @@ Implementing queue with stack.\
 \pard\pardeftab560\pardirnatural\partightenfactor0
 \ls5\ilvl0
 \f7\b0\fs20 \cf0 {\listtext	\uc0\u8226 	}
-\f1\fs24 		Find the longest palindromic substring from the given string. \'a0 {\field{\*\fldinst{HYPERLINK "https://www.glassdoor.com/Interview/-Find-the-longest-palindromic-substring-from-the-given-string-QTN_1978806.htm"}}{\fldrslt \cf17 3 Answers}}\
+\f1\fs24 		Find the longest palindromic substring from the given string. \'a0 {\field{\*\fldinst{HYPERLINK "https://www.glassdoor.com/Interview/-Find-the-longest-palindromic-substring-from-the-given-string-QTN_1978806.htm"}}{\fldrslt \cf18 3 Answers}}\
 \ls5\ilvl0
 \f7\fs20 {\listtext	\uc0\u8226 	}
 \f1\fs24 		calculate overlap area of two rectangles \'a0\
@@ -5418,7 +5744,7 @@ Implementing queue with stack.\
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -5950,7 +6276,7 @@ Here's some examples and some starter code:\
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Uber.\
@@ -6001,7 +6327,7 @@ Here's an example and some starter code:\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -6063,7 +6389,7 @@ Here's some examples and some starter code.\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -6114,7 +6440,7 @@ Here's an example and some starter code.\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Apple.\
@@ -6163,7 +6489,7 @@ Here's an example and some starter code.\
 \f1\b0\fs24 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Two Sigma.\
@@ -6211,7 +6537,7 @@ Here's an example and some starter code.\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
@@ -6257,7 +6583,7 @@ Here's an example and some starter code:\
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Twitter.\
@@ -6304,16 +6630,16 @@ Here's an example and some starter code.\
 \f2\b\fs28 \cf0 \
 \
 \pard\pardeftab560\sa40\partightenfactor0
-{\field{\*\fldinst{HYPERLINK "https://www.techseries.dev/offers/vb9SVFHL/checkout"}}{\fldrslt \cf17 \ul \ulc17 Upgrade to PRO}} and get in-depth solutions to every problem from ex-Google and ex-Facebook engineers TechLead and Joma.\
+{\field{\*\fldinst{HYPERLINK "https://www.techseries.dev/offers/vb9SVFHL/checkout"}}{\fldrslt \cf18 \ul \ulc18 Upgrade to PRO}} and get in-depth solutions to every problem from ex-Google and ex-Facebook engineers TechLead and Joma.\
 \
-By the way, check out our NEW project CoderPro ({\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 http://coderpro.com}}) for over 70+ video coding sessions with ex-Google/ex-Facebook engineers.\
-Ready to fast-track your career? Join our premiere tech interview training program {\field{\*\fldinst{HYPERLINK "http://techinterviewpro.com/"}}{\fldrslt \cf17 \ul \ulc17 techinterviewpro.com}}. \
+By the way, check out our NEW project CoderPro ({\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 http://coderpro.com}}) for over 70+ video coding sessions with ex-Google/ex-Facebook engineers.\
+Ready to fast-track your career? Join our premiere tech interview training program {\field{\*\fldinst{HYPERLINK "http://techinterviewpro.com/"}}{\fldrslt \cf18 \ul \ulc18 techinterviewpro.com}}. \
 \
 Have a great day!\
 Daily Interview Pro\
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 
 \f1\b0\fs24 \cf0 Good morning! Here's your coding interview problem for today.\
@@ -6881,7 +7207,7 @@ n1
 \
 \pard\pardeftab560\sa40\partightenfactor0
 
-\f2\b\fs28 \cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Facebook:\
+\f2\b\fs28 \cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Facebook:\
 \
 Given a sorted list of numbers, return a list of strings that represent all of the consecutive numbers.\
 \
@@ -6951,7 +7277,7 @@ Here is a starting point:\
 \
 \
 \
-Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Google:\
+Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Google:\
 \
 Given a singly-linked list, reverse the list. This can be done iteratively or recursively. Can you get both solutions?\
 \
@@ -7166,7 +7492,7 @@ testTail
 \
 \
 \
-Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Uber:\
+Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Uber:\
 \
 Given a number of integers, combine them so it would create the largest number.\
 \
@@ -7210,7 +7536,7 @@ Output:  77245217\
 \
 \
 \
-Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
+Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
 \
 Given two strings which represent non-negative integers, multiply the two numbers and return the product as a string as well. You should assume that the numbers may be sufficiently large such that the built-in integer type will not be able to store the input (Python does have BigNum, but assume it does not exist).\
 \
@@ -7263,7 +7589,7 @@ Assume that you have a function get_random(floor, ceiling) for getting a random 
 \
 \
 \
-Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Uber:\
+Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Uber:\
 \
 You are given a string of parenthesis. Return the minimum number of parenthesis that would need to be removed in order to make the string valid. "Valid" means that each open parenthesis has a matching closed parenthesis.\
 \
@@ -7307,7 +7633,7 @@ Here's a start:\
 \
 \
 \
-Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Uber:\
+Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Uber:\
 \
 Given a list of numbers, find if there exists a pythagorean triplet in that list. A pythagorean triplet is 3 variables a, b, c where a\super 2\nosupersub  + b\super 2\nosupersub  = c\super 2\nosupersub \
 \
@@ -7350,7 +7676,7 @@ Here, 5\super 2\nosupersub  + 12\super 2\nosupersub  = 13\super 2\nosupersub .\
 \
 \
 \
-Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Amazon:\
+Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Amazon:\
 \
 The h-index is a metric that attempts to measure the productivity and citation impact of the publication of a scholar. The definition of the h-index is if a scholar has at least h of their papers cited h times. \
 \
@@ -7399,7 +7725,7 @@ Here's a starting point:\
 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -7420,7 +7746,7 @@ Output: 2\
 It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move from (1, 1) to (1, 2).\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Atlassian.\
@@ -7429,7 +7755,7 @@ Given an array representing a line of seats of employees at MegaCorp, determine 
 For example, given [10, 40, 200, 1000, 60, 30], you should return [1, 2, 3, 4, 2, 1].\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by PagerDuty.\
@@ -7440,7 +7766,7 @@ There are two kinds of permitted steps:\
 For example, given 100, you can reach 1 in five steps with the following route: 100 -> 10 -> 9 -> 3 -> 2 -> 1.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -7449,14 +7775,14 @@ Given a positive integer n, return the n-th perfect number.\
 For example, given 1, you should return 19. Given 2, you should return 28.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
 Given an array of a million integers between zero and a billion, out of order, how can you efficiently sort it? Assume that you cannot store an array of a billion elements in memory.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Salesforce.\
@@ -7464,14 +7790,14 @@ Write a program to merge two binary trees. Each node in the new tree should hold
 If only one input tree has a node in a given position, the corresponding node in the new tree should match that input node.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
 Given a binary tree, return the level of the tree with minimum sum.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Stitch Fix.\
@@ -7490,7 +7816,7 @@ Given an input k, return the k
 Bonus: Can you do this using only O(k) space?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Oracle.\
@@ -7498,7 +7824,7 @@ Given a binary search tree, find the floor and ceiling of a given integer. The f
 If either value does not exist, return None.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 
 \f2\b\fs28 \cf0 Good morning! Here's your coding interview problem for today.\
@@ -7516,7 +7842,7 @@ Implement 3 stacks using a single list:\
         pass\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
@@ -7528,7 +7854,7 @@ Recall that a heap has the following operations:\
 	\'95	pop(), which removes and returns the max value of the heap\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -7538,7 +7864,7 @@ Given the list of flights [('SFO', 'COM'), ('COM', 'YYZ')] and starting airport 
 Given the list of flights [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', you should return the list ['A', 'B', 'C', 'A', 'C'] even though ['A', 'C', 'A', 'B', 'C'] is also a valid itinerary. However, the first one is lexicographically smaller.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Netflix.\
@@ -7554,7 +7880,7 @@ For example, given the sequence [3, 2, 6, 1, 9], the resulting Cartesian tree wo
 Given a sequence S, construct the corresponding Cartesian tree.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This question was asked by BufferBox.\
@@ -7576,19 +7902,19 @@ should be pruned to:\
 We do not remove the tree at the root or its left child because it still has a 1 as a descendant.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Indeed.\
 Given a 32-bit positive integer N, determine whether it is a power of four in faster than O(log N) time.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Alibaba.\
 Given an even number (greater than 2), return two prime numbers whose sum will be equal to the given number.\
-A solution will always exist. See {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Goldbach%27s_conjecture"}}{\fldrslt \cf17 \ul \ulc17 Goldbach\'92s conjecture}}.\
+A solution will always exist. See {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Goldbach%27s_conjecture"}}{\fldrslt \cf18 \ul \ulc18 Goldbach\'92s conjecture}}.\
 Example:\
 Input: 4\
 Output: 2 + 2 = 4\
@@ -7598,7 +7924,7 @@ If [a, b] is one solution with a <= b, and [c, d] is another solution with c <= 
 If a < c OR a==c AND b < d.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -7606,7 +7932,7 @@ You're given a string consisting solely of (, ), and *. * can represent either a
 For example, (()* and (*) are balanced. )*( is not balanced.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Microsoft.\
@@ -7622,7 +7948,7 @@ return 124 (99 + 25) as:\
 4 -> 2 -> 1\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Dropbox.\
@@ -7636,7 +7962,7 @@ Implement Conway's Game of Life. It should be able to be initialized with a star
 You can represent a live cell with an asterisk (*) and a dead cell with a dot (.).\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
@@ -7644,11 +7970,11 @@ You are given a list of data entries that represent entries and exits of groups 
 \{"timestamp": 1526579928, count: 3, "type": "enter"\}\
 This means 3 people entered the building. An exit looks like this:\
 \{"timestamp": 1526580382, count: 2, "type": "exit"\}\
-This means that 2 people exited the building. timestamp is in {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Unix_time"}}{\fldrslt \cf17 \ul \ulc17 Unix time}}.\
+This means that 2 people exited the building. timestamp is in {\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/Unix_time"}}{\fldrslt \cf18 \ul \ulc18 Unix time}}.\
 Find the busiest period in the building, that is, the time with the most people in the building. Return it as a pair of (start, end) timestamps. You can assume the building always starts off and ends up empty, i.e. with 0 people inside.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by LinkedIn.\
@@ -7656,7 +7982,7 @@ You are given a string consisting of the letters x and y, such as xyxxxyxyy. In 
 Determine how many times you would need to apply this operation to ensure that all x's come before all y's. In the preceding example, it suffices to flip the second and sixth characters, so you should return 2.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 
 \f2\b\fs28 \cf0 Good morning! Here's your coding interview problem for today.\
@@ -7674,14 +8000,14 @@ For example, given the input ['R', 'G', 'B', 'G', 'B'], it is possible to end up
 ['R']                     |\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
 Given the head of a singly linked list, reverse it in-place.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
@@ -7694,13 +8020,13 @@ A tree is symmetric if its data and shape remain unchanged when it is reflected 
 Given a k-ary tree, determine whether it is symmetric.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 Given a real number n, find the square root of n. For example, given n = 9, return 3.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -7716,7 +8042,7 @@ you should return:\
 Follow-up: What if you couldn't use any extra space?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -7726,7 +8052,7 @@ If two distances to larger numbers are the equal, then return any one of them. I
 Follow-up: If you can preprocess the array, can you do this in constant time?\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Amazon.\
@@ -7747,7 +8073,7 @@ For example, given s = "abcba" and k = 2, the longest substring with k distinct 
 \cf0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
-\fs28 \cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
+\fs28 \cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
 \
 You are given the preorder and inorder traversals of a binary tree in the form of arrays. Write a function that reconstructs the tree represented by these traversals.\
 \
@@ -7946,7 +8272,7 @@ tree
 \pard\pardeftab560\sa40\partightenfactor0
 
 \f2\b\fs28 \cf0 \
-Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by AirBNB:\
+Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by AirBNB:\
 \
 Given a non-empty list of words, return the k most frequent words. The output should be sorted from highest to lowest frequency, and if two words have the same frequency, the word with lower alphabetical order comes first. Input will contain only lower-case letters.\
 \
@@ -8024,7 +8350,7 @@ k
 \cf0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Amazon:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Amazon:\
 \
 Given a binary tree, return all values given a certain height h.\
 \
@@ -8163,7 +8489,7 @@ a
 \cf0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
 \
 You are given a doubly linked list. Determine if it is a palindrome. \
 \
@@ -8302,7 +8628,7 @@ node
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Apple:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Apple:\
 \
 Given an integer k and a binary search tree, find the floor (less than or equal to) of k, and the ceiling (larger than or equal to) of k. If either does not exist, then print them as None.\
 \
@@ -8435,7 +8761,7 @@ root
 \cf0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Apple:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Apple:\
 \
 In many spreadsheet applications, the columns are marked with letters. From the 1st to the 26th column the letters are A to Z. Then starting from the 27th column it uses AA, AB, ..., ZZ, AAA, etc.\
 \
@@ -8482,7 +8808,7 @@ Given a number n, find the n-th column name.\
 \cf0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Facebook:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Facebook:\
 \
 Two words can be 'chained' if the last character of the first word is the same as the first character of the second word. \
 \
@@ -8539,7 +8865,7 @@ Here's a start:\
 \
 \pard\pardeftab560\sa40\partightenfactor0
 
-\f2\b\fs28 \cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Apple:\
+\f2\b\fs28 \cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Apple:\
 \
 Create a class that initializes with a list of numbers and has one method called sum. sum should take in two parameters, start_idx and end_idx and return the sum of the list from start_idx (inclusive) to end_idx` (exclusive).\
 \
@@ -8616,7 +8942,7 @@ Here's the class:\
 \f1\b0\fs24 \cf0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\
 \
 Return the longest run of 1s for a given integer n's binary representation.\
 \
@@ -8650,7 +8976,7 @@ Output: 4\
 \cf0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Apple:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Apple:\
 \
 Given an array of integers, arr, where all numbers occur twice except one number which occurs once, find the number. Your solution should ideally be O(n) time and use constant extra space. \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -8717,7 +9043,7 @@ nums
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
 \pard\pardeftab560\slleading20\partightenfactor0
-\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf17 \ul \ulc17 CoderPro}} for more practice!) This problem was recently asked by Google:\
+\cf0 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf18 \ul \ulc18 CoderPro}} for more practice!) This problem was recently asked by Google:\
 \
 Given a binary tree, find and return the largest path from root to leaf.\
 \
@@ -8842,7 +9168,7 @@ tree
 \cf0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -8850,14 +9176,14 @@ Given an array of elements, return the length of the longest subarray where all 
 For example, given the array [5, 1, 3, 5, 2, 3, 4, 1], return 5 as the longest subarray of distinct elements is [5, 2, 3, 4, 1].\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Palantir.\
 Write a program that checks whether an integer is a palindrome. For example, 121 is a palindrome, as well as 888. 678 is not a palindrome. Do not convert the integer into a string.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Facebook.\
@@ -8866,7 +9192,7 @@ For example, given [8, -1, 3, 4], return 15 as we choose the numbers 3, 4, and 8
 Given [-4, 5, 1, 0], return 6 as we choose the numbers 5 and 1.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Palantir.\
@@ -8878,7 +9204,7 @@ A typical American-style crossword puzzle grid is an N x N matrix with black and
 Write a program to determine whether a given matrix qualifies as a crossword grid.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Google.\
@@ -8892,7 +9218,7 @@ For example, given the following board:\
 and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number of steps required to reach the end is 7, since we would need to go through (1, 2) because there is a wall everywhere else on the second row.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Twitter.\
@@ -8902,7 +9228,7 @@ You run an e-commerce website and want to record the last N order ids in a log. 
 You should be as efficient with time and space as possible.\cell \lastrow\row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
-\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf16 \clbrdrl\brdrs\brdrw20\brdrcf16 \clbrdrb\brdrs\brdrw20\brdrcf16 \clbrdrr\brdrs\brdrw20\brdrcf16 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\clvertalt \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf17 \clbrdrl\brdrs\brdrw20\brdrcf17 \clbrdrb\brdrs\brdrw20\brdrcf17 \clbrdrr\brdrs\brdrw20\brdrcf17 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
 \cf0 Good morning! Here's your coding interview problem for today.\
 This problem was asked by Uber.\
@@ -10680,7 +11006,7 @@ Input: \{\cb1 \
 \f3 \cb14 , you should print:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f4\fs26 \cf15 \cb7 t     a     g\
+\f4\fs26 \cf16 \cb7 t     a     g\
  h   s z   a\
   i i   i z\
    s     g\cell \lastrow\row
@@ -10816,7 +11142,7 @@ a XOR b = N\cell \lastrow\row
 \cb14 For example, given the following matrix:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f4\fs26 \cf15 \cb7 [[1,  2,  3,  4,  5],\
+\f4\fs26 \cf16 \cb7 [[1,  2,  3,  4,  5],\
  [6,  7,  8,  9,  10],\
  [11, 12, 13, 14, 15],\
  [16, 17, 18, 19, 20]]\
@@ -10825,7 +11151,7 @@ a XOR b = N\cell \lastrow\row
 \f3\fs32 \cf13 \cb14 You should print out the following:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f4\fs26 \cf15 \cb7 1\
+\f4\fs26 \cf16 \cb7 1\
 2\
 3\
 4\
@@ -10998,7 +11324,7 @@ Trominoes, or
 \f3 \cb14  are trominoes.\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f4\fs26 \cf15 \cb7 A B B C\
+\f4\fs26 \cf16 \cb7 A B B C\
 A B C C\
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
