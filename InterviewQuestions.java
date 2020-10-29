@@ -1176,7 +1176,7 @@ public class InterviewQuestions {
 	Find the maximum possible fun you can get at this resort
 	Example:
 
-	Input: Ski Resot
+	Input: Ski Resort
 
 	[[1,  2,  3, 4,  5],
 	[16, 17, 18, 19, 6],
@@ -1438,8 +1438,8 @@ public class InterviewQuestions {
 			} else {
 				count.put(number, 1);
 			}
-			//evaluate: if hashmap has more than 2 keys, remove from back until 2 keys
-			//if has 2 keys, return length
+			//evaluate: if hashmap has more than k keys, remove from back until 2 keys
+			//if has k keys, return length
 			if (count.keySet().size() > k) {
 
 				while (count.keySet().size() != k) {
