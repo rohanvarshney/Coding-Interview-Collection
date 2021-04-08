@@ -70,13 +70,35 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \itap2\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
 \pard\intbl\itap2\pardeftab720\partightenfactor0
-\cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
+\cf2 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Facebook.\cb1 \
 \cb3 In chess, the Elo rating system is used to calculate player strengths based on game results.\cb1 \
 \cb3 A simplified description of the Elo system is as follows. Every player begins at the same score. For each subsequent game, the loser transfers some points to the winner, where the amount of points transferred depends on how unlikely the win is. For example, a 1200-ranked player should gain much more points for beating a 2000-ranked player than for beating a 1300-ranked player.\cb1 \
 \cb3 Implement this system.\nestcell \lastrow\nestrow
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf2 \cb3 \cell \lastrow\row
+\cf2 \cell \lastrow\row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
+\cb3 This problem was asked by Square.\cb1 \
+\cb3 The Sieve of Eratosthenes is an algorithm used to generate all prime numbers smaller than 
+\f4 \cb4 N
+\f3 \cb3 . The method is to take increasingly larger prime numbers, and mark their multiples as composite.\cb1 \
+\cb3 For example, to find all primes less than 
+\f4 \cb4 100
+\f3 \cb3 , we would first mark 
+\f4 \cb4 [4, 6, 8, ...]
+\f3 \cb3  (multiples of two), then 
+\f4 \cb4 [6, 9, 12, ...]
+\f3 \cb3  (multiples of three), and so on. Once we have done this for all primes less than 
+\f4 \cb4 N
+\f3 \cb3 , the unmarked numbers that remain will be prime.\cb1 \
+\cb3 Implement this algorithm.\cb1 \
+\cb3 Bonus: Create a generator that produces primes indefinitely (that is, without taking 
+\f4 \cb4 N
+\f3 \cb3  as an input).\cell \lastrow\row
 \pard\pardeftab560\slleading20\partightenfactor0
 
 \f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
