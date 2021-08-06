@@ -1,8 +1,8 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2513
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 HelveticaNeue-Bold;
-\f3\fswiss\fcharset0 ArialMT;\f4\fnil\fcharset0 Menlo-Regular;\f5\fmodern\fcharset0 Courier;
-\f6\fmodern\fcharset0 Courier-Bold;\f7\fmodern\fcharset0 Courier-Oblique;\f8\fnil\fcharset0 HelveticaNeue-Italic;
-\f9\fnil\fcharset0 AppleSymbols;\f10\fnil\fcharset129 AppleSDGothicNeo-Regular;\f11\fnil\fcharset129 .AppleSDGothicNeoI-Bold;
+\f3\fswiss\fcharset0 ArialMT;\f4\fnil\fcharset0 Menlo-Regular;\f5\fnil\fcharset0 AppleSymbols;
+\f6\fmodern\fcharset0 Courier;\f7\fmodern\fcharset0 Courier-Bold;\f8\fmodern\fcharset0 Courier-Oblique;
+\f9\fnil\fcharset0 HelveticaNeue-Italic;\f10\fnil\fcharset129 AppleSDGothicNeo-Regular;\f11\fnil\fcharset129 .AppleSDGothicNeoI-Bold;
 \f12\fswiss\fcharset0 Arial-BoldMT;\f13\fswiss\fcharset0 Helvetica-Bold;}
 {\colortbl;\red255\green255\blue255;\red67\green67\blue67;\red239\green241\blue244;\red246\green246\blue246;
 \red97\green101\blue107;\red26\green26\blue26;\red255\green255\blue255;\red236\green236\blue236;\red25\green55\blue116;
@@ -54,6 +54,77 @@ Interview Cake\
 Daily Coding Problem\
 \
 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Good morning! Here's your coding interview problem for today.\cb1 \
+\cb3 This problem was asked by Google.\cb1 \
+\cb3 Given k sorted singly linked lists, write a function to merge all the lists into one sorted singly linked list.\cell \lastrow\row
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\b\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth11738\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Good morning! Here's your coding interview problem for today.\cb1 \
+\cb3 This problem was asked by VMware.\cb1 \
+\cb3 The skyline of a city is composed of several buildings of various widths and heights, possibly overlapping one another when viewed from a distance. We can represent the buildings using an array of 
+\f4 \cb4 (left, right, height)
+\f3 \cb3  tuples, which tell us where on an imaginary x-axis a building begins and ends, and how tall it is. The skyline itself can be described by a list of 
+\f4 \cb4 (x, height)
+\f3 \cb3  tuples, giving the locations at which the height visible to a distant observer changes, and each new height.\cb1 \
+\cb3 Given an array of buildings as described above, create a function that returns the skyline.\cb1 \
+\cb3 For example, suppose the input consists of the buildings 
+\f4 \cb4 [(0, 15, 3), (4, 11, 5), (19, 23, 4)]
+\f3 \cb3 . In aggregate, these buildings would create a skyline that looks like the one below.\cb1 \
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4\fs26 \cf5 \cb4      ______  \
+    |      |        ___\
+ ___|      |___    |   | \
+|   |   B  |   |   | C |\
+| A |      | A |   |   |\
+|   |      |   |   |   |\
+------------------------\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 As a result, your function should return 
+\f4 \cb4 [(0, 3), (4, 5), (11, 3), (15, 0), (19, 4), (23, 0)]\cell \lastrow\row
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\b\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Good morning! Here's your coding interview problem for today.\cb1 \
+\cb3 This problem was asked by Microsoft.\cb1 \
+\cb3 Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer and each internal node is one of '+', '\uc0\u8722 ', '
+\f5 \uc0\u8727 
+\f3 ', or '/'.\cb1 \
+\cb3 Given the root to such a tree, write a function to evaluate it.\cb1 \
+\cb3 For example, given the following tree:\cb1 \
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f4\fs26 \cf5 \cb4     *\
+   / \\\
+  +    +\
+ / \\  / \\\
+3  2  4  5\
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 You should return 45, as it is (3 + 2) * (4 + 5).\cell \lastrow\row
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\b\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -100,7 +171,7 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \itap2\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
 \pard\intbl\itap2\pardeftab720\partightenfactor0
-\cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
+\cf2 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Google.\cb1 \
 \cb3 A unival tree (which stands for "universal value") is a tree where all nodes under it have the same value.\cb1 \
 \cb3 Given the root to a binary tree, count the number of unival subtrees.\cb1 \
@@ -625,85 +696,85 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 Hi, here's your problem today. This problem was recently asked by Facebook:\cb1 \
 \
 \cb7 Given a matrix that is organized such that the numbers will always be sorted left to right, and the first number of each row will always be greater than the last element of the last row (
-\f5 \cb8 mat[i][0] > mat[i - 1][-1]
+\f6 \cb8 mat[i][0] > mat[i - 1][-1]
 \f3 \cb7 ), search for a specific value in the matrix and return whether it exists.\cb1 \
 \
 \cb7 Here's an example and some starter code.\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  searchMatrix
-\f6\b (
-\f5\b0 mat
-\f6\b ,
-\f5\b0  value
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  searchMatrix
+\f7\b (
+\f6\b0 mat
+\f7\b ,
+\f6\b0  value
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \cb4   \cb1 \
 \cb4 mat 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b [
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b [
+\f6\b0 \cb1 \
 \cb4     
-\f6\b [\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf12 8\cf6 ],
-\f5\b0 \cb1 \
+\f7\b [\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf12 8\cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b [\cf12 10\cf6 ,
-\f5\b0  
-\f6\b \cf12 11\cf6 ,
-\f5\b0  
-\f6\b \cf12 15\cf6 ,
-\f5\b0  
-\f6\b \cf12 16\cf6 ],
-\f5\b0 \cb1 \
+\f7\b [\cf12 10\cf6 ,
+\f6\b0  
+\f7\b \cf12 11\cf6 ,
+\f6\b0  
+\f7\b \cf12 15\cf6 ,
+\f6\b0  
+\f7\b \cf12 16\cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b [\cf12 24\cf6 ,
-\f5\b0  
-\f6\b \cf12 27\cf6 ,
-\f5\b0  
-\f6\b \cf12 30\cf6 ,
-\f5\b0  
-\f6\b \cf12 31\cf6 ],
-\f5\b0 \cb1 \
+\f7\b [\cf12 24\cf6 ,
+\f6\b0  
+\f7\b \cf12 27\cf6 ,
+\f6\b0  
+\f7\b \cf12 30\cf6 ,
+\f6\b0  
+\f7\b \cf12 31\cf6 ],
+\f6\b0 \cb1 \
 
-\f6\b \cb4 ]
-\f5\b0 \cb1 \
+\f7\b \cb4 ]
+\f6\b0 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 searchMatrix
-\f6\b (
-\f5\b0 mat
-\f6\b ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 searchMatrix
+\f7\b (
+\f6\b0 mat
+\f7\b ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # False
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # False
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 searchMatrix
-\f6\b (
-\f5\b0 mat
-\f6\b ,
-\f5\b0  
-\f6\b \cf12 10\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 searchMatrix
+\f7\b (
+\f6\b0 mat
+\f7\b ,
+\f6\b0  
+\f7\b \cf12 10\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # True
+\f8\i \cf10 \cb4 # True
 \f1\i0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 \cf0 \
@@ -746,7 +817,7 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth11738\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\partightenfactor0
-\cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
+\cf2 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Amazon.\cb1 \
 \cb3 You are given a list of data entries that represent entries and exits of groups of people into a building. An entry looks like this:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
@@ -805,7 +876,7 @@ Hi, here's your problem today. (You've reached the end of the problems for now -
 \cb7 Can you do this in a single pass?\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: [2,0,2,1,1,0]\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: [0,0,1,1,2,2]\cb1 \
@@ -815,88 +886,88 @@ Input: [2,0,2,1,1,0]\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b :
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  sortColors
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  sortColors
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 nums 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b [\cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ]
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b [\cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ]
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 \cf16 "Before Sort: "
-\f6\b \cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 \cf16 "Before Sort: "
+\f7\b \cf6 )
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 nums
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 nums
+\f7\b )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [0, 1, 2, 2, 1, 1, 2, 2, 0, 0, 0, 0, 2, 1]
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # [0, 1, 2, 2, 1, 1, 2, 2, 0, 0, 0, 0, 2, 1]
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 sortColors
-\f6\b (
-\f5\b0 nums
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b ()\cf11 .
+\f6\b0 \cf6 sortColors
+\f7\b (
+\f6\b0 nums
+\f7\b )
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 \cf16 "After Sort: "
-\f6\b \cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 \cf16 "After Sort: "
+\f7\b \cf6 )
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 nums
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 nums
+\f7\b )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2]
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # [0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \
@@ -950,204 +1021,204 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Node
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Node
+\f7\b :
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  __init__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  val
-\f6\b ,
-\f5\b0  left
-\f6\b \cf11 =
-\f5\b0 \cf15 None
-\f6\b \cf6 ,
-\f5\b0  right
-\f6\b \cf11 =
-\f5\b0 \cf15 None
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __init__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  val
+\f7\b ,
+\f6\b0  left
+\f7\b \cf11 =
+\f6\b0 \cf15 None
+\f7\b \cf6 ,
+\f6\b0  right
+\f7\b \cf11 =
+\f6\b0 \cf15 None
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 val 
-\f6\b \cf11 =
-\f5\b0 \cf6  val\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 val 
+\f7\b \cf11 =
+\f6\b0 \cf6  val\cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 left 
-\f6\b \cf11 =
-\f5\b0 \cf6  left\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 left 
+\f7\b \cf11 =
+\f6\b0 \cf6  left\cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 right 
-\f6\b \cf11 =
-\f5\b0 \cf6  right\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 right 
+\f7\b \cf11 =
+\f6\b0 \cf6  right\cb1 \
 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  __str__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __str__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # pre-order printing of the tree.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # pre-order printing of the tree.
+\f6\i0 \cf6 \cb1 \
 \cb4     result 
-\f6\b \cf11 =
-\f5\b0 \cf6  \cf16 ''\cf6 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  \cf16 ''\cf6 \cb1 \
 \cb4     result 
-\f6\b \cf11 +=
-\f5\b0 \cf6  \cf9 str
-\f6\b \cf6 (
-\f5\b0 \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 val
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf11 +=
+\f6\b0 \cf6  \cf9 str
+\f7\b \cf6 (
+\f6\b0 \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 val
+\f7\b )
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 if
-\f5\b0 \cf6  \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 left
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b \cf9 if
+\f6\b0 \cf6  \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 left
+\f7\b :
+\f6\b0 \cb1 \
 \cb4       result 
-\f6\b \cf11 +=
-\f5\b0 \cf6  \cf9 str
-\f6\b \cf6 (
-\f5\b0 \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 left
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf11 +=
+\f6\b0 \cf6  \cf9 str
+\f7\b \cf6 (
+\f6\b0 \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 left
+\f7\b )
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 if
-\f5\b0 \cf6  \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 right
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b \cf9 if
+\f6\b0 \cf6  \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 right
+\f7\b :
+\f6\b0 \cb1 \
 \cb4       result 
-\f6\b \cf11 +=
-\f5\b0 \cf6  \cf9 str
-\f6\b \cf6 (
-\f5\b0 \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 right
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf11 +=
+\f6\b0 \cf6  \cf9 str
+\f7\b \cf6 (
+\f6\b0 \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 right
+\f7\b )
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 return
-\f5\b0 \cf6  result\cb1 \
+\f7\b \cf9 return
+\f6\b0 \cf6  result\cb1 \
 \
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  serialize
-\f6\b (
-\f5\b0 root
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  serialize
+\f7\b (
+\f6\b0 root
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  deserialize
-\f6\b (
-\f5\b0 data
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  deserialize
+\f7\b (
+\f6\b0 data
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f7\i \cf10 \cb4 #     1
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #     1
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 #    / \\
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #    / \\
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 #   3   4
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #   3   4
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 #  / \\   \\
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #  / \\   \\
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 2   5   7
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 2   5   7
+\f6\i0 \cf6 \cb1 \
 \cb4 tree 
-\f6\b \cf11 =
-\f5\b0 \cf6  Node
-\f6\b (\cf12 1\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  Node
+\f7\b (\cf12 1\cf6 )
+\f6\b0 \cb1 \
 \cb4 tree
-\f6\b \cf11 .
-\f5\b0 \cf6 left 
-\f6\b \cf11 =
-\f5\b0 \cf6  Node
-\f6\b (\cf12 3\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 left 
+\f7\b \cf11 =
+\f6\b0 \cf6  Node
+\f7\b (\cf12 3\cf6 )
+\f6\b0 \cb1 \
 \cb4 tree
-\f6\b \cf11 .
-\f5\b0 \cf6 left
-\f6\b \cf11 .
-\f5\b0 \cf6 left 
-\f6\b \cf11 =
-\f5\b0 \cf6  Node
-\f6\b (\cf12 2\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 left
+\f7\b \cf11 .
+\f6\b0 \cf6 left 
+\f7\b \cf11 =
+\f6\b0 \cf6  Node
+\f7\b (\cf12 2\cf6 )
+\f6\b0 \cb1 \
 \cb4 tree
-\f6\b \cf11 .
-\f5\b0 \cf6 left
-\f6\b \cf11 .
-\f5\b0 \cf6 right 
-\f6\b \cf11 =
-\f5\b0 \cf6  Node
-\f6\b (\cf12 5\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 left
+\f7\b \cf11 .
+\f6\b0 \cf6 right 
+\f7\b \cf11 =
+\f6\b0 \cf6  Node
+\f7\b (\cf12 5\cf6 )
+\f6\b0 \cb1 \
 \cb4 tree
-\f6\b \cf11 .
-\f5\b0 \cf6 right 
-\f6\b \cf11 =
-\f5\b0 \cf6  Node
-\f6\b (\cf12 4\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 right 
+\f7\b \cf11 =
+\f6\b0 \cf6  Node
+\f7\b (\cf12 4\cf6 )
+\f6\b0 \cb1 \
 \cb4 tree
-\f6\b \cf11 .
-\f5\b0 \cf6 right
-\f6\b \cf11 .
-\f5\b0 \cf6 right 
-\f6\b \cf11 =
-\f5\b0 \cf6  Node
-\f6\b (\cf12 7\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 right
+\f7\b \cf11 .
+\f6\b0 \cf6 right 
+\f7\b \cf11 =
+\f6\b0 \cf6  Node
+\f7\b (\cf12 7\cf6 )
+\f6\b0 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  serialize
-\f6\b (
-\f5\b0 tree
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  serialize
+\f7\b (
+\f6\b0 tree
+\f7\b )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 1 3 2 # # 5 # # 4 # 7 # #
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 1 3 2 # # 5 # # 4 # 7 # #
+\f6\i0 \cf6 \cb1 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  deserialize
-\f6\b (
-\f5\b0 \cf16 '1 3 2 # # 5 # # 4 # 7 # #'
-\f6\b \cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  deserialize
+\f7\b (
+\f6\b0 \cf16 '1 3 2 # # 5 # # 4 # 7 # #'
+\f7\b \cf6 )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 132547
+\f8\i \cf10 \cb4 # 132547
 \f1\i0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -1182,33 +1253,33 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \fs26 \cf6 \cb7 Hi, here's your problem today. This problem was recently asked by Amazon:\cb1 \
 \
 \cb7 Given a positive integer 
-\f5 \cb8 n
+\f6 \cb8 n
 \f3 \cb7 , find all primes less than 
-\f5 \cb8 n
+\f6 \cb8 n
 \f3 \cb7 .\cb1 \
 \
 \cb7 Here's an example and some starter code:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  find_primes
-\f6\b (
-\f5\b0 n
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  find_primes
+\f7\b (
+\f6\b0 n
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 find_primes
-\f6\b (\cf12 14\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 find_primes
+\f7\b (\cf12 14\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [2, 3, 5, 7, 11, 13]
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # [2, 3, 5, 7, 11, 13]
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \
@@ -1243,161 +1314,161 @@ Hi, here's your problem today. This problem was recently asked by AirBNB:\cb1 \
 \cb7 Given a phone number, return all valid words that can be created using that phone number.\cb1 \
 \
 \cb7 For instance, given the phone number 
-\f5 \cb8 364
+\f6 \cb8 364
 \f3 \cb7  \cb1 \
 \cb7 we can construct the words 
-\f5 \cb8 ['dog', 'fog']
+\f6 \cb8 ['dog', 'fog']
 \f3 \cb7 .\cb1 \
 \
 \cb7 Here's a starting point:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb4 lettersMaps 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b \{
-\f5\b0 \cb1 \
+\f6\fs24 \cf6 \cb4 lettersMaps 
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b \{
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 1\cf6 :
-\f5\b0  
-\f6\b [],
-\f5\b0 \cb1 \
+\f7\b \cf12 1\cf6 :
+\f6\b0  
+\f7\b [],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 2\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'a'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'b'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'c'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 2\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'a'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'b'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'c'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 3\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'd'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'e'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'f'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 3\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'd'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'e'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'f'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 4\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'g'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'h'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'i'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 4\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'g'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'h'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'i'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 5\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'j'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'k'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'l'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 5\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'j'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'k'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'l'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 6\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'm'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'n'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'o'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 6\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'm'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'n'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'o'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 7\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'p'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'q'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'r'
-\f6\b \cf6 ,
-\f5\b0  \cf16 's'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 7\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'p'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'q'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'r'
+\f7\b \cf6 ,
+\f6\b0  \cf16 's'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 8\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 't'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'u'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'v'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 8\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 't'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'u'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'v'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 9\cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'w'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'x'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'y'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'z'
-\f6\b \cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf12 9\cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'w'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'x'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'y'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'z'
+\f7\b \cf6 ],
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf12 0\cf6 :
-\f5\b0  
-\f6\b []
-\f5\b0 \cb1 \
+\f7\b \cf12 0\cf6 :
+\f6\b0  
+\f7\b []
+\f6\b0 \cb1 \
 
-\f6\b \cb4 \}
-\f5\b0 \cb1 \
+\f7\b \cb4 \}
+\f6\b0 \cb1 \
 \
 \cb4 validWords 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b [
-\f5\b0 \cf16 'dog'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'fish'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'cat'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'fog'
-\f6\b \cf6 ]
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b [
+\f6\b0 \cf16 'dog'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'fish'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'cat'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'fog'
+\f7\b \cf6 ]
+\f6\b0 \cb1 \
 \
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  makeWords
-\f6\b (
-\f5\b0 phone
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  makeWords
+\f7\b (
+\f6\b0 phone
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 #Fill this in
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 #Fill this in
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 makeWords
-\f6\b (
-\f5\b0 \cf16 '364'
-\f6\b \cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 makeWords
+\f7\b (
+\f6\b0 \cf16 '364'
+\f7\b \cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # ['dog', 'fog']\
+\f8\i \cf10 \cb4 # ['dog', 'fog']\
 \
 \
 
@@ -1433,67 +1504,67 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \cb7 You have a landscape, in which puddles can form. You are given an array of non-negative integers representing the elevation at each location. Return the amount of water that would accumulate if it rains.\cb1 \
 \
 \cb7 For example: 
-\f5 \cb8 [0,1,0,2,1,0,1,3,2,1,2,1]
+\f6 \cb8 [0,1,0,2,1,0,1,3,2,1,2,1]
 \f3 \cb7  should return 
-\f5 \cb8 6
+\f6 \cb8 6
 \f3 \cb7  because 6 units of water can get trapped here.
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
        X               \cb1 \
 \cb8    X
 \f4 \uc0\u9608 \u9608 \u9608 
-\f5 XX
+\f6 XX
 \f4 \uc0\u9608 
-\f5 X              \cb1 \
+\f6 X              \cb1 \
 \cb8  X
 \f4 \uc0\u9608 
-\f5 XX
+\f6 XX
 \f4 \uc0\u9608 
-\f5 XXXXXX                   \cb1 \
+\f6 XXXXXX                   \cb1 \
 \cb8 # [0,1,0,2,1,0,1,3,2,1,2,1]\cb1 \
 
 \f3\fs26 \cb7 Here's your starting pont:\cb1 \
 \
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  capacity
-\f6\b (
-\f5\b0 arr
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  capacity
+\f7\b (
+\f6\b0 arr
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  capacity
-\f6\b ([\cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  capacity
+\f7\b ([\cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ])
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 6
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 6
+\f6\i0 \cf6 \cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
@@ -1538,13 +1609,13 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 Hi, here's your problem today. This problem was recently asked by Facebook:\cb1 \
 \
 \cb7 Given a list of words, for each word find the shortest unique prefix. You can assume a word will not be a substring of another word (ie 
-\f5 \cb8 play
+\f6 \cb8 play
 \f3 \cb7  and 
-\f5 \cb8 playing
+\f6 \cb8 playing
 \f3 \cb7  won't be in the same words list)\cb1 \
 \
 \cb7 Example
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: ['joma', 'john', 'jack', 'techlead']\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: ['jom', 'joh', 'ja', 't']\cb1 \
@@ -1554,32 +1625,32 @@ Input: ['joma', 'john', 'jack', 'techlead']\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  shortest_unique_prefix
-\f6\b (
-\f5\b0 words
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  shortest_unique_prefix
+\f7\b (
+\f6\b0 words
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 shortest_unique_prefix
-\f6\b ([
-\f5\b0 \cf16 'joma'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'john'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'jack'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'techlead'
-\f6\b \cf6 ]))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 shortest_unique_prefix
+\f7\b ([
+\f6\b0 \cf16 'joma'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'john'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'jack'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'techlead'
+\f7\b \cf6 ]))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # ['jom', 'joh', 'ja', 't']
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # ['jom', 'joh', 'ja', 't']
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\partightenfactor0
 
 \f2\b\fs34 \cf0 \kerning1\expnd0\expndtw0 \
@@ -1595,7 +1666,7 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 For example, given the tree:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f5\fs26 \cf5 \cb4    1\
+\f6\fs26 \cf5 \cb4    1\
   / \\\
  2   3\
     / \\\
@@ -1603,7 +1674,7 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
 \f3\fs32 \cf2 \cb3 Return 
-\f5 \cb4 [[1, 2], [1, 3, 4], [1, 3, 5]]
+\f6 \cb4 [[1, 2], [1, 3, 4], [1, 3, 5]]
 \f3 \cb3 .\cell \lastrow\row
 \pard\pardeftab560\partightenfactor0
 
@@ -1618,15 +1689,15 @@ Good morning! Here's your coding interview problem for today.\cb1 \
 Hi, here's your problem today. This problem was recently asked by Twitter:\cb1 \
 \
 \cb7 Given an array, 
-\f5 \cb8 nums
+\f6 \cb8 nums
 \f3 \cb7 , of n integers, find all unique triplets (three numbers, a, b, & c) in 
-\f5 \cb8 nums
+\f6 \cb8 nums
 \f3 \cb7  such that a + b + c = 0. Note that there may not be any triplets that sum to zero in 
-\f5 \cb8 nums
+\f6 \cb8 nums
 \f3 \cb7 , and that the triplets must not be duplicates.\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: nums = [0, -1, 2, -3, 1]\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: [0, -1, 1], [2, -3, 1]\cb1 \
@@ -1636,53 +1707,53 @@ Input: nums = [0, -1, 2, -3, 1]\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  threeSum
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  threeSum
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f7\i \cf10 \cb4 # Test Program
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # Test Program
+\f6\i0 \cf6 \cb1 \
 \cb4 nums 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b [\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf11 -\cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ]
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b [\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf11 -\cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ]
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 threeSum
-\f6\b (
-\f5\b0 nums
-\f6\b ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 threeSum
+\f7\b (
+\f6\b0 nums
+\f7\b ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [[-2, 1, 1]]
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # [[-2, 1, 1]]
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\partightenfactor0
 
 \f2\b\fs34 \cf0 \kerning1\expnd0\expndtw0 \
@@ -1692,7 +1763,7 @@ Input: nums = [0, -1, 2, -3, 1]\cb1 \
 Hi, here's your problem today. This problem was recently asked by Amazon:\cb1 \
 \
 \cb7 Given a number like 
-\f5 \cb8 159
+\f6 \cb8 159
 \f3 \cb7 , add the digits repeatedly until you get a single number.\cb1 \
 \
 \cb7 For instance, 1 + 5 + 9 = 15.\cb1 \
@@ -1702,32 +1773,32 @@ Hi, here's your problem today. This problem was recently asked by Amazon:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 addDigits
-\f6\b (\cf12 159\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 addDigits
+\f7\b (\cf12 159\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 1 + 5 + 9 = 15
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 1 + 5 + 9 = 15
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 1 + 5 = 6
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 1 + 5 = 6
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 6
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 6
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\partightenfactor0
 
 \f2\b\fs34 \cf0 \kerning1\expnd0\expndtw0 \
@@ -1743,7 +1814,7 @@ Hi, here's your problem today. This problem was recently asked by Twitter:\cb1 \
 \cb7 Given a list of integers, return the bounds of the minimum range that must be sorted so that the whole list would be sorted.\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: [1, 7, 9, 5, 7, 8, 10]\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: (1, 5)\cb1 \
@@ -1756,35 +1827,35 @@ Input: [1, 7, 9, 5, 7, 8, 10]\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  findRange
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  findRange
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  findRange
-\f6\b ([\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 7\cf6 ,
-\f5\b0  
-\f6\b \cf12 9\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf12 7\cf6 ,
-\f5\b0  
-\f6\b \cf12 8\cf6 ,
-\f5\b0  
-\f6\b \cf12 10\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  findRange
+\f7\b ([\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 7\cf6 ,
+\f6\b0  
+\f7\b \cf12 9\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf12 7\cf6 ,
+\f6\b0  
+\f7\b \cf12 8\cf6 ,
+\f6\b0  
+\f7\b \cf12 10\cf6 ])
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # (1, 5)\
+\f8\i \cf10 \cb4 # (1, 5)\
 \
 \pard\pardeftab720\partightenfactor0
 
@@ -1803,97 +1874,97 @@ Hi, here's your problem today. This problem was recently asked by Apple:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Node
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Node
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 def
-\f5\b0 \cf6  __init__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  val
-\f6\b ,
-\f5\b0  left
-\f6\b \cf11 =
-\f5\b0 \cf15 None
-\f6\b \cf6 ,
-\f5\b0  right
-\f6\b \cf11 =
-\f5\b0 \cf15 None
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __init__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  val
+\f7\b ,
+\f6\b0  left
+\f7\b \cf11 =
+\f6\b0 \cf15 None
+\f7\b \cf6 ,
+\f6\b0  right
+\f7\b \cf11 =
+\f6\b0 \cf15 None
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4         \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 val 
-\f6\b \cf11 =
-\f5\b0 \cf6  val\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 val 
+\f7\b \cf11 =
+\f6\b0 \cf6  val\cb1 \
 \cb4         \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 left 
-\f6\b \cf11 =
-\f5\b0 \cf6  left\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 left 
+\f7\b \cf11 =
+\f6\b0 \cf6  left\cb1 \
 \cb4         \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 right 
-\f6\b \cf11 =
-\f5\b0 \cf6  right\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 right 
+\f7\b \cf11 =
+\f6\b0 \cf6  right\cb1 \
 \cb4     
-\f6\b \cf9 def
-\f5\b0 \cf6  __str__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __str__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4       
-\f6\b \cf9 return
-\f5\b0 \cf6  f\cf16 "\{self.val\}, (\{self.left\}, \{self.right\})"\cf6 \cb1 \
+\f7\b \cf9 return
+\f6\b0 \cf6  f\cf16 "\{self.val\}, (\{self.left\}, \{self.right\})"\cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 def
-\f5\b0 \cf6  sortedArrayToBST
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  sortedArrayToBST
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4       
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 n 
-\f6\b \cf11 =
-\f5\b0 \cf6  Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 sortedArrayToBST
-\f6\b ([\cf11 -\cf12 10\cf6 ,
-\f5\b0  
-\f6\b \cf11 -\cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf12 9\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 sortedArrayToBST
+\f7\b ([\cf11 -\cf12 10\cf6 ,
+\f6\b0  
+\f7\b \cf11 -\cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf12 9\cf6 ])
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 n
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 n
+\f7\b )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 0, (-3, (-10, (None, None), None), 9, (5, (None, None), None))
+\f8\i \cf10 \cb4 # 0, (-3, (-10, (None, None), None), 9, (5, (None, None), None))
 \f2\i0\b\fs34 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\pardeftab560\partightenfactor0
 \cf0 \
@@ -1944,7 +2015,7 @@ Here's an example and some starting code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 s 
@@ -1970,7 +2041,7 @@ reverse_words
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # this read you can
+\f9\i \cf0 # this read you can
 \f1\i0 \
 \
 \
@@ -2042,7 +2113,7 @@ Here's an example and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 n3 
@@ -2075,26 +2146,26 @@ n1
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 """
+\f9\i \cf0 """
 \f1\i0 \
 
-\f8\i     1          Level 0 - Sum: 1
+\f9\i     1          Level 0 - Sum: 1
 \f1\i0 \
 
-\f8\i    / \\
+\f9\i    / \\
 \f1\i0 \
 
-\f8\i   4   5        Level 1 - Sum: 9 
+\f9\i   4   5        Level 1 - Sum: 9 
 \f1\i0 \
 
-\f8\i  / \\ / \\
+\f9\i  / \\ / \\
 \f1\i0 \
 
-\f8\i 3  2 4 -1      Level 2 - Sum: 8
+\f9\i 3  2 4 -1      Level 2 - Sum: 8
 \f1\i0 \
 \
 
-\f8\i """
+\f9\i """
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -2107,7 +2178,7 @@ n1
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # Should print 1 as level 1 has the highest level sum
+\f9\i \cf0 # Should print 1 as level 1 has the highest level sum
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -2143,7 +2214,7 @@ Here's some starting code:\
 \f2\b ):
 \f1\b0 \
    
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
    \
 
@@ -2155,7 +2226,7 @@ Here's some starting code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -2168,7 +2239,7 @@ Here's some starting code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # False
+\f9\i \cf0 # False
 \f1\i0 \
 \
 \
@@ -2186,78 +2257,78 @@ Hi, here's your problem today. This problem was recently asked by Uber:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Grid
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Grid
+\f7\b :
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  __init__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  grid
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __init__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  grid
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 grid 
-\f6\b \cf11 =
-\f5\b0 \cf6  grid\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 grid 
+\f7\b \cf11 =
+\f6\b0 \cf6  grid\cb1 \
 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  max_connected_colors
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  max_connected_colors
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 grid 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b [[\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b [[\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ],
+\f6\b0 \cb1 \
 \cb4         
-\f6\b [\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ],
-\f5\b0 \cb1 \
+\f7\b [\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ],
+\f6\b0 \cb1 \
 \cb4         
-\f6\b [\cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ]]
-\f5\b0 \cb1 \
+\f7\b [\cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ]]
+\f6\b0 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Grid
-\f6\b (
-\f5\b0 grid
-\f6\b )\cf11 .
-\f5\b0 \cf6 max_connected_colors
-\f6\b ())
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Grid
+\f7\b (
+\f6\b0 grid
+\f7\b )\cf11 .
+\f6\b0 \cf6 max_connected_colors
+\f7\b ())
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 7
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 7
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
@@ -2279,65 +2350,65 @@ Hi, here's your problem today. (You've reached the end of the problems for now -
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b :
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  build
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  build
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \cb4     \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  autocomplete
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  word
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  autocomplete
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  word
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 s 
-\f6\b \cf11 =
-\f5\b0 \cf6  Solution
-\f6\b ()
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  Solution
+\f7\b ()
+\f6\b0 \cb1 \
 \cb4 s
-\f6\b \cf11 .
-\f5\b0 \cf6 build
-\f6\b ([
-\f5\b0 \cf16 'dog'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'dark'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'cat'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'door'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'dodge'
-\f6\b \cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 build
+\f7\b ([
+\f6\b0 \cf16 'dog'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'dark'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'cat'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'door'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'dodge'
+\f7\b \cf6 ])
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 s
-\f6\b \cf11 .
-\f5\b0 \cf6 autocomplete
-\f6\b (
-\f5\b0 \cf16 'do'
-\f6\b \cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 s
+\f7\b \cf11 .
+\f6\b0 \cf6 autocomplete
+\f7\b (
+\f6\b0 \cf16 'do'
+\f7\b \cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # ['dog', 'door', 'dodge']\
+\f8\i \cf10 \cb4 # ['dog', 'door', 'dodge']\
 
 \f1\i0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -2357,37 +2428,37 @@ Hi, here's your problem today. This problem was recently asked by Facebook:\cb1 
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  checkPerfectNumber
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  num
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  checkPerfectNumber
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  num
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 checkPerfectNumber
-\f6\b (\cf12 28\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 checkPerfectNumber
+\f7\b (\cf12 28\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # True
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # True
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 28 = 1 + 2 + 4 + 7 + 14
+\f8\i \cf10 \cb4 # 28 = 1 + 2 + 4 + 7 + 14
 \f1\i0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 \cf0 \
@@ -2428,7 +2499,7 @@ Here's an example and some starter code\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 a 
@@ -2458,7 +2529,7 @@ rotate_list
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [3, 4, 5, 1, 2]\
+\f9\i \cf0 # [3, 4, 5, 1, 2]\
 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -2612,7 +2683,7 @@ validWords
 \f2\b ):
 \f1\b0 \
   
-\f8\i #Fill this in
+\f9\i #Fill this in
 \f1\i0 \
 \
 
@@ -2624,7 +2695,7 @@ validWords
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ['dog', 'fog']
+\f9\i \cf0 # ['dog', 'fog']
 \f1\i0 \
 \
 ____________________________\
@@ -2644,7 +2715,7 @@ Here's some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 mat 
@@ -2692,7 +2763,7 @@ mat
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 13
+\f9\i \cf0 # 13
 \f1\i0 \
 \
 ____________________________\
@@ -2755,24 +2826,24 @@ Here's some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #     1
+\f9\i \cf0 #     1
 \f1\i0 \
 
-\f8\i #    / \\
+\f9\i #    / \\
 \f1\i0 \
 
-\f8\i #   2   3
+\f9\i #   2   3
 \f1\i0 \
 
-\f8\i #  /
+\f9\i #  /
 \f1\i0 \
 
-\f8\i # 4  
+\f9\i # 4  
 \f1\i0 \
 n4 
 \f2\b =
@@ -2811,23 +2882,23 @@ n1
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \
 
-\f8\i #     1
+\f9\i #     1
 \f1\i0 \
 
-\f8\i #    / 
+\f9\i #    / 
 \f1\i0 \
 
-\f8\i #   2   
+\f9\i #   2   
 \f1\i0 \
 
-\f8\i #  /
+\f9\i #  /
 \f1\i0 \
 
-\f8\i # 4  
+\f9\i # 4  
 \f1\i0 \
 n1 
 \f2\b =
@@ -2846,7 +2917,7 @@ n1
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # False
+\f9\i \cf0 # False
 \f1\i0 \
 \
 \
@@ -2876,7 +2947,7 @@ Output: (2, 4)\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
   \
 
@@ -2898,7 +2969,7 @@ Output: (2, 4)\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # (2, 4)
+\f9\i \cf0 # (2, 4)
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -2927,7 +2998,7 @@ Here is a starting point:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -2943,7 +3014,7 @@ Here is a starting point:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1
+\f9\i \cf0 # 1
 \f1\i0 \
 \
 Can you do this in sublinear time?\
@@ -2977,7 +3048,7 @@ KAPREKAR_CONSTANT
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -2987,19 +3058,19 @@ KAPREKAR_CONSTANT
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 3
+\f9\i \cf0 # 3
 \f1\i0 \
 
-\f8\i # Explanation:
+\f9\i # Explanation:
 \f1\i0 \
 
-\f8\i #  3210 - 123 = 3087
+\f9\i #  3210 - 123 = 3087
 \f1\i0 \
 
-\f8\i #  8730 - 0378 = 8352
+\f9\i #  8730 - 0378 = 8352
 \f1\i0 \
 
-\f8\i #  8532 - 2358 = 6174 (3 iterations)
+\f9\i #  8532 - 2358 = 6174 (3 iterations)
 \f1\i0 \
 \
 \
@@ -3078,7 +3149,7 @@ Here's some starter code for the problem:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # fill this in.
+\f9\i # fill this in.
 \f1\i0 \
 \
 root 
@@ -3099,7 +3170,7 @@ root
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1
+\f9\i \cf0 # 1
 \f1\i0 \
 \
 \
@@ -3124,7 +3195,7 @@ Output: [1, 1, 2, 2, 3, 3, 3]\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3146,7 +3217,7 @@ Output: [1, 1, 2, 2, 3, 3, 3]\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [1, 1, 2, 2, 3, 3, 3]
+\f9\i \cf0 # [1, 1, 2, 2, 3, 3, 3]
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -3185,7 +3256,7 @@ Output: 1\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3207,7 +3278,7 @@ Output: 1\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1
+\f9\i \cf0 # 1
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -3278,7 +3349,7 @@ Here is the definition of a node for the tree.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 root 
@@ -3350,7 +3421,7 @@ root
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # (4, 6)
+\f9\i \cf0 # (4, 6)
 \f1\i0 \
 \
 
@@ -3388,7 +3459,7 @@ Output: True\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3404,7 +3475,7 @@ Output: True\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -3443,7 +3514,7 @@ Output: -4\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3455,7 +3526,7 @@ Output: -4\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # -4
+\f9\i \cf0 # -4
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -3502,7 +3573,7 @@ Here's a starting point:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3518,7 +3589,7 @@ Here's a starting point:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 128
+\f9\i \cf0 # 128
 \f1\i0 \
 \
 \
@@ -3564,7 +3635,7 @@ Here is a starting point:\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 nums 
@@ -3604,7 +3675,7 @@ Solution
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [2, 1, 3, 4, 0, 0, 0, 0, 0, 0]
+\f9\i \cf0 # [2, 1, 3, 4, 0, 0, 0, 0, 0, 0]
 \f1\i0 \
 \
 
@@ -3721,7 +3792,7 @@ Output: ..RR.LL..RR\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3735,7 +3806,7 @@ Output: ..RR.LL..RR\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ..RR.LL..RR
+\f9\i \cf0 # ..RR.LL..RR
 \f1\i0 \
 \
 
@@ -3792,7 +3863,7 @@ Output: 1260388352\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3802,7 +3873,7 @@ Output: 1260388352\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 10011010010
+\f9\i \cf0 # 10011010010
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -3812,7 +3883,7 @@ Output: 1260388352\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1260388352
+\f9\i \cf0 # 1260388352
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -3824,7 +3895,7 @@ Output: 1260388352\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1001011001000000000000000000000
+\f9\i \cf0 # 1001011001000000000000000000000
 \f1\i0 \
 \
 \
@@ -3910,7 +3981,7 @@ Output: false\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -3926,7 +3997,7 @@ Output: false\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -3942,7 +4013,7 @@ Output: false\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # False
+\f9\i \cf0 # False
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -4088,7 +4159,7 @@ For this problem, often you will be asked to design your own serialization forma
 \f2\b ):
 \f1\b0 \
     
-\f8\i # pre-order printing of the tree.
+\f9\i # pre-order printing of the tree.
 \f1\i0 \
     result 
 \f2\b =
@@ -4146,7 +4217,7 @@ For this problem, often you will be asked to design your own serialization forma
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -4157,24 +4228,24 @@ For this problem, often you will be asked to design your own serialization forma
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #     1
+\f9\i \cf0 #     1
 \f1\i0 \
 
-\f8\i #    / \\
+\f9\i #    / \\
 \f1\i0 \
 
-\f8\i #   3   4
+\f9\i #   3   4
 \f1\i0 \
 
-\f8\i #  / \\   \\
+\f9\i #  / \\   \\
 \f1\i0 \
 
-\f8\i # 2   5   7
+\f9\i # 2   5   7
 \f1\i0 \
 tree 
 \f2\b =
@@ -4233,7 +4304,7 @@ tree
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1 3 2 # # 5 # # 4 # 7 # #
+\f9\i \cf0 # 1 3 2 # # 5 # # 4 # 7 # #
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -4245,7 +4316,7 @@ tree
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 132547
+\f9\i \cf0 # 132547
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -4287,7 +4358,7 @@ Output: '/Users/Joma/'\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -4299,7 +4370,7 @@ Output: '/Users/Joma/'\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # /Users/Joma/
+\f9\i \cf0 # /Users/Joma/
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -4356,7 +4427,7 @@ Here's a starting point:\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # preorder traversal
+\f9\i # preorder traversal
 \f1\i0 \
     answer 
 \f2\b =
@@ -4411,24 +4482,24 @@ Here's a starting point:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #     5
+\f9\i \cf0 #     5
 \f1\i0 \
 
-\f8\i #    / \\
+\f9\i #    / \\
 \f1\i0 \
 
-\f8\i #   6   7
+\f9\i #   6   7
 \f1\i0 \
 
-\f8\i #  /   / \\
+\f9\i #  /   / \\
 \f1\i0 \
 
-\f8\i # 2   4   9
+\f9\i # 2   4   9
 \f1\i0 \
 node 
 \f2\b =
@@ -4486,7 +4557,7 @@ node
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #749
+\f9\i \cf0 #749
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -4534,7 +4605,7 @@ Given an integer, check if that integer is a palindrome. For this problem do not
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -4544,7 +4615,7 @@ Given an integer, check if that integer is a palindrome. For this problem do not
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -4554,7 +4625,7 @@ Given an integer, check if that integer is a palindrome. For this problem do not
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # False
+\f9\i \cf0 # False
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -4619,7 +4690,7 @@ Output: ["pro", "daily"]\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 words 
@@ -4661,7 +4732,7 @@ k
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ['pro', 'daily']
+\f9\i \cf0 # ['pro', 'daily']
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -5116,7 +5187,7 @@ Output: 321\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -5128,7 +5199,7 @@ Output: 321\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 321
+\f9\i \cf0 # 321
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -5140,7 +5211,7 @@ Output: 321\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 0
+\f9\i \cf0 # 0
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -5166,7 +5237,7 @@ Output: cbcbca\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -5178,7 +5249,7 @@ Output: cbcbca\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # cbcabc
+\f9\i \cf0 # cbcabc
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -5257,24 +5328,24 @@ For instance, in the example below, the sums of the trees are 10, 2 + 8 = 10, an
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #     10
+\f9\i \cf0 #     10
 \f1\i0 \
 
-\f8\i #    /  \\
+\f9\i #    /  \\
 \f1\i0 \
 
-\f8\i #   2    8
+\f9\i #   2    8
 \f1\i0 \
 
-\f8\i #  / \\    \\
+\f9\i #  / \\    \\
 \f1\i0 \
 
-\f8\i # 4   1    2
+\f9\i # 4   1    2
 \f1\i0 \
 node 
 \f2\b =
@@ -5367,7 +5438,7 @@ Output: [3,7]\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 nums 
@@ -5398,7 +5469,7 @@ nums
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [3, 5]
+\f9\i \cf0 # [3, 5]
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -5480,7 +5551,7 @@ The example indicates a list where the tail connects to the second node.\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 testHead 
@@ -5545,7 +5616,7 @@ testTail
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -5689,7 +5760,7 @@ Implement a URL shortener with the following methods:\
 \pard\intbl\itap1\pardeftab560\slleading20\qc\partightenfactor0
 \cf0 This problem was asked by Microsoft.\
 Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer and each internal node is one of '+', '\uc0\u8722 ', '
-\f9 \uc0\u8727 
+\f5 \uc0\u8727 
 \f1 ', or '/'.\
 Given the root to such a tree, write a function to evaluate it.\
 For example, given the following tree:\
@@ -5740,7 +5811,7 @@ You are given an array of integers. Return all the permutations of this array.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -5754,7 +5825,7 @@ You are given an array of integers. Return all the permutations of this array.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [[1, 2, 3], [2, 1, 3], [2, 3, 1], [1, 3, 2], [3, 1, 2], [3, 2, 1]]
+\f9\i \cf0 # [[1, 2, 3], [2, 1, 3], [2, 3, 1], [1, 3, 2], [3, 1, 2], [3, 2, 1]]
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6005,7 +6076,7 @@ Here's a starting point\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 version1 
@@ -6027,7 +6098,7 @@ version2
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1
+\f9\i \cf0 # 1
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6068,7 +6139,7 @@ Here is a starting point:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -6098,7 +6169,7 @@ Here is a starting point:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ['0->2', '5->5', '7->11', '15->15']
+\f9\i \cf0 # ['0->2', '5->5', '7->11', '15->15']
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6129,7 +6200,7 @@ Output: 4\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -6139,7 +6210,7 @@ Output: 4\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 4
+\f9\i \cf0 # 4
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6164,18 +6235,18 @@ Given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index, 2 in
 This problem will be free for 2 weeks, then it'll go back to being available only in {\field{\*\fldinst{HYPERLINK "https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDc3NDM4NCIsImRlbGl2ZXJ5X2lkIjoiODM1MDM1ODE1NiIsInVybCI6Imh0dHBzOi8vd3d3LmludGVydmlld2Nha2UuY29tL3VwZ3JhZGU_dXRtX3NvdXJjZT13ZWVrbHlfZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249d2Vla2x5X2VtYWlsXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNl9fcz15ZHFtZGV0ZGdrdGp6YnN0aWhxaVx1MDAyNnV0bV9zb3VyY2U9ZHJpcFx1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249SW50ZXJ2aWV3K0Nha2UrV2Vla2x5K1Byb2JsZW0rJTIzMjY0JTNBK1NpbXVsYXRlKzctc2lkZWQrZGllIn0"}}{\fldrslt \cf18 \ul \ulc18 our full course}}.\
 \
 Do the problem 
-\f8\i this week
+\f9\i this week
 \f1\i0  and we'll review it together next week :)\
 \
 Let's review last week's question, {\field{\*\fldinst{HYPERLINK "https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDc3NDM4NCIsImRlbGl2ZXJ5X2lkIjoiODM1MDM1ODE1NiIsInVybCI6Imh0dHBzOi8vd3d3LmludGVydmlld2Nha2UuY29tL3F1ZXN0aW9uL3NpbXVsYXRlLTUtc2lkZWQtZGllP3V0bV9zb3VyY2U9d2Vla2x5X2VtYWlsXHUwMDI2dXRtX2NhbXBhaWduPXdlZWtseV9lbWFpbFx1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZfX3M9eWRxbWRldGRna3RqemJzdGlocWlcdTAwMjZ1dG1fc291cmNlPWRyaXBcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPUludGVydmlldytDYWtlK1dlZWtseStQcm9ibGVtKyUyMzI2NCUzQStTaW11bGF0ZSs3LXNpZGVkK2RpZSJ9"}}{\fldrslt 
 \f2\b \cf18 \ul \ulc18 Simulate 5-sided die}}:\
 \
 Making sure each possible result has 
-\f8\i the same probability
+\f9\i the same probability
 \f1\i0  is a big part of what makes this one tricky.\
 \
 If you're ever struggling with the math to figure something like that out, don't be afraid to 
-\f8\i just count
+\f9\i just count
 \f1\i0 . As in, write out all the possible results from rand7(), and label each one with its final outcome for rand5(). Then count up how many ways there are to make each final outcome. If the counts aren't the same, the function isn't uniformly random.\
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6221,7 +6292,7 @@ You may also use a list or array to represent a set.\cell \lastrow\row
 A 
 \f2\b cycle
 \f1\b0  occurs when a node\'92s next points 
-\f8\i back to a previous node in the list
+\f9\i back to a previous node in the list
 \f1\i0 . The linked list is no longer linear with a beginning and end\'97instead, it cycles through a loop of nodes.\
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -6304,7 +6375,7 @@ Here is a starting point:\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 input1 
@@ -6333,7 +6404,7 @@ input3
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # A
+\f9\i \cf0 # A
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -6347,7 +6418,7 @@ input3
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # YYYZ
+\f9\i \cf0 # YYYZ
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -6361,7 +6432,7 @@ input3
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # AB
+\f9\i \cf0 # AB
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6483,7 +6554,7 @@ Here's an example and some starting code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 mat 
@@ -6509,29 +6580,29 @@ mat
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # Looks like
+\f9\i \cf0 # Looks like
 \f1\i0 \
 
-\f8\i # 1 2 3
+\f9\i # 1 2 3
 \f1\i0 \
 
-\f8\i # 4 5 6
+\f9\i # 4 5 6
 \f1\i0 \
 
-\f8\i # 7 8 9
+\f9\i # 7 8 9
 \f1\i0 \
 \
 
-\f8\i # Looks like
+\f9\i # Looks like
 \f1\i0 \
 
-\f8\i # 7 4 1
+\f9\i # 7 4 1
 \f1\i0 \
 
-\f8\i # 8 5 2
+\f9\i # 8 5 2
 \f1\i0 \
 
-\f8\i # 9 6 3
+\f9\i # 9 6 3
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -6543,7 +6614,7 @@ mat
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [[7, 4, 1], [8, 5, 2], [9, 6, 3]]\
+\f9\i \cf0 # [[7, 4, 1], [8, 5, 2], [9, 6, 3]]\
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
 \
@@ -6566,7 +6637,7 @@ Here's some starting code: \
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -6578,7 +6649,7 @@ Here's some starting code: \
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 125
+\f9\i \cf0 # 125
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6600,7 +6671,7 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
   \
 
@@ -6610,7 +6681,7 @@ Here's an example and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 2.236
+\f9\i \cf0 # 2.236
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6632,7 +6703,7 @@ Here's an example and some starting code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -6642,10 +6713,10 @@ Here's an example and some starting code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # Min sum is 3^2 + 2^2
+\f9\i \cf0 # Min sum is 3^2 + 2^2
 \f1\i0 \
 
-\f8\i # 2
+\f9\i # 2
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
@@ -6708,7 +6779,7 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 lst 
@@ -6737,7 +6808,7 @@ remove_dup
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # (1, (2, (3, None)))
+\f9\i \cf0 # (1, (2, (3, None)))
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6758,7 +6829,7 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -6768,7 +6839,7 @@ Here's an example and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [2, 3, 5, 7, 11, 13]
+\f9\i \cf0 # [2, 3, 5, 7, 11, 13]
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6791,7 +6862,7 @@ Here are some examples and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -6803,7 +6874,7 @@ Here are some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ()
+\f9\i \cf0 # ()
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -6816,7 +6887,7 @@ Here are some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ()()
+\f9\i \cf0 # ()()
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -6829,7 +6900,7 @@ Here are some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ' '
+\f9\i \cf0 # ' '
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
@@ -6856,7 +6927,7 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
  
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
  \
 
@@ -6878,7 +6949,7 @@ Here's an example and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [7, 3, 8]
+\f9\i \cf0 # [7, 3, 8]
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -6900,12 +6971,12 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
   \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # print [2, 2, 3, 4, -1, -1]
+\f9\i \cf0 # print [2, 2, 3, 4, -1, -1]
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -6944,7 +7015,7 @@ Here's some examples and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -6956,7 +7027,7 @@ Here's some examples and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -6968,7 +7039,7 @@ Here's some examples and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # False
+\f9\i \cf0 # False
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -6980,7 +7051,7 @@ Here's some examples and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # False
+\f9\i \cf0 # False
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -7017,7 +7088,7 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -7033,7 +7104,7 @@ Here's an example and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ['e', 'o']
+\f9\i \cf0 # ['e', 'o']
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -7074,7 +7145,7 @@ Here's some examples and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
   \
 
@@ -7084,7 +7155,7 @@ Here's some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 531
+\f9\i \cf0 # 531
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -7095,7 +7166,7 @@ Here's some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # -123
+\f9\i \cf0 # -123
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -7132,7 +7203,7 @@ Here's an example and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -7146,7 +7217,7 @@ Here's an example and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 143
+\f9\i \cf0 # 143
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -7177,7 +7248,7 @@ Here's an example and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
   \
 
@@ -7191,7 +7262,7 @@ Here's an example and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 101000
+\f9\i \cf0 # 101000
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -7233,7 +7304,7 @@ Here's an example and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -7243,7 +7314,7 @@ Here's an example and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [1, 5, 10, 10, 5, 1]
+\f9\i \cf0 # [1, 5, 10, 10, 5, 1]
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -7275,7 +7346,7 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -7289,7 +7360,7 @@ Here's an example and some starter code:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [2, 1, 0, 0, 1, 2, 2, 1, 0, 1]
+\f9\i \cf0 # [2, 1, 0, 0, 1, 2, 2, 1, 0, 1]
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -7320,7 +7391,7 @@ Here's an example and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -7332,10 +7403,10 @@ Here's an example and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # (((6 - 1) * 2) * 2) = 20 : 3 operations needed only
+\f9\i \cf0 # (((6 - 1) * 2) * 2) = 20 : 3 operations needed only
 \f1\i0 \
 
-\f8\i # print 3
+\f9\i # print 3
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -7374,7 +7445,7 @@ Here's an example:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 mat 
@@ -7409,13 +7480,13 @@ mat
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [[1, 4],
+\f9\i \cf0 # [[1, 4],
 \f1\i0 \
 
-\f8\i #  [2, 5], 
+\f9\i #  [2, 5], 
 \f1\i0 \
 
-\f8\i #  [3, 6]]\
+\f9\i #  [3, 6]]\
 \
 \
 \
@@ -7439,7 +7510,7 @@ Here's some examples and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
   \
 
@@ -7455,7 +7526,7 @@ Here's some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # hell
+\f9\i \cf0 # hell
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -7472,7 +7543,7 @@ Here's some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ''
+\f9\i \cf0 # ''
 \f1\i0 \
 \
 \
@@ -7500,7 +7571,7 @@ Here's some examples and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -7520,7 +7591,7 @@ Here's some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # (0, 1)
+\f9\i \cf0 # (0, 1)
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -7539,7 +7610,7 @@ Here's some examples and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # (-1, -1)
+\f9\i \cf0 # (-1, -1)
 \f1\i0 \
 \
 \
@@ -7608,24 +7679,24 @@ Here's an example and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #      1
+\f9\i \cf0 #      1
 \f1\i0 \
 
-\f8\i #    /   \\
+\f9\i #    /   \\
 \f1\i0 \
 
-\f8\i #   2     3
+\f9\i #   2     3
 \f1\i0 \
 
-\f8\i #    \\     \\
+\f9\i #    \\     \\
 \f1\i0 \
 
-\f8\i #     6     4
+\f9\i #     6     4
 \f1\i0 \
 n6 
 \f2\b =
@@ -7677,10 +7748,10 @@ n1
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 
-\f8\i # Path from 1 -> 2 -> 6
+\f9\i # Path from 1 -> 2 -> 6
 \f1\i0 \
 \
 \
@@ -7710,7 +7781,7 @@ Here's some example and some starter code\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
   \
 
@@ -7726,10 +7797,10 @@ Here's some example and some starter code\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 5
+\f9\i \cf0 # 5
 \f1\i0 \
 
-\f8\i # max sum is 4 (index 1) + 1 (index 3)
+\f9\i # max sum is 4 (index 1) + 1 (index 3)
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -7748,10 +7819,10 @@ Here's some example and some starter code\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 9
+\f9\i \cf0 # 9
 \f1\i0 \
 
-\f8\i # max sum is 2 (index 0) + 7 (index 3)
+\f9\i # max sum is 2 (index 0) + 7 (index 3)
 \f1\i0 \
 \
 \
@@ -7832,7 +7903,7 @@ Here's an example and some starter code.\
 \f2\b =0):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 n5 
@@ -7871,19 +7942,19 @@ n1
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #      1
+\f9\i \cf0 #      1
 \f1\i0 \
 
-\f8\i #    /   \\
+\f9\i #    /   \\
 \f1\i0 \
 
-\f8\i #   2     3
+\f9\i #   2     3
 \f1\i0 \
 
-\f8\i #  / \\
+\f9\i #  / \\
 \f1\i0 \
 
-\f8\i # 4   5
+\f9\i # 4   5
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
@@ -7896,10 +7967,10 @@ n1
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 262
+\f9\i \cf0 # 262
 \f1\i0 \
 
-\f8\i # Explanation: 124 + 125 + 13 = 262
+\f9\i # Explanation: 124 + 125 + 13 = 262
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -7943,7 +8014,7 @@ Here is a starting point:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -7973,7 +8044,7 @@ Here is a starting point:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ['0->2', '5->5', '7->11', '15->15']
+\f9\i \cf0 # ['0->2', '5->5', '7->11', '15->15']
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -8025,7 +8096,7 @@ Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL\
 \f1\b0  None\
   \
   
-\f8\i # Function to print the list
+\f9\i # Function to print the list
 \f1\i0 \
   
 \f2\b def
@@ -8071,7 +8142,7 @@ Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL\
 \f1\b0 \
 \
   
-\f8\i # Iterative Solution
+\f9\i # Iterative Solution
 \f1\i0 \
   
 \f2\b def
@@ -8083,11 +8154,11 @@ Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Implement this.
+\f9\i # Implement this.
 \f1\i0 \
 \
   
-\f8\i # Recursive Solution      
+\f9\i # Recursive Solution      
 \f1\i0 \
   
 \f2\b def
@@ -8099,15 +8170,15 @@ Output: 0 -> 1 -> 2 -> 3 -> 4 -> NULL\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Implement this.
+\f9\i # Implement this.
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # Test Program
+\f9\i \cf0 # Test Program
 \f1\i0 \
 
-\f8\i # Initialize the test list: 
+\f9\i # Initialize the test list: 
 \f1\i0 \
 testHead 
 \f2\b =
@@ -8168,7 +8239,7 @@ testHead
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 4 3 2 1 0
+\f9\i \cf0 # 4 3 2 1 0
 \f1\i0 \
 testHead
 \f2\b .
@@ -8178,7 +8249,7 @@ testHead
 \f2\b )
 \f1\b0 \
 
-\f8\i #testHead.reverseRecursively(testHead)
+\f9\i #testHead.reverseRecursively(testHead)
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -8193,7 +8264,7 @@ testTail
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 0 1 2 3 4
+\f9\i \cf0 # 0 1 2 3 4
 \f1\i0 \
 \
 \
@@ -8220,7 +8291,7 @@ Output:  77245217\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -8238,7 +8309,7 @@ Output:  77245217\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 77245217
+\f9\i \cf0 # 77245217
 \f1\i0 \
 \
 \
@@ -8265,7 +8336,7 @@ Here's an example and some starter code.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -8279,7 +8350,7 @@ Here's an example and some starter code.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 143
+\f9\i \cf0 # 143
 \f1\i0 \
 \
 \
@@ -8324,7 +8395,7 @@ Here's a start:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -8336,7 +8407,7 @@ Here's a start:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 1
+\f9\i \cf0 # 1
 \f1\i0 \
 \
 \
@@ -8363,7 +8434,7 @@ Here, 5\super 2\nosupersub  + 12\super 2\nosupersub  = 13\super 2\nosupersub .\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -8379,7 +8450,7 @@ Here, 5\super 2\nosupersub  + 12\super 2\nosupersub  = 13\super 2\nosupersub .\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \
 \
@@ -8411,7 +8482,7 @@ Here's a starting point:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -8429,7 +8500,7 @@ Here's a starting point:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 3
+\f9\i \cf0 # 3
 \f1\i0 \
 \
 \
@@ -8935,7 +9006,7 @@ Here's a start:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 tree 
@@ -8979,7 +9050,7 @@ tree
 \f1\b0  tree\
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # abcdefg
+\f9\i \cf0 # abcdefg
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -9014,7 +9085,7 @@ Output: ["pro", "daily"]\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 words 
@@ -9056,7 +9127,7 @@ k
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # ['pro', 'daily']
+\f9\i \cf0 # ['pro', 'daily']
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -9117,24 +9188,24 @@ Here's a starting point:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #     1
+\f9\i \cf0 #     1
 \f1\i0 \
 
-\f8\i #    / \\
+\f9\i #    / \\
 \f1\i0 \
 
-\f8\i #   2   3
+\f9\i #   2   3
 \f1\i0 \
 
-\f8\i #  / \\   \\
+\f9\i #  / \\   \\
 \f1\i0 \
 
-\f8\i # 4   5   7
+\f9\i # 4   5   7
 \f1\i0 \
 \
 a 
@@ -9195,7 +9266,7 @@ a
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [4, 5, 7]
+\f9\i \cf0 # [4, 5, 7]
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -9248,7 +9319,7 @@ Can you do this for a singly linked list?\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 node 
@@ -9334,7 +9405,7 @@ node
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
@@ -9395,7 +9466,7 @@ Here is the definition of a node for the tree.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 root 
@@ -9467,7 +9538,7 @@ root
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # (4, 6)
+\f9\i \cf0 # (4, 6)
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -9488,7 +9559,7 @@ Given a number n, find the n-th column name.\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -9508,13 +9579,13 @@ Given a number n, find the n-th column name.\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # Z
+\f9\i \cf0 # Z
 \f1\i0 \
 
-\f8\i # AA
+\f9\i # AA
 \f1\i0 \
 
-\f8\i # AB
+\f9\i # AB
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -9549,7 +9620,7 @@ Here's a start:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -9569,7 +9640,7 @@ Here's a start:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # True
+\f9\i \cf0 # True
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -9618,7 +9689,7 @@ Here's the class:\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -9644,7 +9715,7 @@ Here's the class:\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 12 because 3 + 4 + 5 = 12
+\f9\i \cf0 # 12 because 3 + 4 + 5 = 12
 \f1\i0 \
 \pard\pardeftab560\sa40\partightenfactor0
 
@@ -9672,7 +9743,7 @@ Output: 4\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 
@@ -9682,7 +9753,7 @@ Output: 4\
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 4
+\f9\i \cf0 # 4
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -9714,7 +9785,7 @@ Output: 7\
 \f2\b ):
 \f1\b0 \
     
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 nums 
@@ -9749,7 +9820,7 @@ nums
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # 3
+\f9\i \cf0 # 3
 \f1\i0 \
 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
@@ -9808,7 +9879,7 @@ Here's an example and some starter code:\
 \f2\b ):
 \f1\b0 \
   
-\f8\i # Fill this in.
+\f9\i # Fill this in.
 \f1\i0 \
 \
 tree 
@@ -9850,19 +9921,19 @@ tree
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 #    1
+\f9\i \cf0 #    1
 \f1\i0 \
 
-\f8\i #  /   \\
+\f9\i #  /   \\
 \f1\i0 \
 
-\f8\i # 3     2
+\f9\i # 3     2
 \f1\i0 \
 
-\f8\i #  \\   /
+\f9\i #  \\   /
 \f1\i0 \
 
-\f8\i #   5 4
+\f9\i #   5 4
 \f1\i0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -9874,7 +9945,7 @@ tree
 \f1\b0 \
 \pard\pardeftab560\slleading20\partightenfactor0
 
-\f8\i \cf0 # [1, 3, 5]
+\f9\i \cf0 # [1, 3, 5]
 \f1\i0 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 \cf0 \
@@ -9959,74 +10030,74 @@ Hi, here's your problem today. (You've reached the end of the problems for now -
 
 \f12\b \cf6 \cb7 Example
 \f3\b0 :
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: ["daily", "interview", "pro", "pro", \cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 "for", "daily", "pro", "problems"], k = 2\cb1 \
 \cb8 Output: ["pro", "daily"]\cb1 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  topKFrequent
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  words
-\f6\b ,
-\f5\b0  k
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  topKFrequent
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  words
+\f7\b ,
+\f6\b0  k
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 words 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b [
-\f5\b0 \cf16 "daily"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "interview"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "pro"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "pro"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "for"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "daily"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "pro"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "problems"
-\f6\b \cf6 ]
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b [
+\f6\b0 \cf16 "daily"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "interview"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "pro"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "pro"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "for"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "daily"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "pro"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "problems"
+\f7\b \cf6 ]
+\f6\b0 \cb1 \
 \cb4 k 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b \cf12 2
-\f5\b0 \cf6 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b \cf12 2
+\f6\b0 \cf6 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 topKFrequent
-\f6\b (
-\f5\b0 words
-\f6\b ,
-\f5\b0  k
-\f6\b ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 topKFrequent
+\f7\b (
+\f6\b0 words
+\f7\b ,
+\f6\b0  k
+\f7\b ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # ['pro', 'daily']
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # ['pro', 'daily']
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \
@@ -10040,11 +10111,11 @@ Input: ["daily", "interview", "pro", "pro", \cb1 \
 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by Amazon:\cb1 \
 \
 \cb7 Given a string, return the first recurring letter that appears. If there are no recurring letters, return 
-\f5 \cb8 None
+\f6 \cb8 None
 \f3 \cb7 .\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: qwertty\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: t\cb1 \
@@ -10057,37 +10128,37 @@ Input: qwertty\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  first_recurring_char
-\f6\b (
-\f5\b0 s
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  first_recurring_char
+\f7\b (
+\f6\b0 s
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \cb4   \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 first_recurring_char
-\f6\b (
-\f5\b0 \cf16 'qwertty'
-\f6\b \cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 first_recurring_char
+\f7\b (
+\f6\b0 \cf16 'qwertty'
+\f7\b \cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # t
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # t
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 first_recurring_char
-\f6\b (
-\f5\b0 \cf16 'qwerty'
-\f6\b \cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 first_recurring_char
+\f7\b (
+\f6\b0 \cf16 'qwerty'
+\f7\b \cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # None
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # None
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \
@@ -10099,47 +10170,47 @@ Input: qwertty\cb1 \
 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\cb1 \
 \
 \cb7 Given a list of numbers of size 
-\f5 \cb8 n
+\f6 \cb8 n
 \f3 \cb7 , where 
-\f5 \cb8 n
+\f6 \cb8 n
 \f3 \cb7  is greater than 
-\f5 \cb8 3
+\f6 \cb8 3
 \f3 \cb7 , find the maximum and minimum of the list using less than 
-\f5 \cb8 2 * (n - 1)
+\f6 \cb8 2 * (n - 1)
 \f3 \cb7  comparisons.\cb1 \
 \
 \cb7 Here's a start:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  find_min_max
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  find_min_max
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  find_min_max
-\f6\b ([\cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 8\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  find_min_max
+\f7\b ([\cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 8\cf6 ])
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # (1, 8)
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # (1, 8)
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \
@@ -10161,49 +10232,49 @@ Hi, here's your problem today. (You've reached the end of the problems for now -
 \f3\b0 , x. Assume that the environment can only store integers within the 32-bit signed integer range, [-2^31, 2^31 - 1]. The function returns 0 when the reversed integer overflows. \cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: 123\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: 321\cb1 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b :
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  reverse
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  x
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  reverse
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  x
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 reverse
-\f6\b (\cf12 123\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 reverse
+\f7\b (\cf12 123\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 321
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 321
+\f6\i0 \cf6 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 reverse
-\f6\b (\cf12 2\cf11 **\cf12 31\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 reverse
+\f7\b (\cf12 2\cf11 **\cf12 31\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 0
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 0
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -10218,18 +10289,18 @@ Input: 123\cb1 \
 \f3\fs26 \cf6 \cb7 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by LinkedIn:\cb1 \
 \
 \cb7 Given a 2-dimensional grid consisting of 
-\f5 \cb8 1
+\f6 \cb8 1
 \f3 \cb7 's (land blocks) and 
-\f5 \cb8 0
+\f6 \cb8 0
 \f3 \cb7 's (water blocks), count the number of islands present in the grid. The definition of an island is as follows:\cb1 \
 \cb7 1.) Must be surrounded by water blocks.\cb1 \
 \cb7 2.) Consists of land blocks (
-\f5 \cb8 1
+\f6 \cb8 1
 \f3 \cb7 's) connected to adjacent land blocks (either vertically or horizontally). \cb1 \
 \cb7 Assume all edges outside of the grid are water.\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: \cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 10001\cb1 \
@@ -10244,139 +10315,139 @@ Input: \cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  inRange
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  grid
-\f6\b ,
-\f5\b0  r
-\f6\b ,
-\f5\b0  c
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  inRange
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  grid
+\f7\b ,
+\f6\b0  r
+\f7\b ,
+\f6\b0  c
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     numRow
-\f6\b ,
-\f5\b0  numCol 
-\f6\b \cf11 =
-\f5\b0 \cf6  \cf9 len
-\f6\b \cf6 (
-\f5\b0 grid
-\f6\b ),
-\f5\b0  \cf9 len
-\f6\b \cf6 (
-\f5\b0 grid
-\f6\b [\cf12 0\cf6 ])
-\f5\b0 \cb1 \
+\f7\b ,
+\f6\b0  numCol 
+\f7\b \cf11 =
+\f6\b0 \cf6  \cf9 len
+\f7\b \cf6 (
+\f6\b0 grid
+\f7\b ),
+\f6\b0  \cf9 len
+\f7\b \cf6 (
+\f6\b0 grid
+\f7\b [\cf12 0\cf6 ])
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 if
-\f5\b0 \cf6  r 
-\f6\b \cf11 <
-\f5\b0 \cf6  
-\f6\b \cf12 0
-\f5\b0 \cf6  
-\f6\b \cf9 or
-\f5\b0 \cf6  c 
-\f6\b \cf11 <
-\f5\b0 \cf6  
-\f6\b \cf12 0
-\f5\b0 \cf6  
-\f6\b \cf9 or
-\f5\b0 \cf6  r 
-\f6\b \cf11 >=
-\f5\b0 \cf6  numRow 
-\f6\b \cf9 or
-\f5\b0 \cf6  c 
-\f6\b \cf11 >=
-\f5\b0 \cf6  numCol
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b \cf9 if
+\f6\b0 \cf6  r 
+\f7\b \cf11 <
+\f6\b0 \cf6  
+\f7\b \cf12 0
+\f6\b0 \cf6  
+\f7\b \cf9 or
+\f6\b0 \cf6  c 
+\f7\b \cf11 <
+\f6\b0 \cf6  
+\f7\b \cf12 0
+\f6\b0 \cf6  
+\f7\b \cf9 or
+\f6\b0 \cf6  r 
+\f7\b \cf11 >=
+\f6\b0 \cf6  numRow 
+\f7\b \cf9 or
+\f6\b0 \cf6  c 
+\f7\b \cf11 >=
+\f6\b0 \cf6  numCol
+\f7\b :
+\f6\b0 \cb1 \
 \cb4       
-\f6\b \cf9 return
-\f5\b0 \cf6  \cf15 False\cf6 \cb1 \
+\f7\b \cf9 return
+\f6\b0 \cf6  \cf15 False\cf6 \cb1 \
 \cb4     
-\f6\b \cf9 return
-\f5\b0 \cf6  \cf15 True\cf6 \cb1 \
+\f7\b \cf9 return
+\f6\b0 \cf6  \cf15 True\cf6 \cb1 \
 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  numIslands
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  grid
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  numIslands
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  grid
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 grid 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b [[\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ],
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b [[\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ],
+\f6\b0 \cb1 \
 \cb4         
-\f6\b [\cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ],
-\f5\b0 \cb1 \
+\f7\b [\cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ],
+\f6\b0 \cb1 \
 \cb4         
-\f6\b [\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ],
-\f5\b0 \cb1 \
+\f7\b [\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ],
+\f6\b0 \cb1 \
 \cb4         
-\f6\b [\cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ]]
-\f5\b0 \cb1 \
+\f7\b [\cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ]]
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 numIslands
-\f6\b (
-\f5\b0 grid
-\f6\b ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 numIslands
+\f7\b (
+\f6\b0 grid
+\f7\b ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 3
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 3
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -10387,64 +10458,64 @@ Input: \cb1 \
 \f3\fs26 \cf6 \cb7 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by Twitter:\cb1 \
 \
 \cb7 Given a sorted list with duplicates, and a target number 
-\f5 \cb8 n
+\f6 \cb8 n
 \f3 \cb7 , find the range in which the number exists (represented as a tuple 
-\f5 \cb8 (low, high)
+\f6 \cb8 (low, high)
 \f3 \cb7 , both inclusive. If the number does not exist in the list, return 
-\f5 \cb8 (-1, -1)
+\f6 \cb8 (-1, -1)
 \f3 \cb7 ).\cb1 \
 \
 \cb7 Here's some examples and some starter code.\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  find_num
-\f6\b (
-\f5\b0 nums
-\f6\b ,
-\f5\b0  target
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  find_num
+\f7\b (
+\f6\b0 nums
+\f7\b ,
+\f6\b0  target
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 find_num
-\f6\b ([\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf12 7\cf6 ],
-\f5\b0  
-\f6\b \cf12 1\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 find_num
+\f7\b ([\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf12 7\cf6 ],
+\f6\b0  
+\f7\b \cf12 1\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # (0, 1)
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # (0, 1)
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 find_num
-\f6\b ([\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ],
-\f5\b0  
-\f6\b \cf12 5\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 find_num
+\f7\b ([\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ],
+\f6\b0  
+\f7\b \cf12 5\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # (-1, -1)
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # (-1, -1)
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
@@ -10458,36 +10529,36 @@ Input: \cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  majority_element
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  majority_element
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 majority_element
-\f6\b ([\cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ]))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 majority_element
+\f7\b ([\cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ]))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 3
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 3
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -10502,9 +10573,9 @@ Input: \cb1 \
 \cb7 You are given an array of integers. Return the smallest positive integer that is not present in the array. The array may contain duplicate entries.\cb1 \
 \
 \cb7 For example, the input 
-\f5 \cb8 [3, 4, -1, 1]
+\f6 \cb8 [3, 4, -1, 1]
 \f3 \cb7  should return 
-\f5 \cb8 2
+\f6 \cb8 2
 \f3 \cb7  because it is the smallest positive integer that doesn't exist in the array.\cb1 \
 \
 \cb7 Your solution should run in linear time and use constant space.\cb1 \
@@ -10513,30 +10584,30 @@ Input: \cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  first_missing_positive
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  first_missing_positive
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  first_missing_positive
-\f6\b ([\cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf11 -\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  first_missing_positive
+\f7\b ([\cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf11 -\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ])
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 2
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 2
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -10549,164 +10620,164 @@ Input: \cb1 \
 \f3\fs26 \cf6 \cb7 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by Amazon:\cb1 \
 \
 \cb7 Given a number 
-\f5 \cb8 n
+\f6 \cb8 n
 \f3 \cb7 , generate all binary search trees that can be constructed with nodes 1 to 
-\f5 \cb8 n
+\f6 \cb8 n
 \f3 \cb7 .\cb1 \
 \
 \cb7 Here's some code to start with:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Node
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Node
+\f7\b :
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  __init__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  value
-\f6\b ,
-\f5\b0  left
-\f6\b \cf11 =
-\f5\b0 \cf15 None
-\f6\b \cf6 ,
-\f5\b0  right
-\f6\b \cf11 =
-\f5\b0 \cf15 None
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __init__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  value
+\f7\b ,
+\f6\b0  left
+\f7\b \cf11 =
+\f6\b0 \cf15 None
+\f7\b \cf6 ,
+\f6\b0  right
+\f7\b \cf11 =
+\f6\b0 \cf15 None
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 value 
-\f6\b \cf11 =
-\f5\b0 \cf6  value\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 value 
+\f7\b \cf11 =
+\f6\b0 \cf6  value\cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 left 
-\f6\b \cf11 =
-\f5\b0 \cf6  left\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 left 
+\f7\b \cf11 =
+\f6\b0 \cf6  left\cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 right 
-\f6\b \cf11 =
-\f5\b0 \cf6  right\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 right 
+\f7\b \cf11 =
+\f6\b0 \cf6  right\cb1 \
 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  __str__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __str__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4     result 
-\f6\b \cf11 =
-\f5\b0 \cf6  \cf9 str
-\f6\b \cf6 (
-\f5\b0 \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 value
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  \cf9 str
+\f7\b \cf6 (
+\f6\b0 \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 value
+\f7\b )
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 if
-\f5\b0 \cf6  \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 left
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b \cf9 if
+\f6\b0 \cf6  \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 left
+\f7\b :
+\f6\b0 \cb1 \
 \cb4       result 
-\f6\b \cf11 =
-\f5\b0 \cf6  result 
-\f6\b \cf11 +
-\f5\b0 \cf6  \cf9 str
-\f6\b \cf6 (
-\f5\b0 \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 left
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  result 
+\f7\b \cf11 +
+\f6\b0 \cf6  \cf9 str
+\f7\b \cf6 (
+\f6\b0 \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 left
+\f7\b )
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 if
-\f5\b0 \cf6  \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 right
-\f6\b :
-\f5\b0 \cb1 \
+\f7\b \cf9 if
+\f6\b0 \cf6  \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 right
+\f7\b :
+\f6\b0 \cb1 \
 \cb4       result 
-\f6\b \cf11 =
-\f5\b0 \cf6  result 
-\f6\b \cf11 +
-\f5\b0 \cf6  \cf9 str
-\f6\b \cf6 (
-\f5\b0 \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 right
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  result 
+\f7\b \cf11 +
+\f6\b0 \cf6  \cf9 str
+\f7\b \cf6 (
+\f6\b0 \cf15 self
+\f7\b \cf11 .
+\f6\b0 \cf6 right
+\f7\b )
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \cf9 return
-\f5\b0 \cf6  result\cb1 \
+\f7\b \cf9 return
+\f6\b0 \cf6  result\cb1 \
 \
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  generate_bst
-\f6\b (
-\f5\b0 n
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  generate_bst
+\f7\b (
+\f6\b0 n
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 for
-\f5\b0 \cf6  tree 
-\f6\b \cf9 in
-\f5\b0 \cf6  generate_bst
-\f6\b (\cf12 3\cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 for
+\f6\b0 \cf6  tree 
+\f7\b \cf9 in
+\f6\b0 \cf6  generate_bst
+\f7\b (\cf12 3\cf6 ):
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 print
-\f5\b0 \cf6  tree\cb1 \
+\f7\b \cf9 print
+\f6\b0 \cf6  tree\cb1 \
 \
 
-\f7\i \cf10 \cb4 # Pre-order traversals of binary trees from 1 to n.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # Pre-order traversals of binary trees from 1 to n.
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 123
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 123
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 132
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 132
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 213
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 213
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 312
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 312
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # 321
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 321
+\f6\i0 \cf6 \cb1 \
 \
 
-\f7\i \cf10 \cb4 #   1      1      2      3      3
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #   1      1      2      3      3
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 #    \\      \\    / \\    /      /
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #    \\      \\    / \\    /      /
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 #     2      3  1   3  1      2
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #     2      3  1   3  1      2
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 #      \\    /           \\    /
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #      \\    /           \\    /
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 #       3  2             2  1
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #       3  2             2  1
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
@@ -10727,7 +10798,7 @@ Input: \cb1 \
 
 \f12\b \cf6 \cb7 Examples
 \f3\b0 :
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: n = 3\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: 2\cb1 \
@@ -10740,40 +10811,40 @@ Input: n = 3\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b ():
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b ():
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  fibonacci
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  n
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  fibonacci
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  n
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 n 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b \cf12 9
-\f5\b0 \cf6 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b \cf12 9
+\f6\b0 \cf6 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 fibonacci
-\f6\b (
-\f5\b0 n
-\f6\b ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 fibonacci
+\f7\b (
+\f6\b0 n
+\f7\b ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 34
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 34
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
@@ -10788,7 +10859,7 @@ Input: n = 3\cb1 \
 \cb7 Given a list of numbers, where every number shows up twice except for one number, find that one number.\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: [4, 3, 2, 4, 1, 3, 2]\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: 1\cb1 \
@@ -10798,41 +10869,41 @@ Input: [4, 3, 2, 4, 1, 3, 2]\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  singleNumber
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  singleNumber
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  singleNumber
-\f6\b ([\cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  singleNumber
+\f7\b ([\cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ])
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 1
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 1
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \cb7 Challenge: Find a way to do this using 
-\f5 \cb8 O(1)
+\f6 \cb8 O(1)
 \f3 \cb7  memory.\
 \
 \
@@ -10851,41 +10922,41 @@ Hi, here's your problem today. (You've reached the end of the problems for now -
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  square_numbers
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  square_numbers
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4  
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 square_numbers
-\f6\b ([\cf11 -\cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf11 -\cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf11 -\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ]))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 square_numbers
+\f7\b ([\cf11 -\cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf11 -\cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf11 -\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ]))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [0, 1, 1, 9, 16, 25, 25]
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # [0, 1, 1, 9, 16, 25, 25]
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \cb7 Solve this problem in 
-\f5 \cb8 O(n)
+\f6 \cb8 O(n)
 \f3 \cb7  time.\cb1 \
 \
 \
@@ -10902,32 +10973,32 @@ Hi, here's your problem today. (You've reached the end of the problems for now -
 \cb7 Given a file path with folder names, '..' (Parent directory), and '.' (Current directory), return the shortest possible file path (Eliminate all the '..' and '.').\cb1 \
 \
 \cb7 Example
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: '/Users/Joma/Documents/../Desktop/./../'\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: '/Users/Joma/'\cb1 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  shortest_path
-\f6\b (
-\f5\b0 file_path
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  shortest_path
+\f7\b (
+\f6\b0 file_path
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  shortest_path
-\f6\b (
-\f5\b0 \cf16 '/Users/Joma/Documents/../Desktop/./../'
-\f6\b \cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  shortest_path
+\f7\b (
+\f6\b0 \cf16 '/Users/Joma/Documents/../Desktop/./../'
+\f7\b \cf6 )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # /Users/Joma/
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # /Users/Joma/
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -10945,40 +11016,40 @@ Input: '/Users/Joma/Documents/../Desktop/./../'\cb1 \
 \cb7 Keep in mind that integers can't start with a 0! (Except for 0)\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: 1592551013\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: ['159.255.101.3', '159.255.10.13']\cb1 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  ip_addresses
-\f6\b (
-\f5\b0 s
-\f6\b ,
-\f5\b0  ip_parts
-\f6\b \cf11 =\cf6 []):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  ip_addresses
+\f7\b (
+\f6\b0 s
+\f7\b ,
+\f6\b0  ip_parts
+\f7\b \cf11 =\cf6 []):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  ip_addresses
-\f6\b (
-\f5\b0 \cf16 '1592551013'
-\f6\b \cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  ip_addresses
+\f7\b (
+\f6\b0 \cf16 '1592551013'
+\f7\b \cf6 )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # ['159.255.101.3', '159.255.10.13']
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # ['159.255.101.3', '159.255.10.13']
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \
+\f6\fs24 \cf6 \
 \
 \
 \
@@ -10997,32 +11068,32 @@ Input: 1592551013\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  products
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  products
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  products
-\f6\b ([\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  products
+\f7\b ([\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ])
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [120, 60, 40, 30, 24]
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # [120, 60, 40, 30, 24]
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -11034,37 +11105,37 @@ Input: 1592551013\cb1 \
 \f3\fs26 \cf6 \cb7 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by Microsoft:\cb1 \
 \
 \cb7 Given two strings which represent non-negative integers, multiply the two numbers and return the product as a string as well. You should assume that the numbers may be sufficiently large such that the built-in integer type will not be able to store the input (Python does have 
-\f5 \cb8 BigNum
+\f6 \cb8 BigNum
 \f3 \cb7 , but assume it does not exist).\cb1 \
 \
 \cb7 Here's an example and some starter code.\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  multiply
-\f6\b (
-\f5\b0 str1
-\f6\b ,
-\f5\b0  str2
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  multiply
+\f7\b (
+\f6\b0 str1
+\f7\b ,
+\f6\b0  str2
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 multiply
-\f6\b (
-\f5\b0 \cf16 "11"
-\f6\b \cf6 ,
-\f5\b0  \cf16 "13"
-\f6\b \cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 multiply
+\f7\b (
+\f6\b0 \cf16 "11"
+\f7\b \cf6 ,
+\f6\b0  \cf16 "13"
+\f7\b \cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 143
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 143
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -11084,7 +11155,7 @@ Input: 1592551013\cb1 \
 \cb7 The following input should return 6 since the longest increasing subsequence is 0, 2, 6, 9 , 11, 15.\cb1 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \
+\f6\fs24 \cf6 \
 \
 \
 \
@@ -11100,47 +11171,47 @@ Input: 1592551013\cb1 \
 \cb7 Example:\cb4 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf6 \{
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf6 \{
+\f6\b0 \cb1 \
 \cb4   \cf16 'CSC300'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'CSC100'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'CSC200'
-\f6\b \cf6 ],
-\f5\b0  \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'CSC100'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'CSC200'
+\f7\b \cf6 ],
+\f6\b0  \cb1 \
 \cb4   \cf16 'CSC200'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'CSC100'
-\f6\b \cf6 ],
-\f5\b0  \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'CSC100'
+\f7\b \cf6 ],
+\f6\b0  \cb1 \
 \cb4   \cf16 'CSC100'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b []
-\f5\b0 \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b []
+\f6\b0 \cb1 \
 
-\f6\b \cb4 \}
-\f5\b0 \cb1 \
+\f7\b \cb4 \}
+\f6\b0 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \cb7 This input should return the order that we need to take these courses:\cb4 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6  
-\f6\b [
-\f5\b0 \cf16 'CSC100'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'CSC200'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'CSCS300'
-\f6\b \cf6 ]
-\f5\b0 \cb1 \
+\f6\fs24 \cf6  
+\f7\b [
+\f6\b0 \cf16 'CSC100'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'CSC200'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'CSCS300'
+\f7\b \cf6 ]
+\f6\b0 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
@@ -11148,61 +11219,61 @@ Input: 1592551013\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  courses_to_take
-\f6\b (
-\f5\b0 course_to_prereqs
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  courses_to_take
+\f7\b (
+\f6\b0 course_to_prereqs
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 courses 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b \{
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b \{
+\f6\b0 \cb1 \
 \cb4   \cf16 'CSC300'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'CSC100'
-\f6\b \cf6 ,
-\f5\b0  \cf16 'CSC200'
-\f6\b \cf6 ],
-\f5\b0  \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'CSC100'
+\f7\b \cf6 ,
+\f6\b0  \cf16 'CSC200'
+\f7\b \cf6 ],
+\f6\b0  \cb1 \
 \cb4   \cf16 'CSC200'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b [
-\f5\b0 \cf16 'CSC100'
-\f6\b \cf6 ],
-\f5\b0  \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b [
+\f6\b0 \cf16 'CSC100'
+\f7\b \cf6 ],
+\f6\b0  \cb1 \
 \cb4   \cf16 'CSC100'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b []
-\f5\b0 \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b []
+\f6\b0 \cb1 \
 
-\f6\b \cb4 \}
-\f5\b0 \cb1 \
+\f7\b \cb4 \}
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  courses_to_take
-\f6\b (
-\f5\b0 courses
-\f6\b )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  courses_to_take
+\f7\b (
+\f6\b0 courses
+\f7\b )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # ['CSC100', 'CSC200', 'CSC300']
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # ['CSC100', 'CSC200', 'CSC300']
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \
+\f6\fs24 \cf6 \
 \
 \
 \
@@ -11212,53 +11283,53 @@ Input: 1592551013\cb1 \
 \f3\fs26 \cf6 \cb7 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by AirBNB:\cb1 \
 \
 \cb7 Given a list of sorted numbers, and two integers 
-\f5 \cb8 k
+\f6 \cb8 k
 \f3 \cb7  and 
-\f5 \cb8 x
+\f6 \cb8 x
 \f3 \cb7 , find 
-\f5 \cb8 k
+\f6 \cb8 k
 \f3 \cb7  closest numbers to the pivot 
-\f5 \cb8 x
+\f6 \cb8 x
 \f3 \cb7 .\cb1 \
 \
 \cb7 Here's an example and some starter code:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  closest_nums
-\f6\b (
-\f5\b0 nums
-\f6\b ,
-\f5\b0  k
-\f6\b ,
-\f5\b0  x
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  closest_nums
+\f7\b (
+\f6\b0 nums
+\f7\b ,
+\f6\b0  k
+\f7\b ,
+\f6\b0  x
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4  
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \cb4  \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 closest_nums
-\f6\b ([\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 7\cf6 ,
-\f5\b0  
-\f6\b \cf12 8\cf6 ,
-\f5\b0  
-\f6\b \cf12 9\cf6 ],
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 closest_nums
+\f7\b ([\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 7\cf6 ,
+\f6\b0  
+\f7\b \cf12 8\cf6 ,
+\f6\b0  
+\f7\b \cf12 9\cf6 ],
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [7, 3, 8]
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # [7, 3, 8]
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -11274,32 +11345,32 @@ Input: 1592551013\cb1 \
 \cb7 Given a string, rearrange the string so that no character next to each other are the same. If no such arrangement is possible, then return None.\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: abbccc\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: cbcbca\cb1 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  rearrangeString
-\f6\b (
-\f5\b0 s
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  rearrangeString
+\f7\b (
+\f6\b0 s
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  rearrangeString
-\f6\b (
-\f5\b0 \cf16 'abbccc'
-\f6\b \cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  rearrangeString
+\f7\b (
+\f6\b0 \cf16 'abbccc'
+\f7\b \cf6 )
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # cbcabc
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # cbcabc
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -11314,61 +11385,61 @@ Input: abbccc\cb1 \
 \f3\fs26 \cf6 \cb7 Hi, here's your problem today. (You've reached the end of the problems for now - in the meanwhile, here is a random question. And visit {\field{\*\fldinst{HYPERLINK "http://coderpro.com/"}}{\fldrslt \cf14 \ul \ulc14 CoderPro}} for more practice!) This problem was recently asked by Facebook:\cb1 \
 \
 \cb7 Given a numerator and a denominator, find what the equivalent decimal representation is as a string. If the decimal representation has recurring digits, then put those digits in brackets (ie 
-\f5 \cb8 4/3
+\f6 \cb8 4/3
 \f3 \cb7  should be represented by 
-\f5 \cb8 1.(3)
+\f6 \cb8 1.(3)
 \f3 \cb7  to represent 1.333...). Do not use any built in evaluator functions like python's 
-\f5 \cb8 eval
+\f6 \cb8 eval
 \f3 \cb7 . You can also assume that the denominator will be nonzero.\cb1 \
 \
 \cb7 Here's some examples and some starter code:\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  frac_to_dec
-\f6\b (
-\f5\b0 numerator
-\f6\b ,
-\f5\b0  denominator
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  frac_to_dec
+\f7\b (
+\f6\b0 numerator
+\f7\b ,
+\f6\b0  denominator
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 frac_to_dec
-\f6\b (\cf11 -\cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 frac_to_dec
+\f7\b (\cf11 -\cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # -1.5
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # -1.5
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 frac_to_dec
-\f6\b (\cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 frac_to_dec
+\f7\b (\cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 1.(3)
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 1.(3)
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 frac_to_dec
-\f6\b (\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 6\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 frac_to_dec
+\f7\b (\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 6\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 0.1(6)
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 0.1(6)
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -11387,7 +11458,7 @@ Input: abbccc\cb1 \
 \cb7 Given a list of numbers, where every number shows up twice except for one number, find that one number.\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: [4, 3, 2, 4, 1, 3, 2]\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8 Output: 1\cb1 \
@@ -11397,36 +11468,36 @@ Input: [4, 3, 2, 4, 1, 3, 2]\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  singleNumber
-\f6\b (
-\f5\b0 nums
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  singleNumber
+\f7\b (
+\f6\b0 nums
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  singleNumber
-\f6\b ([\cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ])
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  singleNumber
+\f7\b ([\cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ])
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 1
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 1
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -11441,7 +11512,7 @@ Input: [4, 3, 2, 4, 1, 3, 2]\cb1 \
 \cb7 Given a nested dictionary, flatten the dictionary, where nested dictionary keys can be represented through dot notation.\cb1 \
 \
 \cb7 Example:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: \{\cb1 \
 \pard\pardeftab720\partightenfactor0
 \cf6 \cb8   'a': 1,\cb1 \
@@ -11465,71 +11536,71 @@ Input: \{\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  flatten_dictionary
-\f6\b (
-\f5\b0 d
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  flatten_dictionary
+\f7\b (
+\f6\b0 d
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 \cb4 d 
-\f6\b \cf11 =
-\f5\b0 \cf6  
-\f6\b \{
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  
+\f7\b \{
+\f6\b0 \cb1 \
 \cb4     \cf16 'a'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0 \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0 \cb1 \
 \cb4     \cf16 'b'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b \{
-\f5\b0 \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b \{
+\f6\b0 \cb1 \
 \cb4         \cf16 'c'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0 \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0 \cb1 \
 \cb4         \cf16 'd'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b \{
-\f5\b0 \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b \{
+\f6\b0 \cb1 \
 \cb4             \cf16 'e'
-\f6\b \cf6 :
-\f5\b0  
-\f6\b \cf12 3
-\f5\b0 \cf6 \cb1 \
+\f7\b \cf6 :
+\f6\b0  
+\f7\b \cf12 3
+\f6\b0 \cf6 \cb1 \
 \cb4         
-\f6\b \}
-\f5\b0 \cb1 \
+\f7\b \}
+\f6\b0 \cb1 \
 \cb4     
-\f6\b \}
-\f5\b0 \cb1 \
+\f7\b \}
+\f6\b0 \cb1 \
 
-\f6\b \cb4 \}
-\f5\b0 \cb1 \
+\f7\b \cb4 \}
+\f6\b0 \cb1 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 flatten_dictionary
-\f6\b (
-\f5\b0 d
-\f6\b ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 flatten_dictionary
+\f7\b (
+\f6\b0 d
+\f7\b ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # \{'a': 1, 'b.c': 2, 'b.d.e': 3\}
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # \{'a': 1, 'b.c': 2, 'b.d.e': 3\}
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \
+\f6\fs24 \cf6 \
 \
 \
 
@@ -11540,24 +11611,24 @@ Input: \{\cb1 \
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Google.\cb1 \
 \cb3 An XOR linked list is a more memory efficient doubly linked list. Instead of each node holding 
-\f5 \cb4 next
+\f6 \cb4 next
 \f3 \cb3  and 
-\f5 \cb4 prev
+\f6 \cb4 prev
 \f3 \cb3  fields, it holds a field named 
-\f5 \cb4 both
+\f6 \cb4 both
 \f3 \cb3 , which is an XOR of the next node and the previous node. Implement an XOR linked list; it has an 
-\f5 \cb4 add(element)
+\f6 \cb4 add(element)
 \f3 \cb3  which adds the element to the end, and a 
-\f5 \cb4 get(index)
+\f6 \cb4 get(index)
 \f3 \cb3  which returns the node at index.\cb1 \
 \cb3 If using a language that has no pointers (such as Python), you can assume you have access to 
-\f5 \cb4 get_pointer
+\f6 \cb4 get_pointer
 \f3 \cb3  and 
-\f5 \cb4 dereference_pointer
+\f6 \cb4 dereference_pointer
 \f3 \cb3  functions that converts between nodes and memory addresses.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11571,109 +11642,109 @@ Input: \{\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Rectangle
-\f6\b ():
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Rectangle
+\f7\b ():
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  __init__
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  min_x
-\f6\b \cf11 =\cf12 0\cf6 ,
-\f5\b0  min_y
-\f6\b \cf11 =\cf12 0\cf6 ,
-\f5\b0  max_x
-\f6\b \cf11 =\cf12 0\cf6 ,
-\f5\b0  max_y
-\f6\b \cf11 =\cf12 0\cf6 ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  __init__
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  min_x
+\f7\b \cf11 =\cf12 0\cf6 ,
+\f6\b0  min_y
+\f7\b \cf11 =\cf12 0\cf6 ,
+\f6\b0  max_x
+\f7\b \cf11 =\cf12 0\cf6 ,
+\f6\b0  max_y
+\f7\b \cf11 =\cf12 0\cf6 ):
+\f6\b0 \cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 min_x 
-\f6\b \cf11 =
-\f5\b0 \cf6  min_x\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 min_x 
+\f7\b \cf11 =
+\f6\b0 \cf6  min_x\cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 min_y 
-\f6\b \cf11 =
-\f5\b0 \cf6  min_y\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 min_y 
+\f7\b \cf11 =
+\f6\b0 \cf6  min_y\cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 max_x 
-\f6\b \cf11 =
-\f5\b0 \cf6  max_x\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 max_x 
+\f7\b \cf11 =
+\f6\b0 \cf6  max_x\cb1 \
 \cb4     \cf15 self
-\f6\b \cf11 .
-\f5\b0 \cf6 max_y 
-\f6\b \cf11 =
-\f5\b0 \cf6  max_y\cb1 \
+\f7\b \cf11 .
+\f6\b0 \cf6 max_y 
+\f7\b \cf11 =
+\f6\b0 \cf6  max_y\cb1 \
 \
 
-\f6\b \cf9 \cb4 def
-\f5\b0 \cf6  intersection_area
-\f6\b (
-\f5\b0 rect1
-\f6\b ,
-\f5\b0  rect2
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 def
+\f6\b0 \cf6  intersection_area
+\f7\b (
+\f6\b0 rect1
+\f7\b ,
+\f6\b0  rect2
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f7\i \cf10 \cb4 #  BBB
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 #  BBB
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # AXXB
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # AXXB
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # AAA
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # AAA
+\f6\i0 \cf6 \cb1 \
 \cb4 rect1 
-\f6\b \cf11 =
-\f5\b0 \cf6  Rectangle
-\f6\b (\cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 0\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  Rectangle
+\f7\b (\cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 0\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 )
+\f6\b0 \cb1 \
 \cb4 rect2 
-\f6\b \cf11 =
-\f5\b0 \cf6  Rectangle
-\f6\b (\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 )
-\f5\b0 \cb1 \
+\f7\b \cf11 =
+\f6\b0 \cf6  Rectangle
+\f7\b (\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 )
+\f6\b0 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 intersection_area
-\f6\b (
-\f5\b0 rect1
-\f6\b ,
-\f5\b0  rect2
-\f6\b ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 intersection_area
+\f7\b (
+\f6\b0 rect1
+\f7\b ,
+\f6\b0  rect2
+\f7\b ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # 2
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # 2
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \
+\f6\fs24 \cf6 \
 \
 \
 
@@ -11689,7 +11760,7 @@ Input: \{\cb1 \
 \cb3 Do this in O(M + N) time (where M and N are the lengths of the lists) and constant space.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11702,21 +11773,21 @@ Input: \{\cb1 \
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Microsoft.\cb1 \
 \cb3 Given an array of numbers and a number 
-\f5 \cb4 k
+\f6 \cb4 k
 \f3 \cb3 , determine if there are three entries in the array which add up to the specified number 
-\f5 \cb4 k
+\f6 \cb4 k
 \f3 \cb3 . For example, given 
-\f5 \cb4 [20, 303, 3, 4, 25]
+\f6 \cb4 [20, 303, 3, 4, 25]
 \f3 \cb3  and 
-\f5 \cb4 k = 49
+\f6 \cb4 k = 49
 \f3 \cb3 , return 
-\f5 \cb4 true
+\f6 \cb4 true
 \f3 \cb3  as 
-\f5 \cb4 20 + 4 + 25 = 49
+\f6 \cb4 20 + 4 + 25 = 49
 \f3 \cb3 .\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11730,19 +11801,19 @@ Input: \{\cb1 \
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by PayPal.\cb1 \
 \cb3 Given a string and a number of lines 
-\f5 \cb4 k
+\f6 \cb4 k
 \f3 \cb3 , print the string in zigzag form. In zigzag, characters are printed out diagonally from top left to bottom right until reaching the 
-\f5 \cb4 k
+\f6 \cb4 k
 \fs26\fsmilli13333 \super th
 \f3\fs32 \cb3 \nosupersub  line, then back up to top right, and so on.\cb1 \
 \cb3 For example, given the sentence 
-\f5 \cb4 "thisisazigzag"
+\f6 \cb4 "thisisazigzag"
 \f3 \cb3  and 
-\f5 \cb4 k = 4
+\f6 \cb4 k = 4
 \f3 \cb3 , you should print:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f5\fs26 \cf5 \cb4 t     a     g\
+\f6\fs26 \cf5 \cb4 t     a     g\
  h   s z   a\
   i i   i z\
    s     g\cell \lastrow\row
@@ -11758,32 +11829,32 @@ Input: \{\cb1 \
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Dropbox.\cb1 \
 \cb3 Create a data structure that performs all the following operations in 
-\f5 \cb4 O(1)
+\f6 \cb4 O(1)
 \f3 \cb3  time:\cb1 \
 \pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls13\ilvl0
-\f5 \cf2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f6 \cf2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 plus
 \f3 \cb3 : Add a key with value 
-\f5 \cb4 1
+\f6 \cb4 1
 \f3 \cb3 . If the key already exists, increment its value by one.\cb1 \
 \ls13\ilvl0
-\f5 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f6 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 minus
 \f3 \cb3 : Decrement the value of a key. If the key's value is currently 
-\f5 \cb4 1
+\f6 \cb4 1
 \f3 \cb3 , remove it.\cb1 \
 \ls13\ilvl0
-\f5 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f6 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 get_max
 \f3 \cb3 : Return a key with the highest value.\cb1 \
 \ls13\ilvl0
-\f5 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f6 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 get_min
 \f3 \cb3 : Return a key with the lowest value.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth11400\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
@@ -11793,17 +11864,17 @@ get_min
 \cb3 This problem was asked by Stripe.\cb1 \
 \cb3 Given a collection of intervals, find the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.\cb1 \
 \cb3 Intervals can "touch", such as 
-\f5 \cb4 [0, 1]
+\f6 \cb4 [0, 1]
 \f3 \cb3  and 
-\f5 \cb4 [1, 2]
+\f6 \cb4 [1, 2]
 \f3 \cb3 , but they won't be considered overlapping.\cb1 \
 \cb3 For example, given the intervals 
-\f5 \cb4 (7, 9), (2, 4), (5, 8)
+\f6 \cb4 (7, 9), (2, 4), (5, 8)
 \f3 \cb3 , return 1 as the last interval can be removed and the first two won't overlap.\cb1 \
 \cb3 The intervals are not necessarily sorted in any order.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clshdrawnil \clwWidth12089\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt700 \clpadl700 \clpadb700 \clpadr700 \gaph\cellx8640
@@ -11812,13 +11883,13 @@ get_min
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Google.\cb1 \
 \cb3 Given a set of points (x, y) on a 2D cartesian plane, find the two closest points. For example, given the points 
-\f5 \cb4 [(1, 1), (-1, -1), (3, 4), (6, 1), (-1, -6), (-4, -3)]
+\f6 \cb4 [(1, 1), (-1, -1), (3, 4), (6, 1), (-1, -6), (-4, -3)]
 \f3 \cb3 , return 
-\f5 \cb4 [(-1, -1), (1, 1)]
+\f6 \cb4 [(-1, -1), (1, 1)]
 \f3 \cb3 .\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11830,11 +11901,11 @@ get_min
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Microsoft.\cb1 \
 \cb3 Given a string and a pattern, find the starting indices of all occurrences of the pattern in the string. For example, given the string "abracadabra" and the pattern "abr", you should return 
-\f5 \cb4 [0, 7]
+\f6 \cb4 [0, 7]
 \f3 \cb3 .\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11846,19 +11917,19 @@ get_min
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Jane Street.\cb1 \
 \cb3 Given integers 
-\f5 \cb4 M
+\f6 \cb4 M
 \f3 \cb3  and 
-\f5 \cb4 N
+\f6 \cb4 N
 \f3 \cb3 , write a program that counts how many positive integer pairs 
-\f5 \cb4 (a, b)
+\f6 \cb4 (a, b)
 \f3 \cb3  satisfy the following conditions:\cb1 \
 \pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls14\ilvl0
-\f5 \cf2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f6 \cf2 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 a + b = M
 \f3 \cb1 \
 \ls14\ilvl0
-\f5 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f6 \cb4 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 a XOR b = N\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
@@ -11878,7 +11949,7 @@ a XOR b = N\cell \lastrow\row
 \cb3 For example, given the following matrix:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f5\fs26 \cf5 \cb4 [[1,  2,  3,  4,  5],\
+\f6\fs26 \cf5 \cb4 [[1,  2,  3,  4,  5],\
  [6,  7,  8,  9,  10],\
  [11, 12, 13, 14, 15],\
  [16, 17, 18, 19, 20]]\
@@ -11887,7 +11958,7 @@ a XOR b = N\cell \lastrow\row
 \f3\fs32 \cf2 \cb3 You should print out the following:\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f5\fs26 \cf5 \cb4 1\
+\f6\fs26 \cf5 \cb4 1\
 2\
 3\
 4\
@@ -11924,7 +11995,7 @@ a XOR b = N\cell \lastrow\row
 \cb3 For example, given a file with the content \'93Hello world\'94, three read7() returns \'93Hello w\'94, \'93orld\'94 and then \'93\'94.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 
@@ -11942,14 +12013,14 @@ if n is even, the next number in the sequence is n / 2\cb1 \
 if n is odd, the next number in the sequence is 3n + 1\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf2 \cb3 It is conjectured that every such sequence eventually reaches the number 
-\f5 \cb4 1
+\f6 \cb4 1
 \f3 \cb3 . Test this conjecture.\cb1 \
 \cb3 Bonus: What input 
-\f5 \cb4 n <= 1000000
+\f6 \cb4 n <= 1000000
 \f3 \cb3  gives the longest sequence?\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11963,7 +12034,7 @@ if n is odd, the next number in the sequence is 3n + 1\cb1 \
 \cb3 Given an undirected graph, determine if it contains a cycle.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11978,7 +12049,7 @@ if n is odd, the next number in the sequence is 3n + 1\cb1 \
 \cb3 Implement run-length encoding and decoding. You can assume the string to be encoded have no digits and consists solely of alphabetic characters. You can assume the string to be decoded is valid.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -11996,7 +12067,7 @@ if n is odd, the next number in the sequence is 3n + 1\cb1 \
 \cb3 Do this in constant space and in one pass.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -12010,7 +12081,7 @@ if n is odd, the next number in the sequence is 3n + 1\cb1 \
 \cb3 Given an array of integers, find the maximum XOR of any two elements.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -12022,12 +12093,12 @@ if n is odd, the next number in the sequence is 3n + 1\cb1 \
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Microsoft.\cb1 \
 \cb3 Given a clock time in 
-\f5 \cb4 hh:mm
+\f6 \cb4 hh:mm
 \f3 \cb3  format, determine, to the nearest degree, the angle between the hour and the minute hands.\cb1 \
 \cb3 Bonus: When, during the course of a day, will the angle be zero?\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
@@ -12037,39 +12108,39 @@ if n is odd, the next number in the sequence is 3n + 1\cb1 \
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Wayfair.\cb1 \
 \cb3 You are given a 
-\f5 \cb4 2 x N
+\f6 \cb4 2 x N
 \f3 \cb3  board, and instructed to completely cover the board with the following shapes:\cb1 \
 \pard\intbl\itap1\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls16\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 Dominoes, or 
-\f5 \cb4 2 x 1
+\f6 \cb4 2 x 1
 \f3 \cb3  rectangles.\cb1 \
 \ls16\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 Trominoes, or 
-\f5 \cb4 L
+\f6 \cb4 L
 \f3 \cb3 -shapes.\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 \cf2 \cb3 For example, if 
-\f5 \cb4 N = 4
+\f6 \cb4 N = 4
 \f3 \cb3 , here is one possible configuration, where 
-\f5 \cb4 A
+\f6 \cb4 A
 \f3 \cb3  is a domino, and 
-\f5 \cb4 B
+\f6 \cb4 B
 \f3 \cb3  and 
-\f5 \cb4 C
+\f6 \cb4 C
 \f3 \cb3  are trominoes.\cb1 \
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
-\f5\fs26 \cf5 \cb4 A B B C\
+\f6\fs26 \cf5 \cb4 A B B C\
 A B C C\
 \pard\intbl\itap1\pardeftab720\partightenfactor0
 
 \f3\fs32 \cf2 \cb3 Given an integer 
-\f5 \cb4 N
+\f6 \cb4 N
 \f3 \cb3 , determine in how many ways this task is possible.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -12083,7 +12154,7 @@ A B C C\
 \cb3 Given k sorted singly linked lists, write a function to merge all the lists into one sorted singly linked list.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 
@@ -12099,7 +12170,7 @@ A B C C\
 \cb3 You can assume all the integers in the array are unique.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -12111,18 +12182,18 @@ A B C C\
 \f3\fs32 \cf2 \cb3 Good morning! Here's your coding interview problem for today.\cb1 \
 \cb3 This problem was asked by Palantir.\cb1 \
 \cb3 The ancient Egyptians used to express fractions as a sum of several terms where each numerator is one. For example, 
-\f5 \cb4 4 / 13
+\f6 \cb4 4 / 13
 \f3 \cb3  can be represented as 
-\f5 \cb4 1 / 4 + 1 / 18 + 1 / 468
+\f6 \cb4 1 / 4 + 1 / 18 + 1 / 468
 \f3 \cb3 .\cb1 \
 \cb3 Create an algorithm to turn an ordinary fraction 
-\f5 \cb4 a / b
+\f6 \cb4 a / b
 \f3 \cb3 , where 
-\f5 \cb4 a < b
+\f6 \cb4 a < b
 \f3 \cb3 , into an Egyptian fraction.\cell \lastrow\row
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \cb1 \
+\f6\fs24 \cf6 \cb1 \
 \
 \
 \
@@ -12140,41 +12211,41 @@ A B C C\
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  remove_adjacent_dup
-\f6\b (
-\f5\b0 s
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  remove_adjacent_dup
+\f7\b (
+\f6\b0 s
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 remove_adjacent_dup
-\f6\b (
-\f5\b0 \cf16 "cabba"
-\f6\b \cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 remove_adjacent_dup
+\f7\b (
+\f6\b0 \cf16 "cabba"
+\f7\b \cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # Start with cabba
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # Start with cabba
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # After remove bb: caa
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # After remove bb: caa
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # After remove aa: c
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # After remove aa: c
+\f6\i0 \cf6 \cb1 \
 
-\f7\i \cf10 \cb4 # print c
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # print c
+\f6\i0 \cf6 \cb1 \
 \pard\pardeftab720\partightenfactor0
 
 \f3\fs26 \cf6 \
 \pard\pardeftab720\partightenfactor0
 
-\f5\fs24 \cf6 \
+\f6\fs24 \cf6 \
 \
 \
 \
@@ -12185,7 +12256,7 @@ A B C C\
 \cb7 Given an array containing only positive integers, return if you can pick two integers from the array which cuts the array into three pieces such that the sum of elements in all pieces is equal.\cb1 \
 \
 \cb7 Example 1:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: array = [2, 4, 5, 3, 3, 9, 2, 2, 2]\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
@@ -12195,7 +12266,7 @@ Input: array = [2, 4, 5, 3, 3, 9, 2, 2, 2]\cb1 \
 \f3\fs26 \cf6 \cb7 Explanation: choosing the number 5 and 9 results in three pieces [2, 4], [3, 3] and [2, 2, 2]. Sum = 6.\cb1 \
 \
 \cb7 Example 2:
-\f5\fs24 \cb8 \
+\f6\fs24 \cb8 \
 Input: array =[1, 1, 1, 1],\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
@@ -12206,70 +12277,70 @@ Input: array =[1, 1, 1, 1],\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 class
-\f5\b0 \cf6  Solution
-\f6\b (
-\f5\b0 \cf9 object
-\f6\b \cf6 ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 class
+\f6\b0 \cf6  Solution
+\f7\b (
+\f6\b0 \cf9 object
+\f7\b \cf6 ):
+\f6\b0 \cb1 \
 \cb4   
-\f6\b \cf9 def
-\f5\b0 \cf6  canPick2
-\f6\b (
-\f5\b0 \cf15 self
-\f6\b \cf6 ,
-\f5\b0  arr
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b \cf9 def
+\f6\b0 \cf6  canPick2
+\f7\b (
+\f6\b0 \cf15 self
+\f7\b \cf6 ,
+\f6\b0  arr
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4     
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 canPick2
-\f6\b ([\cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 9\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ]))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 canPick2
+\f7\b ([\cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 9\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ]))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # True
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # True
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print\cf6 (
-\f5\b0 Solution
-\f6\b ()\cf11 .
-\f5\b0 \cf6 canPick2
-\f6\b ([\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 5\cf6 ]))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print\cf6 (
+\f6\b0 Solution
+\f7\b ()\cf11 .
+\f6\b0 \cf6 canPick2
+\f7\b ([\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 5\cf6 ]))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # False
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 \cb4 # False
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
@@ -12279,58 +12350,58 @@ Input: array =[1, 1, 1, 1],\cb1 \
 \f3\fs26 \cf6 \cb7 Hi, here's your problem today. This problem was recently asked by Google:\cb1 \
 \
 \cb7 Given a list of points and a number 
-\f5 \cb8 k
+\f6 \cb8 k
 \f3 \cb7 , find the 
-\f5 \cb8 k
+\f6 \cb8 k
 \f3 \cb7  closest points to the origin.\cb1 \
 \
 \pard\pardeftab720\partightenfactor0
 
-\f6\b\fs24 \cf9 \cb4 def
-\f5\b0 \cf6  findClosestPointsOrigin
-\f6\b (
-\f5\b0 points
-\f6\b ,
-\f5\b0  k
-\f6\b ):
-\f5\b0 \cb1 \
+\f7\b\fs24 \cf9 \cb4 def
+\f6\b0 \cf6  findClosestPointsOrigin
+\f7\b (
+\f6\b0 points
+\f7\b ,
+\f6\b0  k
+\f7\b ):
+\f6\b0 \cb1 \
 \cb4   
-\f7\i \cf10 # Fill this in.
-\f5\i0 \cf6 \cb1 \
+\f8\i \cf10 # Fill this in.
+\f6\i0 \cf6 \cb1 \
 \
 
-\f6\b \cf9 \cb4 print
-\f5\b0 \cf6  
-\f6\b (
-\f5\b0 findClosestPointsOrigin
-\f6\b ([[\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf12 1\cf6 ],
-\f5\b0  
-\f6\b [\cf12 3\cf6 ,
-\f5\b0  
-\f6\b \cf12 3\cf6 ],
-\f5\b0  
-\f6\b [\cf12 2\cf6 ,
-\f5\b0  
-\f6\b \cf12 2\cf6 ],
-\f5\b0  
-\f6\b [\cf12 4\cf6 ,
-\f5\b0  
-\f6\b \cf12 4\cf6 ],
-\f5\b0  
-\f6\b [\cf11 -\cf12 1\cf6 ,
-\f5\b0  
-\f6\b \cf11 -\cf12 1\cf6 ]],
-\f5\b0  
-\f6\b \cf12 3\cf6 ))
-\f5\b0 \cb1 \
+\f7\b \cf9 \cb4 print
+\f6\b0 \cf6  
+\f7\b (
+\f6\b0 findClosestPointsOrigin
+\f7\b ([[\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf12 1\cf6 ],
+\f6\b0  
+\f7\b [\cf12 3\cf6 ,
+\f6\b0  
+\f7\b \cf12 3\cf6 ],
+\f6\b0  
+\f7\b [\cf12 2\cf6 ,
+\f6\b0  
+\f7\b \cf12 2\cf6 ],
+\f6\b0  
+\f7\b [\cf12 4\cf6 ,
+\f6\b0  
+\f7\b \cf12 4\cf6 ],
+\f6\b0  
+\f7\b [\cf11 -\cf12 1\cf6 ,
+\f6\b0  
+\f7\b \cf11 -\cf12 1\cf6 ]],
+\f6\b0  
+\f7\b \cf12 3\cf6 ))
+\f6\b0 \cb1 \
 
-\f7\i \cf10 \cb4 # [[-1, -1], [1, 1], [2, 2]]\
+\f8\i \cf10 \cb4 # [[-1, -1], [1, 1], [2, 2]]\
 \
 \
 
-\f5\i0 \cf6 \cb1 \
+\f6\i0 \cf6 \cb1 \
 \
 \
 \
